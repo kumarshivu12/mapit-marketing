@@ -20,7 +20,7 @@ const Solution3 = () => {
 
   return (
     <Box>
-      <Box height="70vh" style={{ position: "relative" }}>
+      <Box height="70vh" style={{ position: "relative", maxHeight: "500px" }}>
         <img
           src={banner}
           alt="banner"

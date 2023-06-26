@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Box, createTheme, ThemeProvider } from "@mui/material";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 
 //Components
 import Navbar from "./components/Navbar/Navbar";
@@ -17,6 +22,7 @@ import Solution3 from "./pages/Solutions/Solution3";
 //creating theme
 const theme = createTheme({
   typography: {
+    fontFamily: "Roboto Slab,Noto Sans Mono, sans-serif",
     h1: {
       fontSize: "2rem",
       "@media (min-width:600px)": {
@@ -94,27 +100,49 @@ const theme = createTheme({
   },
 });
 
+const PageContent = () => {
+  const location = useLocation();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    // Simulating an asynchronous operation
+    setTimeout(() => {
+      setLoading(false);
+    }, 1200);
+  }, [location]);
+
+  if (loading) {
+    return <Loader />;
+  }
+
+  return (
+    <>
+      <Box style={{ border: "2px solid red" }}>
+        <Navbar />
+        <Box style={{ marginTop: "90px", border: "5px solid green" }}>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/solutions/solution1" element={<Solution1 />} />
+            <Route path="/solutions/solution2" element={<Solution2 />} />
+            <Route path="/solutions/solution3" element={<Solution3 />} />
+            <Route path="/technology" element={<Technology />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </Box>
+      </Box>
+    </>
+  );
+};
+
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Box style={{ border: "2px solid red" }}>
-          <Navbar />
-          <Box style={{ marginTop: "90px", border: "5px solid green" }}>
-            <Routes>
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/solutions" element={<Solutions />} />
-              <Route path="/solutions/solution1" element={<Solution1 />} />
-              <Route path="/solutions/solution2" element={<Solution2 />} />
-              <Route path="/solutions/solution3" element={<Solution3 />} />
-              <Route path="/technology" element={<Technology />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/loader" element={<Loader />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </Box>
-        </Box>
-      </BrowserRouter>
+      <Router>
+        <PageContent />
+      </Router>
     </ThemeProvider>
   );
 };

@@ -3,6 +3,7 @@ import { Box, Typography, Link, Grid, styled } from "@mui/material";
 
 //Components
 import landingBackground from "../../assets/images/landingBackground.png";
+import Loader from "../../components/Loader/Loader";
 // import { Button1 } from "../../utilities/components/Buttons";
 
 // Styles
@@ -60,7 +61,6 @@ const phrases = ["Indoor Space Managemnet", "Automation", "Asset Tracking"];
 const LandingPage = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsVisible(false);
@@ -78,15 +78,15 @@ const LandingPage = () => {
       <GridContainer container alignItems="center" justifyContent="center">
         <Grid item lg={7} md={12} sm={12} xs={12} style={{ padding: "10px" }}>
           <ContentBox>
-            <Typography variant="h1" style={{ fontWeight: 500 }}>
+            <Typography variant="h2" style={{ fontWeight: 500 }}>
               Creating industry-acceptable
             </Typography>
-            <Typography variant="h1" style={{ fontWeight: 500 }}>
+            <Typography variant="h2" style={{ fontWeight: 500 }}>
               products to solve issues
             </Typography>
             <Typography
               component="span"
-              variant="h1"
+              variant="h2"
               style={{ fontWeight: 500 }}
             >
               in{" "}
@@ -99,7 +99,7 @@ const LandingPage = () => {
                   currentWordIndex={currentWordIndex}
                 >
                   <Typography
-                    variant="h1"
+                    variant="h2"
                     color="primary"
                     style={{
                       fontWeight: 500,
