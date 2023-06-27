@@ -59,8 +59,8 @@ const Navbar = () => {
       <NavbarContainer position="fixed">
         <Toolbar
           style={{
-            minHeight: "70px",
-            maxHeight: "70px",
+            minHeight: isMobile ? "50px" : "70px",
+            maxHeight: isMobile ? "50px" : "70px",
             display: "flex",
             justifyContent: "space-between",
             padding: "10px 20px",
@@ -71,7 +71,10 @@ const Navbar = () => {
               <img
                 src={logo}
                 alt="logo"
-                style={{ height: "50px", width: "auto" }}
+                style={{
+                  height: isMobile ? "30px" : "50px",
+                  width: "auto",
+                }}
               />
             </Component>
           </Box>

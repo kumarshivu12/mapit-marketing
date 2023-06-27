@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, createTheme, ThemeProvider } from "@mui/material";
+import { Box, createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
 import {
   BrowserRouter as Router,
   Route,
@@ -101,6 +101,7 @@ const theme = createTheme({
 });
 
 const PageContent = () => {
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("md"));
   const location = useLocation();
   const [loading, setLoading] = useState(true);
 
@@ -118,9 +119,9 @@ const PageContent = () => {
 
   return (
     <>
-      <Box style={{ border: "2px solid red" }}>
+      <Box>
         <Navbar />
-        <Box style={{ marginTop: "90px", border: "5px solid green" }}>
+        <Box style={{ marginTop: isMobile ? "70px" : "90px" }}>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/solutions" element={<Solutions />} />
@@ -141,6 +142,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Router>
+        {/* <Loader /> */}
         <PageContent />
       </Router>
     </ThemeProvider>
