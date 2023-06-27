@@ -10,8 +10,9 @@ import {
 } from "@mui/material";
 
 //Components
-import logo from "../../assets/images/logo.png";
 import banner from "../../assets/images/Solution2Banner.jpg";
+import image1 from "../../assets/images/Solution2(1).jpeg";
+import image2 from "../../assets/images/Solution2(2).jpg";
 import { Button2 } from "../../components/Buttons/Buttons";
 
 const Solution2 = () => {
@@ -69,6 +70,7 @@ const Solution2 = () => {
               sm={12}
               xs={12}
               style={{ padding: "10px" }}
+              alignSelf="center"
             >
               <Typography variant="h6" gutterBottom>
                 Have you ever gotten lost in a mall? Tapped someone on the
@@ -103,7 +105,7 @@ const Solution2 = () => {
               }}
             >
               <img
-                src={logo}
+                src={image1}
                 alt="banner"
                 style={{ maxWidth: "75%", maxHeight: "75%" }}
               />
@@ -124,7 +126,7 @@ const Solution2 = () => {
               }}
             >
               <img
-                src={logo}
+                src={image2}
                 alt="banner"
                 style={{ maxWidth: "75%", maxHeight: "75%" }}
               />
@@ -136,6 +138,7 @@ const Solution2 = () => {
               sm={12}
               xs={12}
               style={{ padding: "10px" }}
+              alignSelf="center"
             >
               <Typography
                 color="secondary"

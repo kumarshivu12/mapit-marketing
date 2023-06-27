@@ -11,8 +11,8 @@ import {
 
 //Components
 import banner from "../../assets/images/Solution1Banner.png";
-import image1 from "../../assets/images/Solution1(1).svg";
-import image2 from "../../assets/images/Solution1(2).svg";
+import image1 from "../../assets/images/Solution1(1).jpg";
+import image2 from "../../assets/images/Solution1(2).jpg";
 import { Button2 } from "../../components/Buttons/Buttons";
 
 const Solution1 = () => {
@@ -71,6 +71,7 @@ const Solution1 = () => {
               sm={12}
               xs={12}
               style={{ padding: "10px" }}
+              alignSelf="center"
             >
               <Typography variant="h6" gutterBottom>
                 In the post covid world, hybrid is all the shor! Employees want
@@ -132,6 +133,7 @@ const Solution1 = () => {
               sm={12}
               xs={12}
               style={{ padding: "10px" }}
+              alignSelf="center"
             >
               <Typography
                 color="secondary"
