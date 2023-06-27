@@ -26,11 +26,15 @@ const responsive = {
 const ImageContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   margin: "0 10px",
+  height: "50vh", // Default height for screens under the medium breakpoint
+  [theme.breakpoints.down("md")]: {
+    height: "250px", // Height for larger screens
+  },
 }));
 
 const Image = styled("img")(({ theme }) => ({
   width: "100%",
-  height: "50vh",
+  height: "100%",
   objectFit: "cover",
 }));
 
