@@ -11,7 +11,7 @@ const Container = ({ children }) => (
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      background: "rgb(0 196 240 / 30%)",
+      background: "rgba(61, 208, 227, 0.5)",
     }}
   >
     {children}

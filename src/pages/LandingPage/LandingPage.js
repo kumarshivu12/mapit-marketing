@@ -7,11 +7,13 @@ import Loader from "../../components/Loader/Loader";
 // import { Button1 } from "../../utilities/components/Buttons";
 
 // Styles
+
 const GridContainer = styled(Grid)`
   position: relative;
   overflow: hidden;
   height: calc(100vh - 90px);
   padding: 0 3vw;
+  background-color: rgba(61, 208, 227, 0.5);
   &::before {
     content: "";
     position: absolute;
@@ -22,7 +24,7 @@ const GridContainer = styled(Grid)`
     background-image: url(${landingBackground});
     background-size: cover;
     background-position: center;
-    filter: blur(4px);
+    opacity: 0.3; /* Adjust the opacity as per your preference */
     z-index: -1;
   }
 `;
@@ -32,6 +34,8 @@ const ContentBox = styled(Box)`
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(4px);
+  box-shadow: 1.9765313863754272px 1.9765313863754272px 4.941329479217529px 0px
+    rgba(0, 0, 0, 0.25);
 `;
 
 const RandomWord = styled(Box)`
@@ -115,9 +119,7 @@ const LandingPage = () => {
           </Box> */}
           </ContentBox>
         </Grid>
-        <Grid item lg={5} md={12} sm={12} xs={12}>
-          <Box>Hello </Box>
-        </Grid>
+        <Grid item lg={5} md={12} sm={12} xs={12}></Grid>
       </GridContainer>
     </Box>
   );
