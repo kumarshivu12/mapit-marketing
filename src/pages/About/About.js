@@ -41,7 +41,8 @@ const About = () => {
             <Typography
               component="span"
               variant="h3"
-              style={{ color: "#0F6579", fontWeight: 600 }}
+              color="primary"
+              fontWeight={600}
             >
               Meet
             </Typography>{" "}

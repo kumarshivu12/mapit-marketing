@@ -11,7 +11,7 @@ import Loader from "../../components/Loader/Loader";
 const GridContainer = styled(Grid)`
   position: relative;
   overflow: hidden;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 70px);
   padding: 0 3vw;
   background-color: rgba(61, 208, 227, 0.5);
   &::before {
