@@ -1,23 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { Box, createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
+import React from "react";
 import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useLocation,
-} from "react-router-dom";
+  Box,
+  createTheme,
+  ThemeProvider,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
+import { BrowserRouter } from "react-router-dom";
 
 //Components
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "../src/components/Navbar/Navbar";
 import LandingPage from "./pages/LandingPage/LandingPage";
-import Solutions from "./pages/Solutions/Solutions";
-import Contact from "./pages/Contact/Contact";
-import About from "./pages/About/About";
-import Loader from "./components/Loader/Loader";
-import Technology from "./pages/Technology/Technology";
-import Solution1 from "./pages/Solutions/Solution1";
-import Solution2 from "./pages/Solutions/Solution2";
-import Solution3 from "./pages/Solutions/Solution3";
+import Hero from "./pages/Hero/Hero";
 
 //creating theme
 const theme = createTheme({
@@ -100,50 +94,19 @@ const theme = createTheme({
   },
 });
 
-const PageContent = () => {
-  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("md"));
-  const location = useLocation();
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(true);
-    // Simulating an asynchronous operation
-    setTimeout(() => {
-      setLoading(false);
-    }, 1200);
-  }, [location]);
-
-  if (loading) {
-    return <Loader />;
-  }
-
-  return (
-    <>
-      <Box>
-        <Navbar />
-        <Box style={{ marginTop: isMobile ? "70px" : "90px" }}>
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/solutions" element={<Solutions />} />
-            <Route path="/solutions/solution1" element={<Solution1 />} />
-            <Route path="/solutions/solution2" element={<Solution2 />} />
-            <Route path="/solutions/solution3" element={<Solution3 />} />
-            <Route path="/technology" element={<Technology />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </Box>
-      </Box>
-    </>
-  );
-};
-
 const App = () => {
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <PageContent />
-      </Router>
+      <BrowserRouter>
+        <Box>
+          <Navbar />
+          <Box style={{ marginTop: isMobile ? "70px" : "90px" }}>
+            <LandingPage />
+            <Hero />
+          </Box>
+        </Box>
+      </BrowserRouter>
     </ThemeProvider>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
-import { styled, Typography } from "@mui/material";
+import { Button, styled, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import "./Buttons.css";
 //Styles
 const MyButton1 = styled(Link)`
   padding: 10px 15px;
@@ -69,6 +70,48 @@ const MyButton2 = styled(Link)`
     border-color: #00c4f0;
   }
 `;
+
+const MyButton3 = styled(Button)`
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  width: 12rem;
+  height: auto;
+
+  &:hover .circle {
+    width: 100%;
+  }
+
+  &:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+  }
+
+  &:hover .button-text {
+    color: #fff;
+  }
+`;
+
+export const Button3 = () => {
+  return (
+    <>
+      <button class="learn-more">
+        <span class="circle" aria-hidden="true">
+          <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">Learn More</span>
+      </button>
+    </>
+  );
+};
 
 export const Button1 = ({ text, url }) => {
   return (

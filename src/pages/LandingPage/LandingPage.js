@@ -1,18 +1,29 @@
 import React, { useState, useEffect } from "react";
-import { Box, Typography, Link, Grid, styled } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Link,
+  Grid,
+  styled,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 
 //Components
 import landingBackground from "../../assets/images/landingBackground.png";
 import Loader from "../../components/Loader/Loader";
+import { Button3 } from "../../components/Buttons/Buttons";
 // import { Button1 } from "../../utilities/components/Buttons";
 
 // Styles
 
 const GridContainer = styled(Grid)`
+  // clip-path: polygon(49.7% 100%, 100% 64.3%, 100% 0.3%, 0% 0%, 0.3% 65.3%);
   position: relative;
   overflow: hidden;
-  height: calc(100vh - 70px);
+  height: 100vh;
   padding: 0 3vw;
+  border: 2px solid red;
   background-color: rgba(61, 208, 227, 0.5);
   &::before {
     content: "";
@@ -63,8 +74,10 @@ const RandomWord = styled(Box)`
 const phrases = ["Indoor Space Managemnet", "Automation", "Asset Tracking"];
 
 const LandingPage = () => {
+  const theme = useTheme();
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   useEffect(() => {
     const interval = setInterval(() => {
       setIsVisible(false);
@@ -79,8 +92,28 @@ const LandingPage = () => {
 
   return (
     <Box>
-      <GridContainer container alignItems="center" justifyContent="center">
-        <Grid item lg={7} md={12} sm={12} xs={12} style={{ padding: "10px" }}>
+      <GridContainer
+        container
+        alignItems="center"
+        justifyContent="center"
+        style={{
+          clipPath: isMobile
+            ? "polygon(49.7% 100%, 100% 90%, 100% 0.3%, 0% 0%, 0% 90%)"
+            : "polygon(49.7% 100%, 100% 80%, 100% 0.3%, 0% 0%, 0% 80%)",
+        }}
+      >
+        <Grid
+          item
+          lg={7}
+          md={12}
+          sm={12}
+          xs={12}
+          style={{
+            padding: "10px",
+            marginBottom: "10%",
+            border: "2px solid green",
+          }}
+        >
           <ContentBox>
             <Typography variant="h2" style={{ fontWeight: 500 }}>
               Creating industry-acceptable
@@ -113,13 +146,20 @@ const LandingPage = () => {
                   </Typography>
                 </RandomWord>
               )}
+              <Box style={{ marginTop: "30px" }}>
+                <Button3 />
+              </Box>
             </Box>
-            {/* <Box style={{ margin: "20px 0" }}>
-            <Button1 />
-          </Box> */}
           </ContentBox>
         </Grid>
-        <Grid item lg={5} md={12} sm={12} xs={12}></Grid>
+        <Grid
+          item
+          lg={5}
+          md={12}
+          sm={12}
+          xs={12}
+          style={{ border: "2px solid green" }}
+        ></Grid>
       </GridContainer>
     </Box>
   );
