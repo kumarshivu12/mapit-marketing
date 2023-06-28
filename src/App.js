@@ -6,12 +6,15 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 //Components
 import Navbar from "../src/components/Navbar/Navbar";
 import LandingPage from "./pages/LandingPage/LandingPage";
-import Hero from "./pages/Hero/Hero";
+import Solutions from "./pages/Solutions/Solutions";
+import Technology from "./pages/Technology/Technology";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 
 //creating theme
 const theme = createTheme({
@@ -102,8 +105,13 @@ const App = () => {
         <Box>
           <Navbar />
           <Box style={{ marginTop: isMobile ? "70px" : "90px" }}>
-            <LandingPage />
-            <Hero />
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/technology" element={<Technology />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
           </Box>
         </Box>
       </BrowserRouter>

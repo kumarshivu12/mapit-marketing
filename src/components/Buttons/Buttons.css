@@ -70,7 +70,7 @@ button {
     font-weight: 700;
     line-height: 1.6;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
    }
    
    button:hover .circle {

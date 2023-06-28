@@ -1,8 +1,9 @@
 import React from "react";
-import { Grid, Typography, Box, styled } from "@mui/material";
+import { Grid, Typography, Box, styled, useMediaQuery } from "@mui/material";
 
 //Components
 import Banner from "./Banner";
+import { useTheme } from "@emotion/react";
 
 //Styles
 const Tag = styled(Box)`
@@ -22,9 +23,13 @@ const Tag = styled(Box)`
 `;
 
 const Solutions = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box>
-      <Box style={{ padding: "30px 0", textAlign: "center" }}>
+      <Box
+        style={{ padding: isMobile ? "3vh 0" : "7vh 0", textAlign: "center" }}
+      >
         <Typography variant="h3" fontWeight={600}>
           Our{" "}
           <Typography
@@ -38,7 +43,12 @@ const Solutions = () => {
         </Typography>
       </Box>
       <Banner />
-      <Box style={{ padding: "30px 0", textAlign: "center" }}>
+      <Box
+        style={{
+          margin: isMobile ? "6vh 0 " : "12vh 0 ",
+          textAlign: "center",
+        }}
+      >
         <Typography variant="h3" fontWeight={600} gutterBottom>
           <Typography
             component="span"
@@ -51,7 +61,13 @@ const Solutions = () => {
           of using Indoor Positioning Systems
         </Typography>
       </Box>
-      <Grid container spacing={3} justifyContent="center" alignItems="center">
+      <Grid
+        container
+        spacing={3}
+        justifyContent="center"
+        alignItems="center"
+        style={{ padding: isMobile ? "0 3vw " : "0 5vw ", marginBottom: "5vh" }}
+      >
         <Grid
           item
           lg={3}
@@ -69,11 +85,18 @@ const Solutions = () => {
           }}
         >
           <Tag></Tag>
-          <Typography variant="body1">
-            {" "}
-            Velit scelerisque in dictum non consectetur. Enim blandit volutpat
-            maecenas volutpat blandit aliquam etiam.{" "}
-          </Typography>{" "}
+          <Box style={{ marginBottom: "30px" }}>
+            <Typography variant="h5" fontWeight={500}>
+              Real-Time Asset Tracking
+            </Typography>
+          </Box>
+          <Box>
+            <Typography variant="body1">
+              {" "}
+              IPS systems enable real-time asset tracking, optimizing
+              utilization and streamlining operations in indoor environments{" "}
+            </Typography>{" "}
+          </Box>
         </Grid>
         <Grid
           item
@@ -92,11 +115,19 @@ const Solutions = () => {
           }}
         >
           <Tag></Tag>
-          <Typography variant="body1">
-            {" "}
-            Velit scelerisque in dictum non consectetur. Enim blandit volutpat
-            maecenas volutpat blandit aliquam etiam.{" "}
-          </Typography>{" "}
+          <Box style={{ marginBottom: "30px" }}>
+            <Typography variant="h5" fontWeight={500}>
+              Enhanced Safety and Security
+            </Typography>
+          </Box>
+          <Box>
+            <Typography variant="body1">
+              {" "}
+              IPS systems enhance safety and security by providing real-time
+              tracking and monitoring of people and assets in critical
+              environments{" "}
+            </Typography>{" "}
+          </Box>
         </Grid>
         <Grid
           item
@@ -115,11 +146,18 @@ const Solutions = () => {
           }}
         >
           <Tag></Tag>
-          <Typography variant="body1">
-            {" "}
-            Velit scelerisque in dictum non consectetur. Enim blandit volutpat
-            maecenas volutpat blandit aliquam etiam.{" "}
-          </Typography>{" "}
+          <Box style={{ marginBottom: "30px" }}>
+            <Typography variant="h5" fontWeight={500}>
+              Improved Efficiency and Productivity
+            </Typography>
+          </Box>
+          <Box>
+            <Typography variant="body1">
+              {" "}
+              IPS systems enhance productivity by accurately tracking people and
+              assets, optimizing workflows and resource allocation.{" "}
+            </Typography>{" "}
+          </Box>
         </Grid>
         <Grid
           item
@@ -138,11 +176,19 @@ const Solutions = () => {
           }}
         >
           <Tag></Tag>
-          <Typography variant="body1">
-            {" "}
-            Velit scelerisque in dictum non consectetur. Enim blandit volutpat
-            maecenas volutpat blandit aliquam etiam.{" "}
-          </Typography>{" "}
+          <Box style={{ marginBottom: "30px" }}>
+            <Typography variant="h5" fontWeight={500}>
+              Enhanced Customer Experience
+            </Typography>
+          </Box>
+          <Box>
+            <Typography variant="body1">
+              {" "}
+              IPS systems enhance customer experience by providing indoor
+              navigation in retail and hospitals, improving wayfinding and
+              satisfaction.{" "}
+            </Typography>{" "}
+          </Box>
         </Grid>
       </Grid>
     </Box>

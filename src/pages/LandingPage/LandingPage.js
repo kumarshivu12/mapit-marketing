@@ -13,6 +13,8 @@ import {
 import landingBackground from "../../assets/images/landingBackground.png";
 import Loader from "../../components/Loader/Loader";
 import { Button3 } from "../../components/Buttons/Buttons";
+import Hero from "../Hero/Hero";
+import Footer from "../../components/Footer/Footer";
 // import { Button1 } from "../../utilities/components/Buttons";
 
 // Styles
@@ -92,6 +94,7 @@ const LandingPage = () => {
 
   return (
     <Box>
+      {/* LandingPage */}
       <GridContainer
         container
         alignItems="center"
@@ -161,6 +164,10 @@ const LandingPage = () => {
           style={{ border: "2px solid green" }}
         ></Grid>
       </GridContainer>
+      {/* Hero Section */}
+      <Hero />
+      {/* Footer */}
+      <Footer />
     </Box>
   );
 };
