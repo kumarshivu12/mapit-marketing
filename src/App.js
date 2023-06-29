@@ -13,6 +13,9 @@ import Navbar from "../src/components/Navbar/Navbar";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
+import Solution1 from "./pages/Solutions/Solution1";
+import Solution2 from "./pages/Solutions/Solution2";
+import Solution3 from "./pages/Solutions/Solution3";
 
 //creating theme
 const theme = createTheme({
@@ -106,6 +109,9 @@ const App = () => {
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/about" element={<About />} />
+              <Route path="/solution1" element={<Solution1 />} />
+              <Route path="/solution2" element={<Solution2 />} />
+              <Route path="/solution3" element={<Solution3 />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </Box>
