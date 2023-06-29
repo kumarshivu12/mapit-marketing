@@ -17,11 +17,11 @@ import { Button2 } from "../../components/Buttons/Buttons";
 
 const Solution2 = () => {
   const theme = useTheme();
-  const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Box>
-      <Box height="70vh" style={{ position: "relative", maxHeight: "500px" }}>
+      <Box style={{ position: "relative", height: isMobile ? "50vh" : "70vh" }}>
         <img
           src={banner}
           alt="banner"
@@ -60,19 +60,21 @@ const Solution2 = () => {
           <Button2 text="Ask for a Demo" />
         </Stack>
       </Box>
-      <Box style={{ padding: "0 2vw", margin: "20px 0" }}>
+      <Box
+        style={{ padding: isMobile ? "4vh 3vw 2vh 3vw" : "8vh 5vw 4vh 5vw" }}
+      >
         <Box>
-          <Grid container style={{ margin: "30px 0" }}>
+          <Grid container>
             <Grid
               item
-              lg={7}
+              lg={6}
               md={7}
               sm={12}
               xs={12}
               style={{ padding: "10px" }}
               alignSelf="center"
             >
-              <Typography variant="h6" gutterBottom>
+              <Typography variant="body1" gutterBottom>
                 Have you ever gotten lost in a mall? Tapped someone on the
                 shoulder to ask for directions; Or purchased something only to
                 realize later that a sale was happening in a nearby store. Now
@@ -93,7 +95,7 @@ const Solution2 = () => {
             </Grid>
             <Grid
               item
-              lg={5}
+              lg={6}
               md={5}
               sm={12}
               xs={12}
@@ -111,10 +113,10 @@ const Solution2 = () => {
               />
             </Grid>
           </Grid>
-          <Grid container style={{ margin: "30px 0" }}>
+          <Grid container>
             <Grid
               item
-              lg={7}
+              lg={6}
               md={7}
               sm={12}
               xs={12}
@@ -133,7 +135,7 @@ const Solution2 = () => {
             </Grid>
             <Grid
               item
-              lg={5}
+              lg={6}
               md={5}
               sm={12}
               xs={12}
@@ -148,15 +150,22 @@ const Solution2 = () => {
               >
                 Don’t worry, we got this
               </Typography>
-              <Typography variant="h6">
+              <Typography variant="body1">
                 Dedicated Mobile app for the mall Customers use a mobile app to
                 navigate within the mall, look for sales and offers and get
                 points for engagement. Brands and Mall engage directly with the
-                customer. Time and energy saving for customers. Increased
-                customer loyalty. Increased valuation of the mall. Improved
-                customer experience rating for the mall. Brands/mall get to
-                monitor customer behavior (anonymously aggregated). Better
-                insights, better opportunities. Increased sales.
+                customer.
+                <ul>
+                  <li>Time and energy saving for customers.</li>
+                  <li>Increased customer loyalty.</li>
+                  <li>Increased valuation of the mall. </li>
+                  <li>Improved customer experience rating for the mall. </li>
+                  <li>
+                    Brands/mall get to monitor customer behavior (anonymously
+                    aggregated). Better insights, better opportunities.{" "}
+                  </li>
+                  <li> Increased sales. </li>
+                </ul>
               </Typography>
             </Grid>
           </Grid>

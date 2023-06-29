@@ -17,11 +17,11 @@ import { Button2 } from "../../components/Buttons/Buttons";
 
 const Solution1 = () => {
   const theme = useTheme();
-  const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Box>
-      <Box height="70vh" style={{ position: "relative", maxHeight: "500px" }}>
+      <Box style={{ position: "relative", height: isMobile ? "50vh" : "70vh" }}>
         <img
           src={banner}
           alt="banner"
@@ -61,9 +61,11 @@ const Solution1 = () => {
           <Button2 text="Ask for a Demo" />
         </Stack>
       </Box>
-      <Box style={{ padding: "0 2vw", margin: "20px 0" }}>
-        <Box>
-          <Grid container style={{ margin: "30px 0" }}>
+      <Box>
+        <Box
+          style={{ padding: isMobile ? "4vh 3vw 2vh 3vw" : "8vh 5vw 4vh 5vw" }}
+        >
+          <Grid container>
             <Grid
               item
               lg={6}
@@ -73,7 +75,7 @@ const Solution1 = () => {
               style={{ padding: "10px" }}
               alignSelf="center"
             >
-              <Typography variant="h6" gutterBottom>
+              <Typography variant="body1" gutterBottom>
                 In the post covid world, hybrid is all the shor! Employees want
                 freedom over their work—sitting in an office with the team or
                 working from the comfort of home. As a result, the work of
@@ -106,7 +108,7 @@ const Solution1 = () => {
               />
             </Grid>
           </Grid>
-          <Grid container style={{ margin: "30px 0" }}>
+          <Grid container>
             <Grid
               item
               lg={6}
@@ -143,7 +145,7 @@ const Solution1 = () => {
               >
                 We at MapIT.ai have the solution
               </Typography>
-              <Typography variant="h6">
+              <Typography variant="body1">
                 Workplace seat booking/ workstation management. Employees book a
                 workstation using a mobile/web app. AI decides what seats to
                 allot, giving choices to the employee. The manager oversees

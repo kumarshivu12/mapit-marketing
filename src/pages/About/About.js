@@ -1,13 +1,15 @@
 import React from "react";
 import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useTheme } from "@emotion/react";
 import ProfileCard from "./ProfileCard";
 
 const About = () => {
   let cardCount = 10;
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Box style={{ padding: "30px 2vw" }}>
+    <Box style={{ padding: isMobile ? "4vh 3vw 2vh 3vw" : "8vh 5vw 4vh 5vw" }}>
       <Box>
         <Box>
           <Typography variant="h5" gutterBottom>
