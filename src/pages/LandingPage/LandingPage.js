@@ -15,6 +15,7 @@ import Loader from "../../components/Loader/Loader";
 import { Button3 } from "../../components/Buttons/Buttons";
 import Hero from "../Hero/Hero";
 import Footer from "../../components/Footer/Footer";
+import Solutions from "../Solutions/Solutions";
 // import { Button1 } from "../../utilities/components/Buttons";
 
 // Styles
@@ -166,6 +167,8 @@ const LandingPage = () => {
       </GridContainer>
       {/* Hero Section */}
       <Hero />
+      {/* Solution */}
+      <Solutions />
       {/* Footer */}
       <Footer />
     </Box>

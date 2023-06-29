@@ -1,11 +1,12 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Stack, Box, styled, Typography } from "@mui/material";
+import { Stack, Box, styled, Typography, useMediaQuery } from "@mui/material";
 
 //Components
 import { SolutionData } from "../../data/data";
 import { Button1 } from "../../components/Buttons/Buttons";
+import { useTheme } from "@emotion/react";
 
 //Styles
 const responsive = {
@@ -49,8 +50,10 @@ const Overlay = styled(Stack)(({ theme }) => ({
 }));
 
 const Banner = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <Box>
+    <Box style={{ padding: isMobile ? "2vh 3vw 4vh 3vw" : "4vh 5vw 8vh 5vw" }}>
       <Carousel
         swipeable={false}
         draggable={false}

@@ -107,7 +107,6 @@ const App = () => {
           <Box style={{ marginTop: isMobile ? "70px" : "90px" }}>
             <Routes>
               <Route path="/" element={<LandingPage />} />
-              <Route path="/solutions" element={<Solutions />} />
               <Route path="/technology" element={<Technology />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />

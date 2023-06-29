@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <Box
       style={{
-        padding: isMobile ? "8vh 3vw 2vh 3vw" : "15vh 5vw 1vh 5vw",
+        padding: isMobile ? "4vh 3vw 2vh 3vw" : "8vh 5vw 4vh 5vw",
         border: "2px solid red",
       }}
     >
@@ -31,7 +31,7 @@ const Hero = () => {
           </Typography>
         </Box>
       </Box>
-      <Grid container style={{ margin: isMobile ? "2vh 0" : "5vh 0" }}>
+      {/* <Grid container style={{ margin: isMobile ? "2vh 0" : "5vh 0" }}>
         <Grid item lg={6} md={7} sm={12} xs={12}>
           <Box>
             <Typography variant="h4" color="secondary" fontWeight={600}>
@@ -146,7 +146,7 @@ const Hero = () => {
             <Typography variant="body1"></Typography>
           </Box>
         </Grid>
-      </Grid>
+      </Grid> */}
     </Box>
   );
 };
