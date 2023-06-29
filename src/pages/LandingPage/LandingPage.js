@@ -16,6 +16,7 @@ import { Button3 } from "../../components/Buttons/Buttons";
 import Hero from "../Hero/Hero";
 import Footer from "../../components/Footer/Footer";
 import Solutions from "../Solutions/Solutions";
+import Technology from "../Technology/Technology";
 // import { Button1 } from "../../utilities/components/Buttons";
 
 // Styles
@@ -169,6 +170,8 @@ const LandingPage = () => {
       <Hero />
       {/* Solution */}
       <Solutions />
+      {/* Technology */}
+      <Technology />
       {/* Footer */}
       <Footer />
     </Box>

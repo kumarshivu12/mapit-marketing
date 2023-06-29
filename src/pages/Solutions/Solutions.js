@@ -34,6 +34,7 @@ const Solutions = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box
+      id="solutions"
       style={{
         padding: isMobile ? "4vh 0 2vh 0" : "8vh 0 4vh 0",
         border: "2px solid green",
