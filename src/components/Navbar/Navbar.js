@@ -53,6 +53,12 @@ const Navbar = () => {
   const handleClose = () => {
     setOpen(false);
   };
+  const handleLogoClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <>
@@ -75,6 +81,7 @@ const Navbar = () => {
                   height: isMobile ? "30px" : "50px",
                   width: "auto",
                 }}
+                onClick={handleLogoClick}
               />
             </Component>
           </Box>

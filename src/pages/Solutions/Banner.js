@@ -53,7 +53,7 @@ const Banner = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <Box style={{ padding: isMobile ? "2vh 3vw 4vh 3vw" : "4vh 5vw 8vh 5vw" }}>
+    <Box style={{ padding: isMobile ? "4vh 3vw 8vh 3vw" : "8vh 5vw 12vh 5vw" }}>
       <Carousel
         swipeable={false}
         draggable={false}

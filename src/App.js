@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Box,
-  createTheme,
-  ThemeProvider,
-  useTheme,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 //Components

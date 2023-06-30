@@ -64,7 +64,11 @@ const Solution2 = () => {
         style={{ padding: isMobile ? "4vh 3vw 2vh 3vw" : "8vh 5vw 4vh 5vw" }}
       >
         <Box>
-          <Grid container>
+          <Grid
+            container
+            flexDirection={isMobile ? "column-reverse" : "row"}
+            style={{ padding: isMobile ? "4vh 0" : "8vh 0" }}
+          >
             <Grid
               item
               lg={6}
@@ -113,7 +117,7 @@ const Solution2 = () => {
               />
             </Grid>
           </Grid>
-          <Grid container>
+          <Grid container style={{ padding: isMobile ? "4vh 0" : "8vh 0" }}>
             <Grid
               item
               lg={6}

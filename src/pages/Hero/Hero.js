@@ -8,12 +8,16 @@ const Hero = () => {
     <Box
       style={{
         padding: isMobile ? "4vh 3vw 2vh 3vw" : "8vh 5vw 4vh 5vw",
-        border: "2px solid red",
       }}
     >
       <Box>
-        <Box style={{ textAlign: "center" }}>
-          <Typography color="secondary" fontWeight={600} variant="h3">
+        <Box
+          style={{
+            padding: isMobile ? "4vh 0 2vh 0" : "8vh 0 4vh 0",
+            textAlign: "center",
+          }}
+        >
+          <Typography color="secondary" fontWeight={600} variant="h2">
             Benefits of indoor positioning systems and asset tracking across
             industries
           </Typography>

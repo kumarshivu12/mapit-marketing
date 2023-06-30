@@ -22,12 +22,10 @@ import Technology from "../Technology/Technology";
 // Styles
 
 const GridContainer = styled(Grid)`
-  // clip-path: polygon(49.7% 100%, 100% 64.3%, 100% 0.3%, 0% 0%, 0.3% 65.3%);
   position: relative;
   overflow: hidden;
   height: 100vh;
   padding: 0 3vw;
-  border: 2px solid red;
   background-color: rgba(61, 208, 227, 0.5);
   &::before {
     content: "";
@@ -116,7 +114,6 @@ const LandingPage = () => {
           style={{
             padding: "10px",
             marginBottom: "10%",
-            border: "2px solid green",
           }}
         >
           <ContentBox>
@@ -157,14 +154,7 @@ const LandingPage = () => {
             </Box>
           </ContentBox>
         </Grid>
-        <Grid
-          item
-          lg={5}
-          md={12}
-          sm={12}
-          xs={12}
-          style={{ border: "2px solid green" }}
-        ></Grid>
+        <Grid item lg={5} md={12} sm={12} xs={12}></Grid>
       </GridContainer>
       {/* Hero Section */}
       <Hero />
@@ -173,7 +163,7 @@ const LandingPage = () => {
       {/* Technology */}
       <Technology />
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </Box>
   );
 };

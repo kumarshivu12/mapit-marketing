@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Typography, styled, Box, Stack, Link } from "@mui/material";
-import { Phone } from "@mui/icons-material";
+import { ArrowDownward, ArrowUpward, Phone } from "@mui/icons-material";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
@@ -90,6 +90,7 @@ const CustomButtons = ({ direction, onClose }) => {
             Solutions
           </Typography>
         </StyledHashBox>
+
         <StyledHashBox
           to="/#technology"
           component={Link}

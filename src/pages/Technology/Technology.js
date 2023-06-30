@@ -1,5 +1,14 @@
-import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
-import React from "react";
+import {
+  Box,
+  Typography,
+  useMediaQuery,
+  useTheme,
+  styled,
+} from "@mui/material";
+import React, { useState } from "react";
+
+//Components
+import Banner from "./Banner";
 
 const Technology = () => {
   const theme = useTheme();
@@ -9,20 +18,19 @@ const Technology = () => {
       id="technology"
       style={{
         padding: isMobile ? "4vh 0 2vh 0" : "8vh 0 4vh 0",
-        border: "2px solid green",
       }}
     >
       <Box
         style={{
-          padding: isMobile ? "3vh 3vw" : "7vh 5vw",
+          padding: isMobile ? "6vh 3vw 3vh 3vw" : "12vh 5vw 6vh 5vw",
           textAlign: "center",
         }}
       >
-        <Typography variant="h3" color="primary" fontWeight={600}>
+        <Typography variant="h2" color="primary" fontWeight={600}>
           Technology{" "}
           <Typography
             component="span"
-            variant="h3"
+            variant="h2"
             fontWeight={600}
             style={{ color: "#444444" }}
           >
@@ -49,6 +57,13 @@ const Technology = () => {
           can enable real-time tracking, positioning, and mapping of people and
           assets within indoor spaces.
         </Typography>
+      </Box>
+      <Box
+        style={{
+          padding: isMobile ? "4vh 3vw" : "8vh 5vw",
+        }}
+      >
+        <Banner />
       </Box>
     </Box>
   );

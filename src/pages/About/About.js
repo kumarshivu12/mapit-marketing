@@ -37,12 +37,13 @@ const About = () => {
             display: "flex",
             justifyContent: "center",
             margin: "30px 0",
+            padding: isMobile ? "4vh 0" : "8vh 0",
           }}
         >
-          <Typography variant="h3" style={{ fontWeight: 600 }} gutterBottom>
+          <Typography variant="h2" style={{ fontWeight: 600 }} gutterBottom>
             <Typography
               component="span"
-              variant="h3"
+              variant="h2"
               color="primary"
               fontWeight={600}
             >

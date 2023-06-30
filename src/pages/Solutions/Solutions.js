@@ -37,7 +37,6 @@ const Solutions = () => {
       id="solutions"
       style={{
         padding: isMobile ? "4vh 0 2vh 0" : "8vh 0 4vh 0",
-        border: "2px solid green",
       }}
     >
       <Box>
@@ -47,11 +46,11 @@ const Solutions = () => {
             textAlign: "center",
           }}
         >
-          <Typography variant="h3" fontWeight={600}>
+          <Typography variant="h2" fontWeight={600}>
             Our{" "}
             <Typography
               component="span"
-              variant="h3"
+              variant="h2"
               fontWeight={600}
               color="primary"
             >
@@ -63,7 +62,7 @@ const Solutions = () => {
       </Box>
       <Box
         style={{
-          marginTop: isMobile ? "2vh" : "4vh",
+          marginTop: isMobile ? "6vh" : "12vh",
           background: "rgba(41, 173, 190, 0.20)",
           padding: isMobile ? "3vh 0" : "6vh 0",
         }}
