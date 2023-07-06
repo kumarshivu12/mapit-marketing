@@ -53,20 +53,14 @@ const Navbar = () => {
   const handleClose = () => {
     setOpen(false);
   };
-  const handleLogoClick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <>
       <NavbarContainer position="fixed">
         <Toolbar
           style={{
-            minHeight: isMobile ? "50px" : "70px",
-            maxHeight: isMobile ? "50px" : "70px",
+            minHeight: "70px",
+            maxHeight: "70px",
             display: "flex",
             justifyContent: "space-between",
             padding: "10px 20px",
@@ -77,11 +71,7 @@ const Navbar = () => {
               <img
                 src={logo}
                 alt="logo"
-                style={{
-                  height: isMobile ? "30px" : "50px",
-                  width: "auto",
-                }}
-                onClick={handleLogoClick}
+                style={{ height: "50px", width: "auto" }}
               />
             </Component>
           </Box>

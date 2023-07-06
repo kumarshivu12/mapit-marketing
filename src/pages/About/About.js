@@ -1,28 +1,38 @@
 import React from "react";
 import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
-import { useTheme } from "@emotion/react";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ProfileCard from "./ProfileCard";
 
 const About = () => {
-  let cardCount = 10;
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  let cardCount = 9;
 
   return (
-    <Box style={{ padding: isMobile ? "4vh 3vw 2vh 3vw" : "8vh 5vw 4vh 5vw" }}>
+    <Box style={{ padding: "30px 2vw" }}>
       <Box>
         <Box>
           <Typography variant="h5" gutterBottom>
-            <Typography variant="h5" component="span" color="primary">
+            <Typography
+              variant="h5"
+              component="span"
+              style={{ color: "#0F6579" }}
+            >
               Mapit.ai
             </Typography>{" "}
             (Project IPS) is an entrepreneurial initiative by the students of
             IIT Bombay backed by{" "}
-            <Typography variant="h5" component="span" color="primary">
+            <Typography
+              variant="h5"
+              component="span"
+              style={{ color: "#0F6579" }}
+            >
               MakerBhavanFoundation
             </Typography>{" "}
             and prestigious alumni of IIT Bombay{" "}
-            <Typography variant="h5" component="span" color="primary">
+            <Typography
+              variant="h5"
+              component="span"
+              style={{ color: "#0F6579" }}
+            >
               Dr. Rajan Vaz.
             </Typography>{" "}
             The focus of this initiative is to create industry acceptable
@@ -37,15 +47,13 @@ const About = () => {
             display: "flex",
             justifyContent: "center",
             margin: "30px 0",
-            padding: isMobile ? "4vh 0" : "8vh 0",
           }}
         >
-          <Typography variant="h2" style={{ fontWeight: 600 }} gutterBottom>
+          <Typography variant="h3" style={{ fontWeight: 600 }} gutterBottom>
             <Typography
               component="span"
-              variant="h2"
-              color="primary"
-              fontWeight={600}
+              variant="h3"
+              style={{ color: "#0F6579", fontWeight: 600 }}
             >
               Meet
             </Typography>{" "}

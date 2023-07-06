@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Stack,
-  Typography,
-  IconButton,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Stack, Typography, IconButton } from "@mui/material";
 import {
   GitHub,
   Facebook,
@@ -18,7 +12,6 @@ import {
 import account from "../../assets/images/account.png";
 
 const ProfileCard = () => {
-  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   const [showIntro, setShowIntro] = useState(false);
 
   const handleArrowClick = () => {
@@ -31,7 +24,7 @@ const ProfileCard = () => {
         sx={{
           position: "relative",
           width: "90%",
-          maxWidth: isMobile ? "250px" : "300px",
+          maxWidth: "300px",
           padding: "50px 10px",
           background: "#FFFFFF",
           boxShadow: "8px 12px 8px rgba(0, 0, 0, 0.25)",
@@ -127,8 +120,7 @@ const ProfileCard = () => {
               backgroundColor: "#0F6579",
               textAlign: "center",
               opacity: showIntro ? 1 : 0,
-              transform: `translateY(${showIntro ? "0" : "-100%"})`,
-              transition: "opacity 0.3s ease-out, transform 0.3s ease-out",
+              transition: "all 0.3s ease-out",
             }}
           >
             <Typography
@@ -144,7 +136,7 @@ const ProfileCard = () => {
               products to solve some of the major issues in indoor space
               management and automation while simultaneously inculcating in
               students the required skills to tinker and build new and
-              innovative solutions to real-world problems.
+              innovative solutions to real world problems.
             </Typography>
           </Box>
         )}

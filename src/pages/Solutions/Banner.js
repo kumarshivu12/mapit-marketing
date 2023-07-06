@@ -1,12 +1,11 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Stack, Box, styled, Typography, useMediaQuery } from "@mui/material";
+import { Stack, Box, styled, Typography } from "@mui/material";
 
 //Components
 import { SolutionData } from "../../data/data";
 import { Button1 } from "../../components/Buttons/Buttons";
-import { useTheme } from "@emotion/react";
 
 //Styles
 const responsive = {
@@ -27,15 +26,11 @@ const responsive = {
 const ImageContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   margin: "0 10px",
-  height: "50vh", // Default height for screens under the medium breakpoint
-  [theme.breakpoints.down("md")]: {
-    height: "250px", // Height for larger screens
-  },
 }));
 
 const Image = styled("img")(({ theme }) => ({
   width: "100%",
-  height: "100%",
+  height: "50vh",
   objectFit: "cover",
 }));
 
@@ -50,10 +45,8 @@ const Overlay = styled(Stack)(({ theme }) => ({
 }));
 
 const Banner = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <Box style={{ padding: isMobile ? "4vh 3vw 8vh 3vw" : "8vh 5vw 12vh 5vw" }}>
+    <Box>
       <Carousel
         swipeable={false}
         draggable={false}
