@@ -1,24 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { Box, createTheme, ThemeProvider } from "@mui/material";
+import React from "react";
+import { Box, createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 //Components
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "../src/components/Navbar/Navbar";
 import LandingPage from "./pages/LandingPage/LandingPage";
-import Solutions from "./pages/Solutions/Solutions";
-import Blogs from "./pages/Blogs/Blogs";
-import Blogpage from "./pages/Blogs/Blogpage";
-import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About";
-import Loader from "./components/Loader/Loader";
-import Technology from "./pages/Technology/Technology";
+import Contact from "./pages/Contact/Contact";
 import Solution1 from "./pages/Solutions/Solution1";
 import Solution2 from "./pages/Solutions/Solution2";
 import Solution3 from "./pages/Solutions/Solution3";
-
+import Blogs from "./pages/Blogs/Blogs";
+import Blogpage from "./pages/Blogs/Blogpage";
 //creating theme
 const theme = createTheme({
   typography: {
+    fontFamily: "Roboto Slab,Noto Sans Mono, sans-serif",
     h1: {
       fontSize: "2rem",
       "@media (min-width:600px)": {
@@ -97,25 +94,22 @@ const theme = createTheme({
 });
 
 const App = () => {
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Box>
           <Navbar />
-          <Box style={{ marginTop: "90px" }}>
+          <Box style={{ marginTop: isMobile ? "70px" : "90px" }}>
             <Routes>
-            
               <Route path="/" element={<LandingPage />} />
-              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/about" element={<About />} />
               <Route path="/solutions/solution1" element={<Solution1 />} />
               <Route path="/solutions/solution2" element={<Solution2 />} />
               <Route path="/solutions/solution3" element={<Solution3 />} />
-              <Route path="/technology" element={<Technology />} />
-              <Route path="/blogpage" element={<Blogpage />} />
-              <Route path="/blogs" element={<Blogs />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/loader" element={<Loader />} />
               <Route path="/contact" element={<Contact />} />
+                 <Route path="/blogpage" element={<Blogpage />} />
+              <Route path="/blogs" element={<Blogs />} />
             </Routes>
           </Box>
         </Box>

@@ -10,17 +10,16 @@ import {
 } from "@mui/material";
 
 //Components
-import logo from "../../assets/images/logo.png";
-import banner from "../../assets/images/Solution2Banner.jpg";
+import banner from "../../assets/images/Solution3Banner.jpg";
 import { Button2 } from "../../components/Buttons/Buttons";
 
-const Solution3 = () => {
+const Solution2 = () => {
   const theme = useTheme();
-  const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Box>
-      <Box height="70vh" style={{ position: "relative" }}>
+      <Box style={{ position: "relative", height: isMobile ? "50vh" : "70vh" }}>
         <img
           src={banner}
           alt="banner"
@@ -59,108 +58,85 @@ const Solution3 = () => {
           <Button2 text="Ask for a Demo" />
         </Stack>
       </Box>
-      <Box style={{ padding: "0 2vw", margin: "20px 0" }}>
+      <Box
+        style={{ padding: isMobile ? "4vh 3vw 2vh 3vw" : "8vh 5vw 4vh 5vw" }}
+      >
         <Box>
-          <Grid container style={{ margin: "30px 0" }}>
-            <Grid
-              item
-              lg={7}
-              md={7}
-              sm={12}
-              xs={12}
-              style={{ padding: "10px" }}
-            >
-              <Typography variant="h6" gutterBottom>
-                Have you ever gotten lost in a mall? Tapped someone on the
-                shoulder to ask for directions; Or purchased something only to
-                realize later that a sale was happening in a nearby store. Now
-                consider the perspective of mall management. How do malls manage
-                their customers? What value do they provide to their partner
-                stores? Do they even know who their customers are? The answer is
-                … NO! Malls know little to nothing about their customers.
-                Despite marketing their elite culture, some of their basics are
-                very primitive. Say footfalls … How do they count them? Via
-                manual counters operated by security personnel. How do they
-                retain customers? They don’t. How do they market to customers?
-                They don’t. How do they market their events? Instagram posts.
-              </Typography>
-              <Typography color="secondary" variant="h4" fontWeight={600}>
-                How do we bridge this gap between the people visiting the mall
-                and the mall itself?
-              </Typography>
-            </Grid>
-            <Grid
-              item
-              lg={5}
-              md={5}
-              sm={12}
-              xs={12}
-              style={{
-                padding: "10px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <img
-                src={logo}
-                alt="banner"
-                style={{ maxWidth: "75%", maxHeight: "75%" }}
-              />
-            </Grid>
-          </Grid>
-          <Grid container style={{ margin: "30px 0" }}>
-            <Grid
-              item
-              lg={7}
-              md={7}
-              sm={12}
-              xs={12}
-              style={{
-                padding: "10px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <img
-                src={logo}
-                alt="banner"
-                style={{ maxWidth: "75%", maxHeight: "75%" }}
-              />
-            </Grid>
-            <Grid
-              item
-              lg={5}
-              md={5}
-              sm={12}
-              xs={12}
-              style={{ padding: "10px" }}
-            >
-              <Typography
-                color="secondary"
-                variant="h4"
-                fontWeight={600}
-                gutterBottom
-              >
-                Don’t worry, we got this
-              </Typography>
-              <Typography variant="h6">
-                Dedicated Mobile app for the mall Customers use a mobile app to
-                navigate within the mall, look for sales and offers and get
-                points for engagement. Brands and Mall engage directly with the
-                customer. Time and energy saving for customers. Increased
-                customer loyalty. Increased valuation of the mall. Improved
-                customer experience rating for the mall. Brands/mall get to
-                monitor customer behavior (anonymously aggregated). Better
-                insights, better opportunities. Increased sales.
-              </Typography>
-            </Grid>
-          </Grid>
+          <Typography variant="body1">
+            Indoor Positioning Systems (IPS) are needed in hospitals to address
+            various challenges and improve operational efficiency.
+            <ol>
+              <li>
+                Tracking Patients:
+                <ul style={{ padding: "25px" }}>
+                  <li>
+                    Hospitals require the ability to track the position of
+                    specific patients for various reasons, including monitoring
+                    their movements within the facility.
+                  </li>
+                  <li>
+                    {" "}
+                    Tracking patients helps enhance patient safety, optimize
+                    workflows, and improve care coordination within the
+                    hospital.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Tracking High-Value Assets:
+                <ul style={{ padding: "25px" }}>
+                  <li>
+                    Hospitals face challenges in tracking high-value assets such
+                    as equipment and devices, which can be misplaced or hidden
+                    by staff, leading to unnecessary expenses.
+                  </li>
+                  <li>
+                    {" "}
+                    Implementing asset tracking solutions helps hospitals
+                    efficiently locate and manage these assets, reducing costs,
+                    improving asset utilization, and minimizing equipment loss.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Visitor Navigation:
+                <ul style={{ padding: "25px" }}>
+                  <li>
+                    Navigating within a hospital can be complex and confusing
+                    for visitors, causing inconvenience and potential delays.
+                  </li>
+                  <li>
+                    {" "}
+                    Providing a navigation system or mobile app specifically
+                    designed for hospitals helps visitors easily find their way,
+                    reducing stress and improving the overall visitor
+                    experience.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Customer Experience and Insurance Ratings:
+                <ul style={{ padding: "25px" }}>
+                  <li>
+                    Hospitals in the US receive insurance ratings based on their
+                    customer experience, which impacts the insurance stipends
+                    they receive.
+                  </li>
+                  <li>
+                    {" "}
+                    Focusing on enhancing customer experience yields a favorable
+                    return on investment for hospitals, as higher ratings result
+                    in increased insurance reimbursements and improved financial
+                    outcomes.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </Typography>
         </Box>
       </Box>
     </Box>
   );
 };
 
-export default Solution3;
+export default Solution2;

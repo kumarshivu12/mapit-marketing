@@ -71,8 +71,9 @@ function Carousel() {
 
 const Blogs = () => {
   return (
+
     <div className="Body">
-    {/* <div className="Header">Blogs</div> */}
+    <div className="Header">Blogs</div>
     <div>
       <Carousel />
     </div>

@@ -1,16 +1,34 @@
 import React, { useState, useEffect } from "react";
-import { Box, Typography, Link, Grid, styled } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Link,
+  Grid,
+  styled,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 
 //Components
 import landingBackground from "../../assets/images/landingBackground.png";
+import Loader from "../../components/Loader/Loader";
+import { Button3 } from "../../components/Buttons/Buttons";
+import Hero from "../Hero/Hero";
+import Footer from "../../components/Footer/Footer";
+import Solutions from "../Solutions/Solutions";
+import Technology from "../Technology/Technology";
+import Blogs from "../Blogs/Blogs";
+import Blogpage from "../Blogs/Blogpage";
 // import { Button1 } from "../../utilities/components/Buttons";
 
 // Styles
+
 const GridContainer = styled(Grid)`
   position: relative;
   overflow: hidden;
-  height: calc(100vh - 90px);
+  height: 100vh;
   padding: 0 3vw;
+  background-color: rgba(61, 208, 227, 0.5);
   &::before {
     content: "";
     position: absolute;
@@ -21,7 +39,7 @@ const GridContainer = styled(Grid)`
     background-image: url(${landingBackground});
     background-size: cover;
     background-position: center;
-    filter: blur(4px);
+    opacity: 0.3; /* Adjust the opacity as per your preference */
     z-index: -1;
   }
 `;
@@ -31,6 +49,8 @@ const ContentBox = styled(Box)`
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(4px);
+  box-shadow: 1.9765313863754272px 1.9765313863754272px 4.941329479217529px 0px
+    rgba(0, 0, 0, 0.25);
 `;
 
 const RandomWord = styled(Box)`
@@ -58,9 +78,10 @@ const RandomWord = styled(Box)`
 const phrases = ["Indoor Space Managemnet", "Automation", "Asset Tracking"];
 
 const LandingPage = () => {
+  const theme = useTheme();
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   useEffect(() => {
     const interval = setInterval(() => {
       setIsVisible(false);
@@ -75,18 +96,38 @@ const LandingPage = () => {
 
   return (
     <Box>
-      <GridContainer container alignItems="center" justifyContent="center">
-        <Grid item lg={7} md={12} sm={12} xs={12} style={{ padding: "10px" }}>
+      {/* LandingPage */}
+      <GridContainer
+        container
+        alignItems="center"
+        justifyContent="center"
+        style={{
+          clipPath: isMobile
+            ? "polygon(49.7% 100%, 100% 90%, 100% 0.3%, 0% 0%, 0% 90%)"
+            : "polygon(49.7% 100%, 100% 80%, 100% 0.3%, 0% 0%, 0% 80%)",
+        }}
+      >
+        <Grid
+          item
+          lg={7}
+          md={12}
+          sm={12}
+          xs={12}
+          style={{
+            padding: "10px",
+            marginBottom: "10%",
+          }}
+        >
           <ContentBox>
-            <Typography variant="h1" style={{ fontWeight: 500 }}>
+            <Typography variant="h2" style={{ fontWeight: 500 }}>
               Creating industry-acceptable
             </Typography>
-            <Typography variant="h1" style={{ fontWeight: 500 }}>
+            <Typography variant="h2" style={{ fontWeight: 500 }}>
               products to solve issues
             </Typography>
             <Typography
               component="span"
-              variant="h1"
+              variant="h2"
               style={{ fontWeight: 500 }}
             >
               in{" "}
@@ -99,7 +140,7 @@ const LandingPage = () => {
                   currentWordIndex={currentWordIndex}
                 >
                   <Typography
-                    variant="h1"
+                    variant="h2"
                     color="primary"
                     style={{
                       fontWeight: 500,
@@ -109,16 +150,24 @@ const LandingPage = () => {
                   </Typography>
                 </RandomWord>
               )}
+              <Box style={{ marginTop: "30px" }}>
+                <Button3 />
+              </Box>
             </Box>
-            {/* <Box style={{ margin: "20px 0" }}>
-            <Button1 />
-          </Box> */}
           </ContentBox>
         </Grid>
-        <Grid item lg={5} md={12} sm={12} xs={12}>
-          <Box>Hello </Box>
-        </Grid>
+        <Grid item lg={5} md={12} sm={12} xs={12}></Grid>
       </GridContainer>
+      {/* Hero Section */}
+      <Hero />
+      {/* Solution */}
+      <Solutions />
+      {/* Technology */}
+      <Technology />
+      <Blogs />
+      
+      {/* Footer */}
+      {/* <Footer /> */}
     </Box>
   );
 };
