@@ -22,21 +22,3 @@ export const SolutionData = [
     url: "/solutions/solution3",
   },
 ];
-
-export const TechnologyData = [
-  {
-    id: 1,
-    text: "Indoor Trilateration Based Positioning Using Bluetooth Low Energy Devices",
-    url: "/technology/technology1",
-  },
-  {
-    id: 2,
-    text: "Indoor Positioning Using Embedded IMU Sensors in Smartphone Devices",
-    url: "/technology/technology2",
-  },
-  {
-    id: 3,
-    text: "Fusion",
-    url: "/technology/technology3",
-  },
-];

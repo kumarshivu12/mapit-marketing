@@ -1,28 +1,15 @@
 import React, { useState } from "react";
 import {
   Box,
-  Button,
   FormControl,
   InputLabel,
   MenuItem,
   Select,
   Stack,
   TextField,
-  Typography,
-  styled,
-  useMediaQuery,
 } from "@mui/material";
-import { useTheme } from "@emotion/react";
-
-//Styles
-const StyledButton = styled(Button)`
-  text-transform: none;
-  padding: 10px 50px;
-`;
 
 const ContactForm = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [interest, setInterest] = useState("");
 
   const handleChange = (event) => {
@@ -31,54 +18,46 @@ const ContactForm = () => {
 
   return (
     <Stack direction="column" spacing={4}>
-      <Stack
-        direction={isMobile ? "column" : "row"}
-        spacing={isMobile ? 4 : null}
-        style={{ justifyContent: "space-between" }}
-      >
+      <Box style={{ display: "flex" }}>
         <TextField
           id="outlined-basic"
           label="First Name"
           variant="outlined"
-          placeholder="First Name"
-          sx={{ width: isMobile ? "100%" : "45%" }}
+          placeholder="Enter first name here..."
+          sx={{ width: "45%" }}
         />
         <TextField
           id="outlined-basic"
           label="Last Name"
           variant="outlined"
-          placeholder="Last Name"
-          sx={{ width: isMobile ? "100%" : "45%" }}
+          placeholder="Enter last name here..."
+          sx={{ width: "45%" }}
         />
-      </Stack>
+      </Box>
       <Box>
         <TextField
           id="outlined-basic"
           label="Email"
           variant="outlined"
-          placeholder="abc@gmail.com"
+          placeholder="Enter email here..."
           fullWidth
         />
       </Box>
-      <Stack
-        direction={isMobile ? "column" : "row"}
-        spacing={isMobile ? 4 : null}
-        style={{ justifyContent: "space-between" }}
-      >
+      <Box>
         <TextField
           id="outlined-basic"
           label="Company"
           variant="outlined"
-          sx={{ width: isMobile ? "100%" : "45%" }}
+          sx={{ minWidthidth: "45%", maxWidth: "100%" }}
         />
         <TextField
           id="outlined-basic"
           label="Phone Number"
           variant="outlined"
           placeholder="XXX-XXX-XXXX"
-          sx={{ width: isMobile ? "100%" : "45%" }}
+          sx={{ width: "45%" }}
         />
-      </Stack>
+      </Box>
       <Box>
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">
@@ -107,21 +86,6 @@ const ContactForm = () => {
           minRows={6}
           fullWidth
         />
-      </Box>
-      <Box style={{ display: "flex", justifyContent: "space-between" }}>
-        <StyledButton
-          variant="contained"
-          style={{ backgroundColor: "#ff0000c9" }}
-        >
-          <Typography variant="h6" fontWeight={600}>
-            Reset
-          </Typography>{" "}
-        </StyledButton>
-        <StyledButton variant="contained">
-          <Typography variant="h6" fontWeight={600}>
-            Submit
-          </Typography>{" "}
-        </StyledButton>
       </Box>
     </Stack>
   );

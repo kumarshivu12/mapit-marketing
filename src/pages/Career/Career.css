@@ -1,0 +1,271 @@
+.topBannerC{
+position: relative;
+
+}
+
+.picBlock {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url("../../assets/images/backgroundCareer.png");
+  }
+  
+  .picBlock::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+  }
+
+.dataHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.picHeader{
+    position: absolute;
+    top:115px;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    
+    }
+
+
+.contentHeader{
+    position: absolute;
+    top:185px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+#two{
+    top:225px !important;
+}
+
+
+.containerCareer {
+    display: flex;
+    align-items: center;
+    Margin: 50px 100px;
+  }
+  
+  .contentCareer {
+    flex: 1;
+  }
+  
+  .imageCareer {
+    margin-left: 20px; /* Adjust the margin as needed */
+  }
+  
+  .titleCareer {
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #1B93AE;
+  }
+  
+  .textCareer {
+    font-size: 16px; /* Adjust the font size as needed */
+    width: 80%;
+    font-size: 24px;
+  }
+  
+  .imageCareer {
+    width: 400px; /* Adjust the width as needed */
+    height: 250px; /* Adjust the height as needed */
+    background-image: url("../../assets/images/backgroundCareer.png");
+  }
+  
+  .containerBlueCareer {
+    text-align: center;
+  }
+  
+  .headerTitleBlueCareer {
+    font-size: 34px;
+    margin-bottom: 2.5%;
+    color: #444444;
+  }
+  
+  .imageBoxContainerBlueCareer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .imageBoxBlueCareer {
+    margin: 10px;
+    margin:  0 10% ;
+    
+    
+  }
+  
+  .imageBoxBlueCareer img {
+    width: 100px;
+    height: auto;
+    border-width: 3px;
+    padding: 9%;
+    border-color: #1B93AE;
+    border-style: solid;
+    background-color: white;
+    
+  }
+  
+  .imageCaptionBlueCareer {
+    font-size: 16px;
+    margin-left: 5%;
+    font-size: 24px;
+
+  }
+  
+  .endBlueClass{
+    background-color: rgba(0, 209, 255, 0.2);
+    padding: 2.5% 10%;
+
+  }
+
+
+  .careerform-container {
+    width: 97%;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .careerform-title {
+    text-align: left;
+    margin-left: 10%;
+    margin-bottom: 4%;
+  }
+  
+  .careerform-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+    margin-left: 17%
+
+    
+  }
+  
+  .careerform-input {
+    flex: 1;
+    margin-right: 10px;
+    
+  }
+
+  .careerform-row input{
+    background-color: #F4F4F4;
+    border-color: #C1C1C1;
+    border-radius: 4px;
+    border-style:solid;
+    border-width: 1px;
+    height: 90%;
+    width: 55%;
+    margin-top: 1%;
+  }
+  
+  .careerform-file {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 57.5%;
+  }
+  
+  .careerform-file label {
+    margin-right: 10px;
+  }
+  
+  .careerform-submit {
+    text-align: center;
+  }
+  
+ 
+  
+  .careerform-title {
+    text-align: left;
+  }
+  
+  .careerform-input {
+    margin-bottom: 10px;
+  }
+  
+  .careerform-input label {
+    display: block;
+  }
+  
+  .careerform-file {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .contactUsForm{
+    background-color: white;
+  }
+
+  .careerform-file {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-left: 17%;
+    margin-bottom: 10px;
+  }
+  
+  .careerform-file label {
+    margin-bottom: 5px;
+  }
+  
+  .careerform-file input[type='file']::file-selector-button {
+    display: none;
+  }
+  
+  .careerform-file input[type='file']::before {
+    content: '  Attach  ';
+  }
+  
+  .careerform-submit {
+    text-align: center;
+  }
+
+  .careerform-file input{
+    height: 90%;
+    width: 30%;
+    border-color: #1B93AE;
+    border-radius: 4px;
+    padding: 0.5%;
+    border-style: solid;
+    border-width: 2px;
+  }
+  
+  .careerform-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .careerform-file {
+    margin-right: 10px;
+  }
+  
+  .careerform-submit {
+    text-align: center;
+  }
+
+  .careerform-submit input{
+    background-color: #1B93AE;
+    color: white;
+    height: 120%;
+    padding: 12% 38%;
+    width: 174%;
+    border-radius: 5px;
+    border-color: #FFFFFF;
+    border-style:solid;
+    border-width: 1px;
+  }
+
+  .contactUsForm label{
+    font-weight: bold;
+  }

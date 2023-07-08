@@ -11,15 +11,15 @@ import { useTheme } from "@emotion/react";
 //Styles
 const responsive = {
   desktop: {
-    breakpoint: { max: 3000, min: 900 },
-    items: 1,
+    breakpoint: { max: 3000, min: 1024 },
+    items: 2,
   },
   tablet: {
-    breakpoint: { max: 900, min: 400 },
+    breakpoint: { max: 1024, min: 464 },
     items: 1,
   },
   mobile: {
-    breakpoint: { max: 400, min: 0 },
+    breakpoint: { max: 464, min: 0 },
     items: 1,
   },
 };
@@ -27,12 +27,9 @@ const responsive = {
 const ImageContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   margin: "0 10px",
-  height: "75vh", // Height for large screens
-  [theme.breakpoints.between("md", "lg")]: {
-    height: "500px", // Height for medium screens
-  },
+  height: "50vh", // Default height for screens under the medium breakpoint
   [theme.breakpoints.down("md")]: {
-    height: "300px", // Height for small screens
+    height: "250px", // Height for larger screens
   },
 }));
 
@@ -46,7 +43,7 @@ const Overlay = styled(Stack)(({ theme }) => ({
   position: "absolute",
   top: 0,
   left: 0,
-  width: "60%",
+  width: "70%",
   height: "100%",
   backgroundColor: "rgba(0, 196, 240, 0.7)",
   padding: "10px 20px",
@@ -77,7 +74,7 @@ const Banner = () => {
             <Overlay direction="column" spacing={4} justifyContent="center">
               <Box>
                 <Typography
-                  variant={isMobile ? "h3" : "h1"}
+                  variant="h3"
                   fontWeight={600}
                   style={{ color: "white" }}
                 >
