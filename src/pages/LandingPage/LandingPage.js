@@ -17,6 +17,7 @@ import Hero from "../Hero/Hero";
 import Footer from "../../components/Footer/Footer";
 import Solutions from "../Solutions/Solutions";
 import Technology from "../Technology/Technology";
+import Contact from "../Contact/Contact";
 // import { Button1 } from "../../utilities/components/Buttons";
 
 // Styles
@@ -162,8 +163,10 @@ const LandingPage = () => {
       <Solutions />
       {/* Technology */}
       <Technology />
+      {/* Contact */}
+      <Contact />
       {/* Footer */}
-      {/* <Footer /> */}
+      <Footer />
     </Box>
   );
 };

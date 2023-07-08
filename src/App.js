@@ -10,6 +10,9 @@ import Contact from "./pages/Contact/Contact";
 import Solution1 from "./pages/Solutions/Solution1";
 import Solution2 from "./pages/Solutions/Solution2";
 import Solution3 from "./pages/Solutions/Solution3";
+import Technology1 from "./pages/Technology/Technology1";
+import Technology2 from "./pages/Technology/Technology2";
+import Technology3 from "./pages/Technology/Technology3";
 
 //creating theme
 const theme = createTheme({
@@ -106,6 +109,9 @@ const App = () => {
               <Route path="/solutions/solution1" element={<Solution1 />} />
               <Route path="/solutions/solution2" element={<Solution2 />} />
               <Route path="/solutions/solution3" element={<Solution3 />} />
+              <Route path="/technology/technology1" element={<Technology1 />} />
+              <Route path="/technology/technology2" element={<Technology2 />} />
+              <Route path="/technology/technology3" element={<Technology3 />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </Box>

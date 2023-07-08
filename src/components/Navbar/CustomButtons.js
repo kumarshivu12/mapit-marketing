@@ -68,6 +68,9 @@ const CustomButtons = ({ direction, onClose }) => {
   const handleButtonClick = () => {
     setDrawerOpen(false);
   };
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const isActiveHashLink = (match, location) => {
     return (
@@ -103,7 +106,14 @@ const CustomButtons = ({ direction, onClose }) => {
             Technology
           </Typography>
         </StyledHashBox>
-        <StyledBox to="/about" component={Link} onClick={handleButtonClick}>
+        <StyledBox
+          to="/about"
+          component={Link}
+          onClick={() => {
+            handleButtonClick();
+            scrollToTop();
+          }}
+        >
           <Typography variant="h5" color="primary" fontWeight={600}>
             About Us
           </Typography>
@@ -115,7 +125,10 @@ const CustomButtons = ({ direction, onClose }) => {
           component={NavLink}
           to="/contact"
           activeClassName="active"
-          onClick={handleButtonClick}
+          onClick={() => {
+            handleButtonClick();
+            scrollToTop();
+          }}
         >
           Contact Us
         </Button>
