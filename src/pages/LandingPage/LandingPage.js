@@ -17,6 +17,8 @@ import Hero from "../Hero/Hero";
 import Footer from "../../components/Footer/Footer";
 import Solutions from "../Solutions/Solutions";
 import Technology from "../Technology/Technology";
+import Blogs from "../Blogs/Blogs";
+import Blogpage from "../Blogs/Blogpage";
 import Contact from "../Contact/Contact";
 // import { Button1 } from "../../utilities/components/Buttons";
 
@@ -163,6 +165,8 @@ const LandingPage = () => {
       <Solutions />
       {/* Technology */}
       <Technology />
+      <Blogs />
+
       {/* Contact */}
       <Contact />
       {/* Footer */}

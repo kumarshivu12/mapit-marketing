@@ -10,6 +10,8 @@ import Contact from "./pages/Contact/Contact";
 import Solution1 from "./pages/Solutions/Solution1";
 import Solution2 from "./pages/Solutions/Solution2";
 import Solution3 from "./pages/Solutions/Solution3";
+import Blogs from "./pages/Blogs/Blogs";
+import Blogpage from "./pages/Blogs/Blogpage";
 import Technology1 from "./pages/Technology/Technology1";
 import Technology2 from "./pages/Technology/Technology2";
 import Technology3 from "./pages/Technology/Technology3";
@@ -113,6 +115,8 @@ const App = () => {
               <Route path="/technology/technology2" element={<Technology2 />} />
               <Route path="/technology/technology3" element={<Technology3 />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/blogpage" element={<Blogpage />} />
+              <Route path="/blogs" element={<Blogs />} />
             </Routes>
           </Box>
         </Box>

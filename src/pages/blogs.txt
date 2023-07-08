@@ -1,0 +1,75 @@
+import React from "react";
+import image1 from "../../assets/images/Solution1(1).svg";
+import "./Blogs.css"
+
+const Blogs = () => {
+  return (
+    <>
+    <div className="container">
+    <div className="blogPost">
+      <div className="picBlogPost">
+        <img className="pictureBlogPost" src={image1}/>
+      </div>
+      <div className="categoryBlogPost">
+      Technology
+      </div>
+      <div className="titleBlogPost">
+      While directing the Union Ministry of Information and Broadcasting and the Central Board of Film Certification (CBFC) to submit their personal affidav
+
+      </div>
+      <div className="contentBlogPost">
+
+      </div>
+    </div>
+    <div className="blogPost">
+      <div className="picBlogPost">
+        <img className="pictureBlogPost" src={image1}/>
+      </div>
+      <div className="categoryBlogPost">
+      Technology
+      </div>
+      <div className="titleBlogPost">
+      While directing the Union Ministry of Information and Broadcasting and the Central Board of Film Certification (CBFC) to submit their personal affidav
+
+      </div>
+      <div className="contentBlogPost">
+
+      </div>
+    </div>
+    <div className="blogPost">
+      <div className="picBlogPost">
+        <img className="pictureBlogPost" src={image1}/>
+      </div>
+      <div className="categoryBlogPost">
+      Technology
+      </div>
+      <div className="titleBlogPost">
+      While directing the Union Ministry of Information and Broadcasting and the Central Board of Film Certification (CBFC) to submit their personal affidav
+
+      </div>
+      <div className="contentBlogPost">
+
+      </div>
+    </div>
+    <div className="blogPost">
+      <div className="picBlogPost">
+        <img className="pictureBlogPost" src={image1}/>
+      </div>
+      <div className="categoryBlogPost">
+      Technology
+      </div>
+      <div className="titleBlogPost">
+      While directing the Union Ministry of Information and Broadcasting and the Central Board of Film Certification (CBFC) to submit their personal affidav
+
+      </div>
+      <div className="contentBlogPost">
+
+      </div>
+    </div>
+    
+    </div>
+    </>
+  );
+};
+
+export default Blogs;
