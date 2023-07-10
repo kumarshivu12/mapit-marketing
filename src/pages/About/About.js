@@ -12,17 +12,17 @@ const About = () => {
     <Box style={{ padding: isMobile ? "4vh 3vw 2vh 3vw" : "8vh 5vw 4vh 5vw" }}>
       <Box>
         <Box>
-          <Typography variant="h5" gutterBottom>
-            <Typography variant="h5" component="span" color="primary">
+          <Typography variant="body1" gutterBottom>
+            <Typography variant="body1" component="span" color="primary">
               Mapit.ai
             </Typography>{" "}
             (Project IPS) is an entrepreneurial initiative by the students of
             IIT Bombay backed by{" "}
-            <Typography variant="h5" component="span" color="primary">
+            <Typography variant="body1" component="span" color="primary">
               MakerBhavanFoundation
             </Typography>{" "}
             and prestigious alumni of IIT Bombay{" "}
-            <Typography variant="h5" component="span" color="primary">
+            <Typography variant="body1" component="span" color="primary">
               Dr. Rajan Vaz.
             </Typography>{" "}
             The focus of this initiative is to create industry acceptable

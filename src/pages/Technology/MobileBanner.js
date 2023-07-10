@@ -4,8 +4,8 @@ import "react-multi-carousel/lib/styles.css";
 import { Stack, Box, styled, Typography, useMediaQuery } from "@mui/material";
 
 //Components
-import { SolutionData } from "../../data/data";
-import { Button1, Button3 } from "../../components/Buttons/Buttons";
+import { TechnologyData } from "../../data/data";
+import { Button3 } from "../../components/Buttons/Buttons";
 import { useTheme } from "@emotion/react";
 
 //Styles
@@ -27,12 +27,9 @@ const responsive = {
 const ImageContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   margin: "0 10px",
-  height: "75vh", // Height for large screens
-  [theme.breakpoints.between("md", "lg")]: {
-    height: "500px", // Height for medium screens
-  },
-  [theme.breakpoints.down("md")]: {
-    height: "300px", // Height for small screens
+  height: "400px", // Height for large screens
+  [theme.breakpoints.down("sm")]: {
+    height: "300px",
   },
 }));
 
@@ -46,13 +43,13 @@ const Overlay = styled(Stack)(({ theme }) => ({
   position: "absolute",
   top: 0,
   left: 0,
-  width: "60%",
+  width: "100%",
   height: "100%",
-  backgroundColor: "rgba(0, 196, 240, 0.7)",
+  backgroundColor: "#000000a8",
   padding: "10px 20px",
 }));
 
-const Banner = () => {
+const MobileBanner = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
@@ -75,7 +72,7 @@ const Banner = () => {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
-        {SolutionData.map((item) => (
+        {TechnologyData.map((item) => (
           <ImageContainer key={item.id}>
             <Image loading="lazy" src={item.image} alt="banner" />
             <Overlay direction="column" spacing={4} justifyContent="center">
@@ -99,4 +96,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default MobileBanner;

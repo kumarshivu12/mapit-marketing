@@ -85,3 +85,79 @@ button {
    button:hover .button-text {
     color: #fff;
    }
+
+
+/* Button1  */
+ .button1 {
+    background-color:#1B93AE;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    text-transform: none;
+    padding:10px 20px;
+    transition: .3s;
+  }
+  
+.button1:hover {
+    background-color: #f3f7fe;
+    box-shadow: 0 0 0 5px #1b93ae67;
+    color: #1B93AE;
+    
+  }
+
+/* Button2 */
+.button2 {
+  font-family: monospace;
+  background-color: #f3f7fe;
+  color: #00C4F0;
+  border: none;
+  border-radius: 10px;
+  text-transform: none;
+  transition: .3s;
+  padding:10px 20px;
+  border:2px solid 
+}
+
+.button2:hover {
+  background-color: #00C4F0;
+  box-shadow: 0 0 0 3px #03b1d894;
+  color: #fff;
+}
+
+/* Button3 */
+.button3 {
+  padding:10px 20px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+ }
+ 
+ .button3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms
+ }
+ 
+ .button3:hover {
+  color: #e8e8e8;
+ }
+ 
+ .button3:hover::before {
+  width: 100%;
+ }

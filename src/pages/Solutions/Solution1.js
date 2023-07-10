@@ -58,7 +58,6 @@ const Solution1 = () => {
           style={{
             backgroundImage: `url(${banner})`,
             backgroundSize: "auto",
-            opacity: 0.3,
             height: "100%",
             display: "flex",
             flexDirection: "column",
@@ -66,7 +65,7 @@ const Solution1 = () => {
             alignItems: "center",
           }}
         >
-          <div style={{ opacity: 1 }}>
+          <div>
             <Stack
               direction="column"
               spacing={4}

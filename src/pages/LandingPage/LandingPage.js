@@ -12,7 +12,7 @@ import {
 //Components
 import landingBackground from "../../assets/images/landingBackground.webp";
 import Loader from "../../components/Loader/Loader";
-import { Button3 } from "../../components/Buttons/Buttons";
+import { Button1 } from "../../components/Buttons/Buttons";
 import Hero from "../Hero/Hero";
 import Footer from "../../components/Footer/Footer";
 import Solutions from "../Solutions/Solutions";
@@ -106,6 +106,7 @@ const LandingPage = () => {
           clipPath: isMobile
             ? "polygon(49.7% 100%, 100% 90%, 100% 0.3%, 0% 0%, 0% 90%)"
             : "polygon(49.7% 100%, 100% 80%, 100% 0.3%, 0% 0%, 0% 80%)",
+          marginBottom: isMobile ? "4vh" : "8vh",
         }}
       >
         <Grid
@@ -151,8 +152,8 @@ const LandingPage = () => {
                   </Typography>
                 </RandomWord>
               )}
-              <Box style={{ marginTop: "30px" }}>
-                <Button3 />
+              <Box style={{ marginTop: isMobile ? "40px" : "60px" }}>
+                <Button1 text="Read More" url="/" />
               </Box>
             </Box>
           </ContentBox>
@@ -165,10 +166,12 @@ const LandingPage = () => {
       <Solutions />
       {/* Technology */}
       <Technology />
-      <Blogs />
-
+      {/* Blogs  */}
+      {/* <Blogs /> */}
       {/* Contact */}
-      <Contact />
+      <Box style={{ margin: isMobile ? "4vh 0" : "8vh 0" }}>
+        <Contact />
+      </Box>
       {/* Footer */}
       <Footer />
     </Box>

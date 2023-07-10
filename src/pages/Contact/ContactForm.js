@@ -14,12 +14,6 @@ import {
 } from "@mui/material";
 import { useTheme } from "@emotion/react";
 
-//Styles
-const StyledButton = styled(Button)`
-  text-transform: none;
-  padding: 10px 50px;
-`;
-
 const ContactForm = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -109,19 +103,32 @@ const ContactForm = () => {
         />
       </Box>
       <Box style={{ display: "flex", justifyContent: "space-between" }}>
-        <StyledButton
+        <Button
           variant="contained"
-          style={{ backgroundColor: "#ff0000c9" }}
+          style={{
+            backgroundColor: "#ff0000c9",
+            textTransform: "none",
+            borderRadius: "30px",
+            padding: "5px 25px",
+          }}
         >
-          <Typography variant="h6" fontWeight={600}>
+          <Typography variant="h6" fontWeight={600} style={{ color: "#fff" }}>
             Reset
           </Typography>{" "}
-        </StyledButton>
-        <StyledButton variant="contained">
-          <Typography variant="h6" fontWeight={600}>
+        </Button>
+        <Button
+          variant="contained"
+          style={{
+            textTransform: "none",
+            backgroundColor: "#1B93AE",
+            borderRadius: "30px",
+            padding: "5px 25px",
+          }}
+        >
+          <Typography variant="h6" fontWeight={600} style={{ color: "#fff" }}>
             Submit
           </Typography>{" "}
-        </StyledButton>
+        </Button>
       </Box>
     </Stack>
   );

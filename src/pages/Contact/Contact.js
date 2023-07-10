@@ -32,13 +32,11 @@ const Contact = () => {
   return (
     <Box
       style={{
-        padding: isMobile ? "4vh 3vw 2vh 3vw" : "8vh 5vw 4vh 5vw",
-        // backgroundImage:
-        //   "radial-gradient(circle, #28d3fa, #3ecbfb, #51c3fa, #64bbf6, #74b3f1, #70b7f4, #6dbbf6, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1)",
+        padding: isMobile ? "4vh 3vw" : "8vh 5vw",
         background: "rgba(27, 147, 174, 0.80)",
       }}
     >
-      <Box style={{ padding: isMobile ? "3vh 0" : "6vh 0" }}>
+      <Box style={{ marginBottom: isMobile ? "4vh " : "8vh" }}>
         <Typography variant="h1" fontWeight={800}>
           Questions?
         </Typography>
@@ -87,10 +85,10 @@ const Contact = () => {
                 borderBottom: "1px solid gray",
               }}
             >
-              <Typography variant="h4" fontWeight={600} color="gray">
+              <Typography variant="h5" fontWeight={600} color="gray">
                 ADDRESS
               </Typography>
-              <Typography variant="h6" fontWeight={400}>
+              <Typography variant="body1" fontWeight={400}>
                 Main Gate Rd, IIT Area, Powai, Mumbai, Maharashtra 400076
               </Typography>{" "}
             </Box>
@@ -102,10 +100,10 @@ const Contact = () => {
                 borderBottom: "1px solid gray",
               }}
             >
-              <Typography variant="h4" fontWeight={600} color="gray">
+              <Typography variant="h5" fontWeight={600} color="gray">
                 CALL US
               </Typography>
-              <Typography variant="h6" fontWeight={400} color="primary">
+              <Typography variant="body1" fontWeight={400} color="primary">
                 +91 XXX-XXX-XXXX
               </Typography>{" "}
             </Box>
@@ -117,13 +115,13 @@ const Contact = () => {
                 borderBottom: "1px solid gray",
               }}
             >
-              <Typography variant="h4" fontWeight={600} color="gray">
+              <Typography variant="h5" fontWeight={600} color="gray">
                 GOT A QUESTION?
               </Typography>
-              <Typography variant="h6" fontWeight={400}>
+              <Typography variant="body1" fontWeight={400}>
                 Drop us an email and we’ll be in touch asap.
               </Typography>
-              <Typography variant="h6" fontWeight={400} color="primary">
+              <Typography variant="body1" fontWeight={400} color="primary">
                 @mapit.ai
               </Typography>{" "}
             </Box>

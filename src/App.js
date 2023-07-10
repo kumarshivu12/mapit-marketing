@@ -20,50 +20,64 @@ import Technology3 from "./pages/Technology/Technology3";
 //creating theme
 const theme = createTheme({
   typography: {
-    fontFamily: "Roboto Slab,Noto Sans Mono, sans-serif",
     h1: {
-      fontSize: "2rem",
+      fontSize: "2.3rem",
       "@media (min-width:600px)": {
         fontSize: "2.5rem",
       },
-      "@media (min-width:960px)": {
+      "@media (min-width:900px)": {
+        fontSize: "2.7rem",
+      },
+      "@media (min-width:1200px)": {
         fontSize: "3rem",
       },
     },
     h2: {
-      fontSize: "1.5rem",
+      fontSize: "2rem",
       "@media (min-width:600px)": {
-        fontSize: "2rem",
+        fontSize: "2.2rem",
       },
-      "@media (min-width:960px)": {
-        fontSize: "2.5rem",
+      "@media (min-width:900px)": {
+        fontSize: "2.4rem",
+      },
+      "@media (min-width:1200px)": {
+        fontSize: "2.6rem",
       },
     },
     h3: {
-      fontSize: "1.2rem",
+      fontSize: "1.6rem",
       "@media (min-width:600px)": {
-        fontSize: "1.5rem",
+        fontSize: "1.8rem",
       },
-      "@media (min-width:960px)": {
+      "@media (min-width:900px)": {
         fontSize: "2rem",
+      },
+      "@media (min-width:900px)": {
+        fontSize: "2.2rem",
       },
     },
     h4: {
+      fontSize: "1.3rem",
+      "@media (min-width:600px)": {
+        fontSize: "1.5rem",
+      },
+      "@media (min-width:900px)": {
+        fontSize: "1.7rem",
+      },
+      "@media (min-width:1200px)": {
+        fontSize: "1.9rem",
+      },
+    },
+    h5: {
       fontSize: "1rem",
       "@media (min-width:600px)": {
         fontSize: "1.2rem",
       },
-      "@media (min-width:960px)": {
-        fontSize: "1.5rem",
+      "@media (min-width:900px)": {
+        fontSize: "1.4rem",
       },
-    },
-    h5: {
-      fontSize: "0.9rem",
-      "@media (min-width:600px)": {
-        fontSize: "1rem",
-      },
-      "@media (min-width:960px)": {
-        fontSize: "1.2rem",
+      "@media (min-width:1200px)": {
+        fontSize: "1.6rem",
       },
     },
     h6: {
@@ -71,14 +85,23 @@ const theme = createTheme({
       "@media (min-width:600px)": {
         fontSize: "0.9rem",
       },
-      "@media (min-width:960px)": {
-        fontSize: "1rem",
+      "@media (min-width:900px)": {
+        fontSize: "1.1rem",
+      },
+      "@media (min-width:1200px)": {
+        fontSize: "1.3rem",
       },
     },
     body1: {
-      fontSize: "1rem",
-      "@media (max-width:600px)": {
-        fontSize: "0.8rem",
+      fontSize: "0.6rem",
+      "@media (min-width:600px)": {
+        fontSize: "0.7rem",
+      },
+      "@media (min-width:900px)": {
+        fontSize: "0.9rem",
+      },
+      "@media (min-width:1200px)": {
+        fontSize: "1.1rem",
       },
     },
   },
@@ -90,7 +113,7 @@ const theme = createTheme({
       main: "#1B93AE",
     },
     dark: {
-      main: "black",
+      main: "#444444",
     },
     light: {
       main: "white",

@@ -11,19 +11,15 @@ import sixth from "../../assets/images/6.webp";
 import seventh from "../../assets/images/7.webp";
 import eighth from "../../assets/images/8.webp";
 import ninth from "../../assets/images/9.webp";
-import { Button1 } from "../../components/Buttons/Buttons";
+import { Button3 } from "../../components/Buttons/Buttons";
 import { TechnologyData } from "../../data/data";
 
 //Styles
 const Overlay = styled(Stack)(({ theme }) => ({
   position: "absolute",
-  top: 0,
-  left: 0,
-  // margin: "0 -40px -10px 0 ",
-  padding: "10px 20px",
   width: "100%",
   height: "100%",
-  backgroundColor: "transparent",
+  backgroundColor: "#000000a8",
 }));
 
 const Banner = () => {
@@ -115,7 +111,7 @@ const Banner = () => {
             justifyContent="center"
             style={{ zIndex: grid1Hovered ? 4 : -1 }}
           >
-            <Box>
+            <Box style={{ margin: "0 20px " }}>
               <Typography
                 variant="h5"
                 fontWeight={600}
@@ -124,8 +120,9 @@ const Banner = () => {
                 {TechnologyData[0].text}
               </Typography>
             </Box>
-            <Box>
-              <Button1 text="Read More" url={TechnologyData[0].url} />
+            <br />
+            <Box style={{ margin: "0 20px " }}>
+              <Button3 text="Read More" url={TechnologyData[0].url} />
             </Box>
           </Overlay>
         </Grid>
@@ -174,7 +171,7 @@ const Banner = () => {
             justifyContent="center"
             style={{ zIndex: grid2Hovered ? 4 : -1 }}
           >
-            <Box>
+            <Box style={{ margin: "0 20px " }}>
               <Typography
                 variant="h5"
                 fontWeight={600}
@@ -183,8 +180,9 @@ const Banner = () => {
                 {TechnologyData[1].text}
               </Typography>
             </Box>
-            <Box>
-              <Button1 text="Read More" url={TechnologyData[1].url} />
+            <br />
+            <Box style={{ margin: "0 20px " }}>
+              <Button3 text="Read More" url={TechnologyData[1].url} />
             </Box>
           </Overlay>
         </Grid>
@@ -233,7 +231,7 @@ const Banner = () => {
             justifyContent="center"
             style={{ zIndex: grid3Hovered ? 4 : -1 }}
           >
-            <Box>
+            <Box style={{ margin: "0 20px " }}>
               <Typography
                 variant="h5"
                 fontWeight={600}
@@ -242,8 +240,9 @@ const Banner = () => {
                 {TechnologyData[2].text}
               </Typography>
             </Box>
-            <Box>
-              <Button1 text="Read More" url={TechnologyData[2].url} />
+            <br />
+            <Box style={{ margin: "0 20px " }}>
+              <Button3 text="Read More" url={TechnologyData[2].url} />
             </Box>
           </Overlay>
         </Grid>

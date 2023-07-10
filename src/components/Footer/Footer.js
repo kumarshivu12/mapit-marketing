@@ -38,54 +38,62 @@ const Footer = () => {
         >
           <Box>
             <Typography
-              variant="h3"
+              variant="h5"
               fontWeight={600}
               color="secondary"
               gutterBottom
             >
               MapIT.ai
             </Typography>
-            <Typography variant="h6" fontWeight={400}>
-              Main Gate Rd, IIT Area
-            </Typography>
-            <Typography variant="h6" fontWeight={400} gutterBottom>
+            <Typography variant="body1">Main Gate Rd, IIT Area</Typography>
+            <Typography variant="body1" gutterBottom>
               Powai, Mumbai Maharashtra 400076
             </Typography>
-            <Typography variant="h5" fontWeight={600} color="primary" gutterTop>
+            <Typography variant="h6" fontWeight={500} color="primary" gutterTop>
               +91 XXX-XXX-XXXX
             </Typography>
           </Box>
         </Grid>
         <Grid item lg={3} md={3} sm={6} xs={12} style={{ padding: "20px" }}>
-          <Typography variant="h4" fontWeight={600} style={{ color: "black" }}>
+          <Typography variant="h5" fontWeight={600} style={{ color: "black" }}>
             Solutions
           </Typography>
           <Box style={{ padding: "20px 0" }}>
-            <Typography variant="h6">Hybrid Space</Typography>
-            <Typography variant="h6">Retail Stores</Typography>
-            <Typography variant="h6">Hospitals</Typography>
+            <Typography variant="body1" fontWeight={500}>
+              Hybrid Space
+            </Typography>
+            <Typography variant="body1" fontWeight={500}>
+              Retail Stores
+            </Typography>
+            <Typography variant="body1" fontWeight={500}>
+              Hospitals
+            </Typography>
           </Box>
         </Grid>
         <Grid item lg={3} md={3} sm={6} xs={12} style={{ padding: "20px" }}>
-          <Typography variant="h4" fontWeight={600} style={{ color: "black" }}>
+          <Typography variant="h5" fontWeight={600} style={{ color: "black" }}>
             Technology
           </Typography>
           <Box style={{ padding: "20px 0" }}>
-            <Typography variant="h6">Bluetooth Low Energy</Typography>
-            <Typography variant="h6">
+            <Typography variant="body1" fontWeight={500}>
+              Bluetooth Low Energy
+            </Typography>
+            <Typography variant="body1" fontWeight={500}>
               Inertial Measurement Units (IMU)
             </Typography>
-            <Typography variant="h6">Fusion</Typography>
+            <Typography variant="body1" fontWeight={500}>
+              Fusion
+            </Typography>
           </Box>
         </Grid>
         <Grid item lg={3} md={3} sm={6} xs={12} style={{ padding: "20px" }}>
-          <Typography variant="h4" fontWeight={600} style={{ color: "black" }}>
+          <Typography variant="h5" fontWeight={600} style={{ color: "black" }}>
             Quick Links
           </Typography>
           <Box style={{ padding: "20px 10px" }}>
             <Box>
               <Link
-                to="/"
+                to="/about"
                 style={{
                   textDecoration: "none",
                   display: "inline-flex",
@@ -100,7 +108,7 @@ const Footer = () => {
             </Box>
             <Box>
               <Link
-                to="/solutions"
+                to="/blogs"
                 style={{
                   textDecoration: "none",
                   display: "inline-flex",
@@ -115,7 +123,7 @@ const Footer = () => {
             </Box>
             <Box>
               <Link
-                to="/solutions"
+                to="/contact"
                 style={{
                   textDecoration: "none",
                   display: "inline-flex",
@@ -160,15 +168,19 @@ const Footer = () => {
         >
           <Box style={{ display: "flex", alignItems: "center" }}>
             <Typography
-              variant="h5"
-              fontWeight={600}
+              variant="h6"
+              fontWeight={500}
               style={{ marginRight: isMobile ? "10px" : "20px" }}
             >
               Discover what MapIT.ai can do for you
             </Typography>
             <Button
               variant="contained"
-              style={{ backgroundColor: "#00C4F0", color: "white" }}
+              style={{
+                backgroundColor: "#00C4F0",
+                color: "white",
+                textTransform: "none",
+              }}
               component={NavLink}
               to="/contact"
               activeClassName="active"
@@ -176,7 +188,7 @@ const Footer = () => {
                 scrollToTop();
               }}
             >
-              <Typography varint="h5" fontWeight={500}>
+              <Typography varint="h6" fontWeight={500}>
                 Contact Us
               </Typography>
             </Button>

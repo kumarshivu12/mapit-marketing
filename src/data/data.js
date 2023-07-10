@@ -26,16 +26,19 @@ export const SolutionData = [
 export const TechnologyData = [
   {
     id: 1,
+    image: Solution1,
     text: "Indoor Trilateration Based Positioning Using Bluetooth Low Energy Devices",
     url: "/technology/technology1",
   },
   {
     id: 2,
+    image: Solution2,
     text: "Indoor Positioning Using Embedded IMU Sensors in Smartphone Devices",
     url: "/technology/technology2",
   },
   {
     id: 3,
+    image: Solution3,
     text: "Fusion",
     url: "/technology/technology3",
   },

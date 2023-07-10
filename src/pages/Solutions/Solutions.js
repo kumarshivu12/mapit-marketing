@@ -36,41 +36,43 @@ const Solutions = () => {
     <Box
       id="solutions"
       style={{
-        padding: isMobile ? "4vh 0 2vh 0" : "8vh 0 4vh 0",
+        padding: isMobile ? "4vh 0" : "8vh 0",
+        border: "2px solid yellow",
       }}
     >
-      <Box>
-        <Box
-          style={{
-            padding: isMobile ? "3vh 3vw" : "7vh 5vw",
-            textAlign: "center",
-          }}
-        >
-          <Typography variant="h2" fontWeight={600}>
-            Our{" "}
-            <Typography
-              component="span"
-              variant="h2"
-              fontWeight={600}
-              color="primary"
-            >
-              Solutions
-            </Typography>
-          </Typography>
-        </Box>
-        <Banner />
-      </Box>
       <Box
         style={{
-          marginTop: isMobile ? "6vh" : "12vh",
+          marginBottom: isMobile ? "4vh" : "8vh",
+          textAlign: "center",
+          border: "2px solid green",
+        }}
+      >
+        <Typography variant="h1" fontWeight={600}>
+          Our{" "}
+          <Typography
+            component="span"
+            variant="h1"
+            fontWeight={600}
+            color="primary"
+          >
+            Solutions
+          </Typography>
+        </Typography>
+      </Box>
+      <Banner />
+      <Box
+        style={{
+          border: "2px solid red",
+          marginTop: isMobile ? "4vh" : "8vh",
+          padding: isMobile ? "4vh" : "8vh",
           background: "rgba(41, 173, 190, 0.20)",
-          padding: isMobile ? "3vh 0" : "6vh 0",
         }}
       >
         <Box
           style={{
-            marginBottom: isMobile ? "3vh" : "6vh ",
+            marginBottom: isMobile ? "4vh" : "8vh ",
             textAlign: "center",
+            border: "2px solid pink",
           }}
         >
           <Typography variant="h3" fontWeight={600} gutterBottom>
@@ -87,10 +89,10 @@ const Solutions = () => {
         </Box>
         <Grid
           container
-          spacing={3}
           justifyContent="center"
           style={{
             padding: isMobile ? "0 3vw " : "0 5vw ",
+            border: "2px solid violet",
           }}
         >
           <Grid
@@ -123,7 +125,7 @@ const Solutions = () => {
               </Tag>
             </Box>
             <Box style={{ paddingBottom: "30px" }}>
-              <Typography variant="h5" fontWeight={500}>
+              <Typography variant="h6" fontWeight={600}>
                 Real-Time Asset Tracking
               </Typography>
             </Box>
@@ -160,7 +162,7 @@ const Solutions = () => {
               </Tag>
             </Box>
             <Box style={{ paddingBottom: "30px" }}>
-              <Typography variant="h5" fontWeight={500}>
+              <Typography variant="h6" fontWeight={600}>
                 Enhanced Safety and Security
               </Typography>
             </Box>
@@ -199,7 +201,7 @@ const Solutions = () => {
               </Tag>
             </Box>
             <Box style={{ paddingBottom: "30px" }}>
-              <Typography variant="h5" fontWeight={500}>
+              <Typography variant="h6" fontWeight={600}>
                 Improved Efficiency and Productivity
               </Typography>
             </Box>
@@ -237,7 +239,7 @@ const Solutions = () => {
               </Tag>
             </Box>
             <Box style={{ paddingBottom: "30px" }}>
-              <Typography variant="h5" fontWeight={500}>
+              <Typography variant="h6" fontWeight={600}>
                 Enhanced Customer Experience
               </Typography>
             </Box>
