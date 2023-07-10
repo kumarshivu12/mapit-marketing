@@ -14,9 +14,9 @@ import Productivity from "../../assets/images/Productivity.svg";
 import Customers from "../../assets/images/Customers.svg";
 import Security from "../../assets/images/Security.svg";
 import Footer from "../../components/Footer/Footer";
-import banner from "../../assets/images/Solution2Banner.jpg";
-import image1 from "../../assets/images/Solution2(1).jpeg";
-import image2 from "../../assets/images/Solution2(2).jpg";
+import banner from "../../assets/images/Solution2Banner.webp";
+import image1 from "../../assets/images/Solution2(1).webp";
+import image2 from "../../assets/images/Solution2(2).webp";
 import { Button2 } from "../../components/Buttons/Buttons";
 import Contact from "../Contact/Contact";
 
@@ -175,6 +175,7 @@ const Solution2 = () => {
           }}
         >
           <img
+            loading="lazy"
             src={image1}
             alt="banner"
             style={{ width: "90%", height: "auto" }}
@@ -212,6 +213,7 @@ const Solution2 = () => {
           }}
         ></Box>
         <img
+          loading="lazy"
           src={image2}
           alt="banner"
           style={{
@@ -273,7 +275,13 @@ const Solution2 = () => {
             }}
           >
             <Tag>
-              <img src={Location} alt="location" width="60%" height="60%" />
+              <img
+                loading="lazy"
+                src={Location}
+                alt="location"
+                width="60%"
+                height="60%"
+              />
             </Tag>
           </Box>
           <Box style={{ paddingBottom: "30px" }}>
@@ -307,7 +315,13 @@ const Solution2 = () => {
         >
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <Tag>
-              <img src={Security} alt="location" width="60%" height="60%" />
+              <img
+                loading="lazy"
+                src={Security}
+                alt="location"
+                width="60%"
+                height="60%"
+              />
             </Tag>
           </Box>
           <Box style={{ paddingBottom: "30px" }}>
@@ -340,7 +354,13 @@ const Solution2 = () => {
         >
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <Tag>
-              <img src={Security} alt="location" width="60%" height="60%" />
+              <img
+                loading="lazy"
+                src={Security}
+                alt="location"
+                width="60%"
+                height="60%"
+              />
             </Tag>
           </Box>
           <Box style={{ paddingBottom: "30px" }}>
@@ -373,7 +393,13 @@ const Solution2 = () => {
         >
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <Tag>
-              <img src={Security} alt="location" width="60%" height="60%" />
+              <img
+                loading="lazy"
+                src={Security}
+                alt="location"
+                width="60%"
+                height="60%"
+              />
             </Tag>
           </Box>
           <Box style={{ paddingBottom: "30px" }}>
@@ -407,7 +433,13 @@ const Solution2 = () => {
         >
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <Tag>
-              <img src={Security} alt="location" width="60%" height="60%" />
+              <img
+                loading="lazy"
+                src={Security}
+                alt="location"
+                width="60%"
+                height="60%"
+              />
             </Tag>
           </Box>
           <Box style={{ paddingBottom: "30px" }}>
@@ -442,7 +474,13 @@ const Solution2 = () => {
         >
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <Tag>
-              <img src={Security} alt="location" width="60%" height="60%" />
+              <img
+                loading="lazy"
+                src={Security}
+                alt="location"
+                width="60%"
+                height="60%"
+              />
             </Tag>
           </Box>
           <Box style={{ paddingBottom: "30px" }}>

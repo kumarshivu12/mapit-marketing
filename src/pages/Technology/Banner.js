@@ -2,15 +2,15 @@ import { Grid, Stack, Typography, Box, styled } from "@mui/material";
 import React, { useState } from "react";
 
 //Components
-import first from "../../assets/images/1.png";
-import second from "../../assets/images/2.png";
-import third from "../../assets/images/3.png";
-import forth from "../../assets/images/4.png";
-import fifth from "../../assets/images/5.png";
-import sixth from "../../assets/images/6.png";
-import seventh from "../../assets/images/7.png";
-import eighth from "../../assets/images/8.png";
-import ninth from "../../assets/images/9.png";
+import first from "../../assets/images/1.webp";
+import second from "../../assets/images/2.webp";
+import third from "../../assets/images/3.webp";
+import forth from "../../assets/images/4.webp";
+import fifth from "../../assets/images/5.webp";
+import sixth from "../../assets/images/6.webp";
+import seventh from "../../assets/images/7.webp";
+import eighth from "../../assets/images/8.webp";
+import ninth from "../../assets/images/9.webp";
 import { Button1 } from "../../components/Buttons/Buttons";
 import { TechnologyData } from "../../data/data";
 
@@ -78,6 +78,7 @@ const Banner = () => {
           onMouseLeave={grid1LeaveHandler}
         >
           <img
+            loading="lazy"
             src={first}
             alt="image1"
             style={{
@@ -88,6 +89,7 @@ const Banner = () => {
             }}
           />
           <img
+            loading="lazy"
             src={second}
             alt="image2"
             style={{
@@ -98,6 +100,7 @@ const Banner = () => {
             }}
           />
           <img
+            loading="lazy"
             src={third}
             style={{
               position: "absolute",
@@ -135,6 +138,7 @@ const Banner = () => {
           onMouseLeave={grid2LeaveHandler}
         >
           <img
+            loading="lazy"
             src={forth}
             alt="image4"
             style={{
@@ -145,6 +149,7 @@ const Banner = () => {
             }}
           />
           <img
+            loading="lazy"
             src={fifth}
             style={{
               position: "absolute",
@@ -154,6 +159,7 @@ const Banner = () => {
             }}
           />
           <img
+            loading="lazy"
             src={sixth}
             style={{
               position: "absolute",
@@ -191,6 +197,7 @@ const Banner = () => {
           onMouseLeave={grid3LeaveHandler}
         >
           <img
+            loading="lazy"
             src={seventh}
             style={{
               position: "absolute",
@@ -200,6 +207,7 @@ const Banner = () => {
             }}
           />
           <img
+            loading="lazy"
             src={eighth}
             style={{
               position: "absolute",
@@ -209,6 +217,7 @@ const Banner = () => {
             }}
           />
           <img
+            loading="lazy"
             src={ninth}
             alt="image9"
             style={{

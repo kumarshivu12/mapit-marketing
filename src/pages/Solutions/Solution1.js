@@ -14,9 +14,9 @@ import Productivity from "../../assets/images/Productivity.svg";
 import Customers from "../../assets/images/Customers.svg";
 import Security from "../../assets/images/Security.svg";
 import Footer from "../../components/Footer/Footer";
-import banner from "../../assets/images/Solution1Banner.png";
-import image1 from "../../assets/images/Solution1(1).jpg";
-import image2 from "../../assets/images/Solution1(2).jpg";
+import banner from "../../assets/images/Solution1Banner.webp";
+import image1 from "../../assets/images/Solution1(1).webp";
+import image2 from "../../assets/images/Solution1(1).webp";
 import { Button2 } from "../../components/Buttons/Buttons";
 import Contact from "../Contact/Contact";
 
@@ -184,6 +184,7 @@ const Solution1 = () => {
           }}
         ></Box>
         <img
+          loading="lazy"
           src={image2}
           alt="banner"
           style={{
@@ -245,7 +246,13 @@ const Solution1 = () => {
             }}
           >
             <Tag>
-              <img src={Location} alt="location" width="60%" height="60%" />
+              <img
+                loading="lazy"
+                src={Location}
+                alt="location"
+                width="60%"
+                height="60%"
+              />
             </Tag>
           </Box>
           <Box style={{ paddingBottom: "30px" }}>
@@ -279,7 +286,13 @@ const Solution1 = () => {
         >
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <Tag>
-              <img src={Security} alt="location" width="60%" height="60%" />
+              <img
+                loading="lazy"
+                src={Security}
+                alt="location"
+                width="60%"
+                height="60%"
+              />
             </Tag>
           </Box>
           <Box style={{ paddingBottom: "30px" }}>
@@ -312,7 +325,13 @@ const Solution1 = () => {
         >
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <Tag>
-              <img src={Security} alt="location" width="60%" height="60%" />
+              <img
+                loading="lazy"
+                src={Security}
+                alt="location"
+                width="60%"
+                height="60%"
+              />
             </Tag>
           </Box>
           <Box style={{ paddingBottom: "30px" }}>
@@ -346,7 +365,13 @@ const Solution1 = () => {
         >
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <Tag>
-              <img src={Security} alt="location" width="60%" height="60%" />
+              <img
+                loading="lazy"
+                src={Security}
+                alt="location"
+                width="60%"
+                height="60%"
+              />
             </Tag>
           </Box>
           <Box style={{ paddingBottom: "30px" }}>
@@ -380,7 +405,13 @@ const Solution1 = () => {
         >
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <Tag>
-              <img src={Security} alt="location" width="60%" height="60%" />
+              <img
+                loading="lazy"
+                src={Security}
+                alt="location"
+                width="60%"
+                height="60%"
+              />
             </Tag>
           </Box>
           <Box style={{ paddingBottom: "30px" }}>
@@ -412,7 +443,13 @@ const Solution1 = () => {
         >
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <Tag>
-              <img src={Security} alt="location" width="60%" height="60%" />
+              <img
+                loading="lazy"
+                src={Security}
+                alt="location"
+                width="60%"
+                height="60%"
+              />
             </Tag>
           </Box>
           <Box style={{ paddingBottom: "30px" }}>

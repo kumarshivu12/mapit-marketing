@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 
 //Components
-import landingBackground from "../../assets/images/landingBackground.png";
+import landingBackground from "../../assets/images/landingBackground.webp";
 import Loader from "../../components/Loader/Loader";
 import { Button3 } from "../../components/Buttons/Buttons";
 import Hero from "../Hero/Hero";

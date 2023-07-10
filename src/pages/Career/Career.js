@@ -1,6 +1,6 @@
 import React from "react";
 import "./Career.css";
-import image4 from "../../assets/images/Solution3.jpg";
+import image4 from "../../assets/images/Solution3.webp";
 import log1 from "../../assets/images/careerlog1.png";
 import log2 from "../../assets/images/careerlog2.png";
 import log3 from "../../assets/images/careerlog3.png";
@@ -88,15 +88,14 @@ const Career = () => {
             </div>
           </div>
           <div className="careerform-buttons">
-  <div className="careerform-file">
-    <label htmlFor="file">RESUME/CV*</label>
-    <input type="file" id="file" />
-  </div>
-  <div className="careerform-submit">
-    <input type="submit" value="SUBMIT" />
-  </div>
-</div>
-
+            <div className="careerform-file">
+              <label htmlFor="file">RESUME/CV*</label>
+              <input type="file" id="file" />
+            </div>
+            <div className="careerform-submit">
+              <input type="submit" value="SUBMIT" />
+            </div>
+          </div>
         </div>
       </div>
     </>

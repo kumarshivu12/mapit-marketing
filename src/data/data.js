@@ -1,6 +1,6 @@
-import Solution1 from "../assets/images/Solution1.jpg";
-import Solution2 from "../assets/images/Solution2.jpg";
-import Solution3 from "../assets/images/Solution3.jpg";
+import Solution1 from "../assets/images/Solution1.webp";
+import Solution2 from "../assets/images/Solution2.webp";
+import Solution3 from "../assets/images/Solution3.webp";
 
 export const SolutionData = [
   {

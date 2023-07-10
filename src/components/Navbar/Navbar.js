@@ -12,7 +12,7 @@ import { Menu, Close } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
 //Components
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo.webp";
 import CustomButtons from "./CustomButtons";
 
 //Styles
@@ -75,6 +75,7 @@ const Navbar = () => {
           <Box>
             <Component to="/">
               <img
+                loading="lazy"
                 src={logo}
                 alt="logo"
                 style={{

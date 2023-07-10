@@ -94,6 +94,7 @@ const Technology3 = () => {
         }}
       >
         <img
+          loading="lazy"
           src="https://placehold.co/900X300/png"
           alt="banner"
           style={{ width: "90%", height: "auto" }}
@@ -160,7 +161,13 @@ const Technology3 = () => {
             }}
           >
             <Tag>
-              <img src={Location} alt="location" width="60%" height="60%" />
+              <img
+                loading="lazy"
+                src={Location}
+                alt="location"
+                width="60%"
+                height="60%"
+              />
             </Tag>
           </Box>
           <Box style={{ paddingBottom: "30px" }}>
@@ -191,7 +198,13 @@ const Technology3 = () => {
         >
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <Tag>
-              <img src={Security} alt="location" width="60%" height="60%" />
+              <img
+                loading="lazy"
+                src={Security}
+                alt="location"
+                width="60%"
+                height="60%"
+              />
             </Tag>
           </Box>
           <Box style={{ paddingBottom: "30px" }}>
@@ -222,7 +235,13 @@ const Technology3 = () => {
         >
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <Tag>
-              <img src={Security} alt="location" width="60%" height="60%" />
+              <img
+                loading="lazy"
+                src={Security}
+                alt="location"
+                width="60%"
+                height="60%"
+              />
             </Tag>
           </Box>
           <Box style={{ paddingBottom: "30px" }}>

@@ -73,7 +73,7 @@ const Banner = () => {
       >
         {SolutionData.map((item) => (
           <ImageContainer key={item.id}>
-            <Image src={item.image} alt="banner" />
+            <Image loading="lazy" src={item.image} alt="banner" />
             <Overlay direction="column" spacing={4} justifyContent="center">
               <Box>
                 <Typography

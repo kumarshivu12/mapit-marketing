@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 
 //Components
-import banner from "../../assets/images/Solution3Banner.jpg";
+import banner from "../../assets/images/Solution3Banner.webp";
 import { Button2 } from "../../components/Buttons/Buttons";
 
 const Solution2 = () => {
@@ -21,6 +21,7 @@ const Solution2 = () => {
     <Box>
       <Box style={{ position: "relative", height: isMobile ? "50vh" : "70vh" }}>
         <img
+          loading="lazy"
           src={banner}
           alt="banner"
           width="100%"

@@ -113,7 +113,13 @@ const Solutions = () => {
               }}
             >
               <Tag>
-                <img src={Location} alt="location" width="60%" height="60%" />
+                <img
+                  loading="lazy"
+                  src={Location}
+                  alt="location"
+                  width="60%"
+                  height="60%"
+                />
               </Tag>
             </Box>
             <Box style={{ paddingBottom: "30px" }}>
@@ -144,7 +150,13 @@ const Solutions = () => {
           >
             <Box style={{ display: "flex", justifyContent: "center" }}>
               <Tag>
-                <img src={Security} alt="location" width="60%" height="60%" />
+                <img
+                  loading="lazy"
+                  src={Security}
+                  alt="location"
+                  width="60%"
+                  height="60%"
+                />
               </Tag>
             </Box>
             <Box style={{ paddingBottom: "30px" }}>
@@ -178,6 +190,7 @@ const Solutions = () => {
             <Box style={{ display: "flex", justifyContent: "center" }}>
               <Tag>
                 <img
+                  loading="lazy"
                   src={Productivity}
                   alt="location"
                   width="60%"
@@ -214,7 +227,13 @@ const Solutions = () => {
           >
             <Box style={{ display: "flex", justifyContent: "center" }}>
               <Tag>
-                <img src={Customers} alt="location" width="60%" height="60%" />
+                <img
+                  loading="lazy"
+                  src={Customers}
+                  alt="location"
+                  width="60%"
+                  height="60%"
+                />
               </Tag>
             </Box>
             <Box style={{ paddingBottom: "30px" }}>

@@ -15,7 +15,7 @@ import {
 } from "@mui/icons-material";
 
 //Components
-import account from "../../assets/images/account.png";
+import account from "../../assets/images/account.webp";
 
 const ProfileCard = () => {
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
@@ -75,6 +75,7 @@ const ProfileCard = () => {
           alignItems="center"
         >
           <img
+            loading="lazy"
             src={account}
             alt="mapit"
             style={{
