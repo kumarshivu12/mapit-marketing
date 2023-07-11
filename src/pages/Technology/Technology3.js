@@ -2,6 +2,8 @@ import { useTheme } from "@emotion/react";
 import { Box, useMediaQuery, Grid, Typography, styled } from "@mui/material";
 import React from "react";
 //Components
+import banner from "../../assets/images/Solution1Banner.webp";
+import technology1 from "../../assets/images/Solution1(1).webp";
 import Location from "../../assets/images/Location.svg";
 import Productivity from "../../assets/images/Productivity.svg";
 import Customers from "../../assets/images/Customers.svg";
@@ -37,8 +39,11 @@ const Technology3 = () => {
           clipPath: isMobile
             ? "polygon(49.7% 100%, 100% 90%, 100% 0.3%, 0% 0%, 0% 90%)"
             : "polygon(49.7% 100%, 100% 80%, 100% 0.3%, 0% 0%, 0% 80%)",
-          background: "rgba(15, 101, 121, 0.5)",
+          // background: "rgba(15, 101, 121, 0.5)",
           padding: isMobile ? "4vh 1vw" : "8vh 3vw",
+          backgroundImage: `url(${banner})`,
+          backgroundSize: "auto",
+          marginBottom: isMobile ? "4vh" : "8vh",
         }}
       >
         <Box
@@ -95,7 +100,7 @@ const Technology3 = () => {
       >
         <img
           loading="lazy"
-          src="https://placehold.co/900X300/png"
+          src={technology1}
           alt="banner"
           style={{ width: "90%", height: "auto" }}
         />

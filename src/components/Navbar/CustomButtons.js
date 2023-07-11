@@ -49,6 +49,8 @@ const StyledLink = styled(NavHashLink)`
 
 const CustomButtons = ({ direction, onClose }) => {
   const navigate = useNavigate();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const handleButtonClick = () => {
@@ -57,6 +59,10 @@ const CustomButtons = ({ direction, onClose }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  // const scrollToBox=() =>{
+  //   var element = document.getElementById("myBox");
+  //   element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+  // }
 
   return (
     <>
@@ -74,7 +80,10 @@ const CustomButtons = ({ direction, onClose }) => {
 
         <StyledLink
           to="/#technology"
-          onClick={handleButtonClick}
+          onClick={() => {
+            handleButtonClick();
+            // scrollToBox();
+          }}
           smooth
           duration={500}
         >
@@ -113,7 +122,7 @@ const CustomButtons = ({ direction, onClose }) => {
               size="large"
               style={{
                 marginRight: "10px",
-                fontSize: "25px",
+                fontSize: isMobile ? "15px" : "25px",
               }}
             />
           }

@@ -166,7 +166,13 @@ const Footer = () => {
             justifyContent: "center",
           }}
         >
-          <Box style={{ display: "flex", alignItems: "center" }}>
+          <Box
+            style={{
+              display: "flex",
+              alignItems: "center",
+              textAlign: "center",
+            }}
+          >
             <Typography
               variant="h6"
               fontWeight={500}

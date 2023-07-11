@@ -2,6 +2,8 @@ import { useTheme } from "@emotion/react";
 import { Box, useMediaQuery, Grid, Typography, styled } from "@mui/material";
 import React from "react";
 //Components
+import banner from "../../assets/images/Solution1Banner.webp";
+import technology1 from "../../assets/images/Solution1(1).webp";
 import Location from "../../assets/images/Location.svg";
 import Productivity from "../../assets/images/Productivity.svg";
 import Customers from "../../assets/images/Customers.svg";
@@ -37,8 +39,11 @@ const Technology2 = () => {
           clipPath: isMobile
             ? "polygon(49.7% 100%, 100% 90%, 100% 0.3%, 0% 0%, 0% 90%)"
             : "polygon(49.7% 100%, 100% 80%, 100% 0.3%, 0% 0%, 0% 80%)",
-          background: "rgba(15, 101, 121, 0.5)",
+          // background: "rgba(15, 101, 121, 0.5)",
           padding: isMobile ? "4vh 1vw" : "8vh 3vw",
+          backgroundImage: `url(${banner})`,
+          backgroundSize: "auto",
+          marginBottom: isMobile ? "4vh" : "8vh",
         }}
       >
         <Box
@@ -66,8 +71,8 @@ const Technology2 = () => {
           md={7}
           sm={12}
           xs={12}
-          style={{ padding: "10px" }}
-          alignSelf="center"
+          style={{ padding: "10px", marginTop: isMobile ? "4vh" : null }}
+          alignSelf={isMobile ? null : "center"}
         >
           <Typography variant="body1">
             <strong>Inertial Measurement Units (IMUs)</strong> embedded in
@@ -95,11 +100,12 @@ const Technology2 = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            marginBottom: isMobile ? "4vh" : null,
           }}
         >
           <img
             loading="lazy"
-            src="https://placehold.co/600X300/png"
+            src={technology1}
             alt="banner"
             style={{ width: "90%", height: "auto" }}
           />
@@ -115,7 +121,7 @@ const Technology2 = () => {
       >
         <img
           loading="lazy"
-          src="https://placehold.co/900X300/png"
+          src={banner}
           alt="banner"
           style={{ width: "90%", height: "auto" }}
         />
@@ -170,7 +176,7 @@ const Technology2 = () => {
             </Tag>
           </Box>
           <Box style={{ paddingBottom: "30px" }}>
-            <Typography variant="h5" fontWeight={500}>
+            <Typography variant="h6" fontWeight={500}>
               High Accuracy
             </Typography>
           </Box>
@@ -208,7 +214,7 @@ const Technology2 = () => {
             </Tag>
           </Box>
           <Box style={{ paddingBottom: "30px" }}>
-            <Typography variant="h5" fontWeight={500}>
+            <Typography variant="h6" fontWeight={500}>
               No specialized hardware
             </Typography>
           </Box>

@@ -7,6 +7,7 @@ import {
   styled,
   useTheme,
   useMediaQuery,
+  Button,
 } from "@mui/material";
 
 //Components
@@ -169,7 +170,7 @@ const LandingPage = () => {
       {/* Blogs  */}
       {/* <Blogs /> */}
       {/* Contact */}
-      <Box style={{ margin: isMobile ? "4vh 0" : "8vh 0" }}>
+      <Box id="myBox" style={{ margin: isMobile ? "4vh 0" : "8vh 0" }}>
         <Contact />
       </Box>
       {/* Footer */}
