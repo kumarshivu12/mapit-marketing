@@ -1,11 +1,12 @@
 import React from "react";
 import "./Loader.css";
+
 const Loader = () => {
   return (
-    <>
-      <div class="pin"></div>
-      <div class="pulse"></div>
-    </>
+    <div>
+      <div className="pulse"></div>
+      <div className="pin"></div>
+    </div>
   );
 };
 

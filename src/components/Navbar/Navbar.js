@@ -12,7 +12,7 @@ import { Menu, Close } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
 //Components
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo.webp";
 import CustomButtons from "./CustomButtons";
 
 //Styles
@@ -44,7 +44,6 @@ const CloseButton = styled(IconButton)`
 
 const Navbar = () => {
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down("md"));
-
   const [open, setOpen] = useState(false);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -53,14 +52,20 @@ const Navbar = () => {
   const handleClose = () => {
     setOpen(false);
   };
+  const handleLogoClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <>
       <NavbarContainer position="fixed">
         <Toolbar
           style={{
-            minHeight: "70px",
-            maxHeight: "70px",
+            minHeight: isMobile ? "50px" : "70px",
+            maxHeight: isMobile ? "50px" : "70px",
             display: "flex",
             justifyContent: "space-between",
             padding: "10px 20px",
@@ -69,9 +74,14 @@ const Navbar = () => {
           <Box>
             <Component to="/">
               <img
+                loading="lazy"
                 src={logo}
                 alt="logo"
-                style={{ height: "50px", width: "auto" }}
+                style={{
+                  height: isMobile ? "30px" : "50px",
+                  width: "auto",
+                }}
+                onClick={() => handleLogoClick}
               />
             </Component>
           </Box>
@@ -87,7 +97,7 @@ const Navbar = () => {
               <Menu />
             </IconButton>
           ) : (
-            <CustomButtons direction="row" />
+            <CustomButtons direction="row" onClose={handleClose} />
           )}
 
           <Drawer
@@ -123,7 +133,7 @@ const Navbar = () => {
                 <Close />
               </CloseButton>
             </Box>
-            <CustomButtons direction="column" />
+            <CustomButtons direction="column" onClose={handleClose} />
           </Drawer>
         </Toolbar>
       </NavbarContainer>

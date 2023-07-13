@@ -1,117 +1,69 @@
-import React from "react";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
+import React, { useState } from "react";
+
+// Components
+import Banner from "./Banner";
+import MobileBanner from "./MobileBanner";
 
 const Technology = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
-    <div>
-      <div
+    <>
+      <Box
+        id="technology"
         style={{
-          width: 1500,
-          height: 400,
-          background: "linear-gradient(0deg, white 0%, white 100%)",
-          backgroundImage: "url(https://via.placeholder.com/1500x400)",
-          justifyContent: "flex-start",
-          alignItems: "flex-start",
-          display: "inline-flex",
+          padding: isMobile ? "8vh 3vw 4vh 3vw" : "16vh 5vw 8vh 5vw",
         }}
       >
-        <div
+        <Box
           style={{
-            width: 500,
-            height: 400,
-            paddingTop: 54,
-            paddingBottom: 300,
-            paddingLeft: 56,
-            paddingRight: 147,
-            background: "rgba(0, 0, 0, 0.40)",
-            borderLeft: "0.50px white solid",
-            borderTop: "0.50px white solid",
-            borderRight: "0.50px white solid",
-            borderBottom: "0.50px white solid",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            display: "flex",
+            marginBottom: isMobile ? "4vh" : "6vh",
+            textAlign: "center",
           }}
         >
-          <div
-            style={{
-              width: 297,
-              height: 46,
-              color: "white",
-              fontSize: 33,
-              fontFamily: "Roboto",
-              fontWeight: "700",
-              wordWrap: "break-word",
-            }}
-          >
-            Technology 1
-          </div>
-        </div>
-        <div
+          <Typography variant="h1" color="primary" fontWeight={600}>
+            Technology{" "}
+            <Typography
+              component="span"
+              variant="h1"
+              fontWeight={600}
+              style={{ color: "#444444" }}
+            >
+              Used
+            </Typography>
+          </Typography>
+        </Box>
+        <Box
           style={{
-            width: 500,
-            height: 400,
-            paddingTop: 54,
-            paddingBottom: 300,
-            paddingLeft: 56,
-            paddingRight: 147,
-            background: "rgba(0, 0, 0, 0.40)",
-            borderLeft: "0.50px white solid",
-            borderTop: "0.50px white solid",
-            borderRight: "0.50px white solid",
-            borderBottom: "0.50px white solid",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            display: "flex",
+            padding: isMobile ? "4vh 0" : "8vh 0",
           }}
         >
-          <div
-            style={{
-              width: 297,
-              height: 46,
-              color: "white",
-              fontSize: 33,
-              fontFamily: "Roboto",
-              fontWeight: "700",
-              wordWrap: "break-word",
-            }}
-          >
-            Technology 2
-          </div>
-        </div>
-        <div
+          <Typography variant="body1">
+            Our core technology, currently under provisional patent, revolves
+            around the innovative concept of an Indoor Positioning System (IPS).
+            At MapIT.ai, we have developed cutting-edge solutions that harness
+            the power of IPS to transform various sectors of the industry.
+          </Typography>
+          <Typography variant="body1">
+            With our IPS technology, we have the ability to revolutionize the
+            way businesses and organizations navigate and optimize their indoor
+            environments. By leveraging a combination of advanced hardware,
+            software algorithms, and wireless communication protocols, our
+            system can enable real-time tracking, positioning, and mapping of
+            people and assets within indoor spaces.
+          </Typography>
+        </Box>
+        <Box
           style={{
-            width: 500,
-            height: 400,
-            paddingTop: 54,
-            paddingBottom: 300,
-            paddingLeft: 56,
-            paddingRight: 147,
-            background: "rgba(0, 0, 0, 0.40)",
-            borderLeft: "0.50px white solid",
-            borderTop: "0.50px white solid",
-            borderRight: "0.50px white solid",
-            borderBottom: "0.50px white solid",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            display: "flex",
+            padding: isMobile ? "4vh 0" : "8vh 0",
           }}
         >
-          <div
-            style={{
-              width: 297,
-              height: 46,
-              color: "white",
-              fontSize: 33,
-              fontFamily: "Roboto",
-              fontWeight: "700",
-              wordWrap: "break-word",
-            }}
-          >
-            Technology 3
-          </div>
-        </div>
-      </div>
-    </div>
+          {isMobile ? <MobileBanner /> : <Banner />}
+        </Box>
+      </Box>
+    </>
   );
 };
 

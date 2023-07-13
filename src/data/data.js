@@ -1,24 +1,45 @@
-import Solution1 from "../assets/images/Solution1.jpg";
-import Solution2 from "../assets/images/Solution2.jpg";
-import Solution3 from "../assets/images/Solution3.jpg";
+import HybridSpace from "../assets/images/HybridSpace.webp";
+import AssetTracking from "../assets/images/AssetTracking.webp";
+import CustomerEngagement from "../assets/images/CustomerEngagement.webp";
 
 export const SolutionData = [
   {
     id: 1,
-    image: Solution1,
+    image: HybridSpace,
     text: "Hybrid Workspace",
-    url: "/solutions/solution1",
+    url: "/solutions/hybrid-solution1",
   },
   {
     id: 2,
-    image: Solution2,
+    image: CustomerEngagement,
     text: "Customer engagement in malls or big retail/franchise stores",
     url: "/solutions/solution2",
   },
   {
     id: 3,
-    image: Solution3,
-    text: "Eget gravida cum sociis natoque. Velit scelerisque in dictum non.",
+    image: AssetTracking,
+    text: "Asset Tracking and Indoor Positioning in Hospitals",
     url: "/solutions/solution3",
+  },
+];
+
+export const TechnologyData = [
+  {
+    id: 1,
+    image: HybridSpace,
+    text: "Indoor Trilateration Based Positioning Using Bluetooth Low Energy Devices",
+    url: "/technology/technology1",
+  },
+  {
+    id: 2,
+    image: CustomerEngagement,
+    text: "Indoor Positioning Using Embedded IMU Sensors in Smartphone Devices",
+    url: "/technology/technology2",
+  },
+  {
+    id: 3,
+    image: AssetTracking,
+    text: "Fusion",
+    url: "/technology/technology3",
   },
 ];

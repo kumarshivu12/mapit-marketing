@@ -1,24 +1,25 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Stack, Box, styled, Typography } from "@mui/material";
+import { Stack, Box, styled, Typography, useMediaQuery } from "@mui/material";
 
 //Components
 import { SolutionData } from "../../data/data";
-import { Button1 } from "../../components/Buttons/Buttons";
+import { Button1, Button3 } from "../../components/Buttons/Buttons";
+import { useTheme } from "@emotion/react";
 
 //Styles
 const responsive = {
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 2,
+    breakpoint: { max: 3000, min: 900 },
+    items: 1,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 900, min: 400 },
     items: 1,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 400, min: 0 },
     items: 1,
   },
 };
@@ -26,27 +27,40 @@ const responsive = {
 const ImageContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   margin: "0 10px",
+  height: "75vh", // Height for large screens
+  [theme.breakpoints.between("md", "lg")]: {
+    height: "500px", // Height for medium screens
+  },
+  [theme.breakpoints.down("md")]: {
+    height: "250px", // Height for small screens
+  },
 }));
 
 const Image = styled("img")(({ theme }) => ({
   width: "100%",
-  height: "50vh",
-  objectFit: "cover",
+  height: "100%",
+  objectFit: "auto",
 }));
 
 const Overlay = styled(Stack)(({ theme }) => ({
   position: "absolute",
   top: 0,
   left: 0,
-  width: "70%",
+  width: "60%",
   height: "100%",
   backgroundColor: "rgba(0, 196, 240, 0.7)",
   padding: "10px 20px",
 }));
 
 const Banner = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <Box>
+    <Box
+      style={{
+        padding: isMobile ? "4vh 3vw " : "8vh 5vw ",
+      }}
+    >
       <Carousel
         swipeable={false}
         draggable={false}
@@ -63,11 +77,11 @@ const Banner = () => {
       >
         {SolutionData.map((item) => (
           <ImageContainer key={item.id}>
-            <Image src={item.image} alt="banner" />
+            <Image loading="lazy" src={item.image} alt={item.text} />
             <Overlay direction="column" spacing={4} justifyContent="center">
               <Box>
                 <Typography
-                  variant="h3"
+                  variant={isMobile ? "h5" : "h3"}
                   fontWeight={600}
                   style={{ color: "white" }}
                 >
@@ -75,7 +89,7 @@ const Banner = () => {
                 </Typography>
               </Box>
               <Box>
-                <Button1 text="Read More" url={item.url} />
+                <Button3 text="Read More" url={item.url} />
               </Box>
             </Overlay>
           </ImageContainer>

@@ -1,13 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400;600;700;800;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body {
+  color: #444444;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Scrollbar Track */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #1B93AE; /* Color of the scrollbar handle */
+  border-radius: 4px; /* Rounded corners of the handle */
+}
+
+/* Hovered Scrollbar Handle */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #00C4F0; /* Color of the scrollbar handle on hover */
+  cursor: pointer;
+}
+
+/* Scrollbar Track when the handle is being dragged */
+::-webkit-scrollbar-thumb:active {
+  background-color: #00C4F0; /* Color of the scrollbar handle when active */
+}
+
