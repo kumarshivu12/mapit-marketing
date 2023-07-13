@@ -42,4 +42,8 @@ export const TechnologyData = [
     text: "Fusion",
     url: "/technology/technology3",
   },
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> eed56797913f314bb7114a6be0fa386771dfed4f
