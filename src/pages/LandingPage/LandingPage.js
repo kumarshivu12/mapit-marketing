@@ -174,11 +174,7 @@ const LandingPage = () => {
       <Technology />
 
       {/* Blogs  */}
-<<<<<<< HEAD
       <Blogs />
-=======
-      {/* <Blogs /> */}
->>>>>>> eed56797913f314bb7114a6be0fa386771dfed4f
 
       {/* Contact */}
       <Box id="myBox" style={{ margin: isMobile ? "4vh 0" : "8vh 0" }}>
