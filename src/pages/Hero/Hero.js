@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <Box
       style={{
-        padding: isMobile ? "4vh 3vw " : "8vh 5vw ",
+        padding: isMobile ? "8vh 3vw 0 3vw" : "8vh 5vw 0 5vw",
       }}
     >
       <Box>

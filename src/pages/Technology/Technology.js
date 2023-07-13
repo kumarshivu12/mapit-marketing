@@ -14,7 +14,7 @@ const Technology = () => {
       <Box
         id="technology"
         style={{
-          padding: isMobile ? "4vh 3vw " : "8vh 5vw",
+          padding: isMobile ? "8vh 3vw 4vh 3vw" : "16vh 5vw 8vh 5vw",
         }}
       >
         <Box

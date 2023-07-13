@@ -36,7 +36,7 @@ const Solutions = () => {
     <Box
       id="solutions"
       style={{
-        padding: isMobile ? "4vh 0" : "8vh 0",
+        padding: isMobile ? "8vh 0" : "16vh 0 ",
         border: "2px solid yellow",
       }}
     >

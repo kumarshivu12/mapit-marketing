@@ -99,68 +99,70 @@ const LandingPage = () => {
   return (
     <Box>
       {/* LandingPage */}
-      <GridContainer
-        container
-        alignItems="center"
-        justifyContent="center"
-        style={{
-          clipPath: isMobile
-            ? "polygon(49.7% 100%, 100% 90%, 100% 0.3%, 0% 0%, 0% 90%)"
-            : "polygon(49.7% 100%, 100% 80%, 100% 0.3%, 0% 0%, 0% 80%)",
-          marginBottom: isMobile ? "4vh" : "8vh",
-        }}
-      >
-        <Grid
-          item
-          lg={7}
-          md={12}
-          sm={12}
-          xs={12}
+      <Box>
+        <GridContainer
+          container
+          alignItems="center"
+          justifyContent="center"
           style={{
-            padding: "10px",
-            marginBottom: "10%",
+            clipPath: isMobile
+              ? "polygon(49.7% 100%, 100% 90%, 100% 0.3%, 0% 0%, 0% 90%)"
+              : "polygon(49.7% 100%, 100% 80%, 100% 0.3%, 0% 0%, 0% 80%)",
+            marginBottom: isMobile ? "4vh" : "8vh",
           }}
         >
-          <ContentBox>
-            <Typography variant="h2" style={{ fontWeight: 500 }}>
-              Creating industry-acceptable
-            </Typography>
-            <Typography variant="h2" style={{ fontWeight: 500 }}>
-              products to solve issues
-            </Typography>
-            <Typography
-              component="span"
-              variant="h2"
-              style={{ fontWeight: 500 }}
-            >
-              in{" "}
-            </Typography>
-            <Box component="span">
-              {isVisible && (
-                <RandomWord
-                  component="span"
-                  currentIndex={currentWordIndex}
-                  currentWordIndex={currentWordIndex}
-                >
-                  <Typography
-                    variant="h2"
-                    color="primary"
-                    style={{
-                      fontWeight: 500,
-                    }}
+          <Grid
+            item
+            lg={7}
+            md={12}
+            sm={12}
+            xs={12}
+            style={{
+              padding: "10px",
+              marginBottom: "10%",
+            }}
+          >
+            <ContentBox>
+              <Typography variant="h2" style={{ fontWeight: 500 }}>
+                Creating industry-acceptable
+              </Typography>
+              <Typography variant="h2" style={{ fontWeight: 500 }}>
+                products to solve issues
+              </Typography>
+              <Typography
+                component="span"
+                variant="h2"
+                style={{ fontWeight: 500 }}
+              >
+                in{" "}
+              </Typography>
+              <Box component="span">
+                {isVisible && (
+                  <RandomWord
+                    component="span"
+                    currentIndex={currentWordIndex}
+                    currentWordIndex={currentWordIndex}
                   >
-                    {phrases[currentWordIndex]}
-                  </Typography>
-                </RandomWord>
-              )}
-              <Box style={{ marginTop: isMobile ? "40px" : "60px" }}>
-                <Button1 text="Read More" url="/" />
+                    <Typography
+                      variant="h2"
+                      color="primary"
+                      style={{
+                        fontWeight: 500,
+                      }}
+                    >
+                      {phrases[currentWordIndex]}
+                    </Typography>
+                  </RandomWord>
+                )}
+                <Box style={{ marginTop: isMobile ? "40px" : "60px" }}>
+                  <Button1 text="Read More" url="/" />
+                </Box>
               </Box>
-            </Box>
-          </ContentBox>
-        </Grid>
-        <Grid item lg={5} md={12} sm={12} xs={12}></Grid>
-      </GridContainer>
+            </ContentBox>
+          </Grid>
+          <Grid item lg={5} md={12} sm={12} xs={12}></Grid>
+        </GridContainer>
+      </Box>
       {/* Hero Section */}
       <Hero />
       {/* Solution */}

@@ -8,13 +8,12 @@ import {
   Link,
   useMediaQuery,
 } from "@mui/material";
-import { ArrowDownward, ArrowUpward, Phone } from "@mui/icons-material";
-import { NavLink, useNavigate } from "react-router-dom";
-import { HashLink, NavHashLink } from "react-router-hash-link";
+import { Phone } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { useTheme } from "@emotion/react";
 
-// Styles
-const StyledLink = styled(NavHashLink)`
+const StyledLink = styled(HashLink)`
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -23,13 +22,14 @@ const StyledLink = styled(NavHashLink)`
   padding: 10px;
   border: 3px;
   text-align: center;
+
   &:hover {
     border-bottom-color: #1b93ae;
-
     &::after {
       transform: scaleX(1);
     }
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -40,10 +40,6 @@ const StyledLink = styled(NavHashLink)`
     background-color: #1b93ae;
     transform: scaleX(0);
     transition: transform 0.3s ease;
-  }
-
-  &.active::after {
-    transform: scaleX(1);
   }
 `;
 
@@ -56,94 +52,99 @@ const CustomButtons = ({ direction, onClose }) => {
   const handleButtonClick = () => {
     setDrawerOpen(false);
   };
+
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const element = document.documentElement;
+    element.scrollIntoView({ behavior: "smooth", block: "start" });
   };
-  // const scrollToBox=() =>{
-  //   var element = document.getElementById("myBox");
-  //   element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-  // }
+  const handleLinkClick = () => {
+    handleButtonClick();
+    scrollToTop();
+  };
 
   return (
-    <>
-      <Stack direction={direction} spacing={3} justifyContent="center">
-        <StyledLink
-          to="/#solutions"
-          smooth
-          duration={500}
-          onClick={handleButtonClick}
-        >
-          <Typography variant="h6" color="primary" fontWeight={600}>
-            Solutions
-          </Typography>
-        </StyledLink>
+    <Stack direction={direction} spacing={3} justifyContent="center">
+      <StyledLink
+        smooth
+        duration={300}
+        to="/#solutions"
+        onClick={() => handleLinkClick()}
+      >
+        <Typography variant="h6" color="primary" fontWeight={600}>
+          Solutions
+        </Typography>
+      </StyledLink>
 
-        <StyledLink
-          to="/#technology"
-          onClick={() => {
-            handleButtonClick();
-            // scrollToBox();
-          }}
-          smooth
-          duration={500}
-        >
-          <Typography variant="h6" color="primary" fontWeight={600}>
-            Technology
-          </Typography>
-        </StyledLink>
-        <StyledLink
-          to="/blogs"
-          onClick={handleButtonClick}
-          smooth
-          duration={500}
-        >
-          <Typography variant="h6" color="primary" fontWeight={600}>
-            Blogs
-          </Typography>
-        </StyledLink>
-        <StyledLink
-          to="/about"
-          component={Link}
-          onClick={() => {
-            handleButtonClick();
-            scrollToTop();
-          }}
-        >
-          <Typography variant="h6" color="primary" fontWeight={600}>
-            About Us
-          </Typography>
-        </StyledLink>
-        <Button
-          variant="contained"
-          component={Link}
-          startIcon={
-            <Phone
-              color="light"
-              size="large"
-              style={{
-                marginRight: "10px",
-                fontSize: isMobile ? "15px" : "25px",
-              }}
-            />
-          }
-          style={{
-            backgroundColor: "#1B93AE",
-            borderRadius: "30px",
-            padding: "5px 20px",
-            textTransform: "none",
-          }}
-          onClick={() => {
-            navigate("/contact");
-            handleButtonClick();
-            scrollToTop();
-          }}
-        >
-          <Typography variant="h6" color="white" fontWeight={600}>
-            Contact Us
-          </Typography>
-        </Button>
-      </Stack>
-    </>
+      <StyledLink
+        to="/#technology"
+        onClick={() => {
+          handleButtonClick();
+        }}
+        smooth
+        duration={300}
+      >
+        <Typography variant="h6" color="primary" fontWeight={600}>
+          Technology
+        </Typography>
+      </StyledLink>
+
+      <StyledLink
+        to="/blogs"
+        onClick={() => {
+          handleButtonClick();
+          scrollToTop();
+        }}
+        smooth
+        duration={500}
+      >
+        <Typography variant="h6" color="primary" fontWeight={600}>
+          Blogs
+        </Typography>
+      </StyledLink>
+
+      <StyledLink
+        to="/about"
+        component={Link}
+        onClick={() => {
+          handleButtonClick();
+          scrollToTop();
+        }}
+      >
+        <Typography variant="h6" color="primary" fontWeight={600}>
+          About Us
+        </Typography>
+      </StyledLink>
+
+      <Button
+        variant="contained"
+        component={Link}
+        startIcon={
+          <Phone
+            color="light"
+            size="large"
+            style={{
+              marginRight: "10px",
+              fontSize: isMobile ? "15px" : "25px",
+            }}
+          />
+        }
+        style={{
+          backgroundColor: "#1B93AE",
+          borderRadius: "30px",
+          padding: "5px 20px",
+          textTransform: "none",
+        }}
+        onClick={() => {
+          navigate("/contact");
+          handleButtonClick();
+          scrollToTop();
+        }}
+      >
+        <Typography variant="h6" color="white" fontWeight={600}>
+          Contact Us
+        </Typography>
+      </Button>
+    </Stack>
   );
 };
 
