@@ -9,13 +9,14 @@ import {
 } from "@mui/material";
 import React from "react";
 //Components
-import Location from "../../assets/images/Location.svg";
+
 import Productivity from "../../assets/images/Productivity.svg";
-import Customers from "../../assets/images/Customers.svg";
-import Security from "../../assets/images/Security.svg";
-import Footer from "../../components/Footer/Footer";
+import StreamLined from "../../assets/images/StreamLined.webp";
+import Optimization from "../../assets/images/StreamLined.webp";
+import AI from "../../assets/images/AI.webp";
+import Transarency from "../../assets/images/Transparency.webp";
+import Flexibility from "../../assets/images/Flexibitlity.webp";
 import banner from "../../assets/images/Solution1Banner.webp";
-import image1 from "../../assets/images/Solution1(1).webp";
 import image2 from "../../assets/images/Solution1(1).webp";
 import { Button2 } from "../../components/Buttons/Buttons";
 import Contact from "../Contact/Contact";
@@ -47,22 +48,24 @@ const Solution1 = () => {
     <Box>
       <Box
         style={{
-          height: isMobile ? "50vh" : "70vh",
+          minHeight: isMobile ? "50vh" : "70vh",
+          maxWidth: "100vw",
           clipPath: isMobile
             ? "polygon(49.7% 100%, 100% 90%, 100% 0.3%, 0% 0%, 0% 90%)"
             : "polygon(49.7% 100%, 100% 80%, 100% 0.3%, 0% 0%, 0% 80%)",
           marginBottom: isMobile ? "4vh" : "8vh",
+          backgroundImage: `url(${banner})`,
+          backgroundSize: "cover",
         }}
       >
         <Box
           style={{
-            backgroundImage: `url(${banner})`,
-            backgroundSize: "auto",
-            height: "100%",
+            minHeight: isMobile ? "50vh" : "70vh",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            background: "#e8e8e8ba",
           }}
         >
           <div>
@@ -174,12 +177,22 @@ const Solution1 = () => {
           today, only with MapIT.ai
         </Typography>
       </Box>
-      <Box style={{ height: isMobile ? "50vh" : "75vh" }}>
+      <Box
+        style={{
+          position: "relative",
+          margin: isMobile ? "4vh 0" : "8vh 0",
+          height: isMobile ? "50vh" : "75vh",
+          display: "flex",
+          justifyContent: "center", // Center horizontally
+          alignItems: "center", // Center vertically
+        }}
+      >
         <Box
           style={{
             clipPath: "polygon(0 25%, 100% 0%, 100% 75%, 0% 100%)",
             background: "rgba(73, 169, 190, 1)",
-            height: "100%",
+            height: isMobile ? "50vh" : "75vh",
+            width: "100%",
           }}
         ></Box>
         <img
@@ -187,16 +200,14 @@ const Solution1 = () => {
           src={image2}
           alt="banner"
           style={{
-            position: "relative",
-            bottom: "50%",
-            left: "50%",
-            width: "auto",
+            position: "absolute",
+            width: "90%",
             height: "90%",
-            transform: "translate(-50%,-50%)",
-            zIndex: 1,
+            zIndex: 2,
           }}
         />
       </Box>
+
       <Box style={{ padding: isMobile ? "4vh 3vw" : "8vh 5vw" }}>
         <Typography
           variant="h3"
@@ -247,8 +258,8 @@ const Solution1 = () => {
             <Tag>
               <img
                 loading="lazy"
-                src={Location}
-                alt="location"
+                src={StreamLined}
+                alt="stream lined process"
                 width="60%"
                 height="60%"
               />
@@ -287,8 +298,8 @@ const Solution1 = () => {
             <Tag>
               <img
                 loading="lazy"
-                src={Security}
-                alt="location"
+                src={AI}
+                alt=" AI-driven system"
                 width="60%"
                 height="60%"
               />
@@ -326,8 +337,8 @@ const Solution1 = () => {
             <Tag>
               <img
                 loading="lazy"
-                src={Security}
-                alt="location"
+                src={Transarency}
+                alt="transparency"
                 width="60%"
                 height="60%"
               />
@@ -366,8 +377,8 @@ const Solution1 = () => {
             <Tag>
               <img
                 loading="lazy"
-                src={Security}
-                alt="location"
+                src={Flexibility}
+                alt="Flexibility"
                 width="60%"
                 height="60%"
               />
@@ -406,8 +417,8 @@ const Solution1 = () => {
             <Tag>
               <img
                 loading="lazy"
-                src={Security}
-                alt="location"
+                src={Productivity}
+                alt="Productivity"
                 width="60%"
                 height="60%"
               />
@@ -444,8 +455,8 @@ const Solution1 = () => {
             <Tag>
               <img
                 loading="lazy"
-                src={Security}
-                alt="location"
+                src={Optimization}
+                alt="Optimization"
                 width="60%"
                 height="60%"
               />

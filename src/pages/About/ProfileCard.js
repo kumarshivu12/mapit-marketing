@@ -89,11 +89,11 @@ const ProfileCard = () => {
           />
 
           <Box style={{ textAlign: "center" }}>
-            <Typography variant="h5" style={{ fontWeight: 600 }}>
+            <Typography variant="h6" style={{ fontWeight: 600 }}>
               Name
             </Typography>
             <Typography
-              variant="h5"
+              variant="h6"
               style={{ fontWeight: 400, color: "#0F6579" }}
             >
               Designation

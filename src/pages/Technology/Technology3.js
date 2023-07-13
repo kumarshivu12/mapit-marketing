@@ -3,11 +3,11 @@ import { Box, useMediaQuery, Grid, Typography, styled } from "@mui/material";
 import React from "react";
 //Components
 import banner from "../../assets/images/Solution1Banner.webp";
-import technology1 from "../../assets/images/Solution1(1).webp";
+import IMU from "../../assets/images/BLE.webp";
+import HighAccuracy from "../../assets/images/HighAccuracy.webp";
+import IncreasedRange from "../../assets/images/IncreasedRange.webp";
 import Location from "../../assets/images/Location.svg";
-import Productivity from "../../assets/images/Productivity.svg";
-import Customers from "../../assets/images/Customers.svg";
-import Security from "../../assets/images/Security.svg";
+import Footer from "../../components/Footer/Footer";
 
 //Styles
 const Tag = styled(Box)`
@@ -36,61 +36,36 @@ const Technology3 = () => {
     <Box>
       <Box
         style={{
+          minHeight: isMobile ? "50vh" : "70vh",
+          maxWidth: "100vw",
           clipPath: isMobile
             ? "polygon(49.7% 100%, 100% 90%, 100% 0.3%, 0% 0%, 0% 90%)"
             : "polygon(49.7% 100%, 100% 80%, 100% 0.3%, 0% 0%, 0% 80%)",
-          // background: "rgba(15, 101, 121, 0.5)",
-          padding: isMobile ? "4vh 1vw" : "8vh 3vw",
           backgroundImage: `url(${banner})`,
           backgroundSize: "auto",
-          marginBottom: isMobile ? "4vh" : "8vh",
         }}
       >
         <Box
           style={{
-            padding: isMobile ? "10vh 0 " : "20vh 0 ",
-            marginBottom: isMobile ? "2vh" : "4vh",
+            background: "#e8e8e8ba",
+            minHeight: isMobile ? "50vh" : "70vh",
           }}
         >
-          {/* <Typography variant="h3" fontWeight={500} gutterBottom>
+          <Box
+            style={{
+              padding: isMobile ? "10vh 1vw " : "20vh 3vw ",
+            }}
+          >
+            {/* <Typography variant="h3" fontWeight={500} gutterBottom>
             Indoor Positioning Using
           </Typography>
           <Typography variant="h1" fontWeight={700} style={{ color: "#fff" }}>
             Embedded IMU Sensors in Smartphone Devices
           </Typography> */}
+          </Box>
         </Box>
       </Box>
-      <Box
-        style={{
-          padding: isMobile ? "4vh 3vw" : "8vh 5vw",
-        }}
-      >
-        <Box>
-          <Typography variant="body1">
-            Both BLE and IMU-based indoor positioning have their advantages and
-            limitations.
-            <ul>
-              <li>
-                Limitations of BLE-based indoor positioning:
-                <ul>
-                  <li>
-                    Affected by signal interference, device density, and
-                    building layout.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Limitations of IMU-based indoor positioning:
-                <ul>
-                  <li>Affected by sensor drift and user movement patterns.</li>
-                </ul>
-              </li>
-            </ul>
-            To overcome these limitations, BLE and IMU-based technologies can be
-            fused together.
-          </Typography>
-        </Box>
-      </Box>
+
       <Box
         style={{
           padding: isMobile ? "4vh 3vw" : "8vh 5vw",
@@ -100,8 +75,8 @@ const Technology3 = () => {
       >
         <img
           loading="lazy"
-          src={technology1}
-          alt="banner"
+          src={IMU}
+          alt="Inertial Measurement Units"
           style={{ width: "90%", height: "auto" }}
         />
       </Box>
@@ -168,8 +143,8 @@ const Technology3 = () => {
             <Tag>
               <img
                 loading="lazy"
-                src={Location}
-                alt="location"
+                src={HighAccuracy}
+                alt="improved accuracy"
                 width="60%"
                 height="60%"
               />
@@ -205,8 +180,8 @@ const Technology3 = () => {
             <Tag>
               <img
                 loading="lazy"
-                src={Security}
-                alt="location"
+                src={IncreasedRange}
+                alt="increases range"
                 width="60%"
                 height="60%"
               />
@@ -242,8 +217,8 @@ const Technology3 = () => {
             <Tag>
               <img
                 loading="lazy"
-                src={Security}
-                alt="location"
+                src={Location}
+                alt="accurate poisitioning"
                 width="60%"
                 height="60%"
               />
@@ -270,6 +245,9 @@ const Technology3 = () => {
           can be expected as organizations seek to enhance operations and
           customer experiences.
         </Typography>
+      </Box>
+      <Box style={{ marginTop: isMobile ? "4vh" : "8vh" }}>
+        <Footer />
       </Box>
     </Box>
   );

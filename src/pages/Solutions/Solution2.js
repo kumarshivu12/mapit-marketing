@@ -9,11 +9,12 @@ import {
 } from "@mui/material";
 import React from "react";
 //Components
-import Location from "../../assets/images/Location.svg";
-import Productivity from "../../assets/images/Productivity.svg";
-import Customers from "../../assets/images/Customers.svg";
-import Security from "../../assets/images/Security.svg";
-import Footer from "../../components/Footer/Footer";
+import Loyality from "../../assets/images/Loyality.webp";
+import Time from "../../assets/images/Loyality.webp";
+import Valuation from "../../assets/images/Loyality.webp";
+import Rating from "../../assets/images/Loyality.webp";
+import Behaviour from "../../assets/images/Behaviour.webp";
+import Sales from "../../assets/images/Sales.webp";
 import banner from "../../assets/images/Solution2Banner.webp";
 import image1 from "../../assets/images/Solution2(1).webp";
 import image2 from "../../assets/images/Solution2(2).webp";
@@ -47,26 +48,27 @@ const Solution2 = () => {
     <Box>
       <Box
         style={{
-          height: isMobile ? "50vh" : "70vh",
+          minHeight: isMobile ? "50vh" : "70vh",
+          maxWidth: "100vw",
           clipPath: isMobile
             ? "polygon(49.7% 100%, 100% 90%, 100% 0.3%, 0% 0%, 0% 90%)"
             : "polygon(49.7% 100%, 100% 80%, 100% 0.3%, 0% 0%, 0% 80%)",
           marginBottom: isMobile ? "4vh" : "8vh",
+          backgroundImage: `url(${banner})`,
+          backgroundSize: "cover",
         }}
       >
         <Box
           style={{
-            backgroundImage: `url(${banner})`,
-            backgroundSize: "auto",
-            opacity: 0.3,
-            height: "100%",
+            minHeight: isMobile ? "50vh" : "70vh",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            background: "#e8e8e8ba",
           }}
         >
-          <div style={{ opacity: 1 }}>
+          <div>
             <Stack
               direction="column"
               spacing={4}
@@ -204,12 +206,22 @@ const Solution2 = () => {
         </Typography>
       </Box>
 
-      <Box style={{ height: isMobile ? "50vh" : "75vh" }}>
+      <Box
+        style={{
+          margin: isMobile ? "4vh 0" : "8vh 0",
+          position: "relative",
+          height: isMobile ? "50vh" : "75vh",
+          display: "flex",
+          justifyContent: "center", // Center horizontally
+          alignItems: "center", // Center vertically
+        }}
+      >
         <Box
           style={{
             clipPath: "polygon(0 25%, 100% 0%, 100% 75%, 0% 100%)",
             background: "rgba(73, 169, 190, 1)",
-            height: "100%",
+            height: isMobile ? "50vh" : "75vh",
+            width: "100%",
           }}
         ></Box>
         <img
@@ -217,13 +229,10 @@ const Solution2 = () => {
           src={image2}
           alt="banner"
           style={{
-            position: "relative",
-            bottom: "50%",
-            left: "50%",
-            width: "auto",
+            position: "absolute",
+            width: "90%",
             height: "90%",
-            transform: "translate(-50%,-50%)",
-            zIndex: 1,
+            zIndex: 2,
           }}
         />
       </Box>
@@ -277,8 +286,8 @@ const Solution2 = () => {
             <Tag>
               <img
                 loading="lazy"
-                src={Location}
-                alt="location"
+                src={Time}
+                alt="Time and Energy Saving"
                 width="60%"
                 height="60%"
               />
@@ -317,8 +326,8 @@ const Solution2 = () => {
             <Tag>
               <img
                 loading="lazy"
-                src={Security}
-                alt="location"
+                src={Loyality}
+                alt="Increased Customer Loyalty"
                 width="60%"
                 height="60%"
               />
@@ -356,8 +365,8 @@ const Solution2 = () => {
             <Tag>
               <img
                 loading="lazy"
-                src={Security}
-                alt="location"
+                src={Valuation}
+                alt=" Increased Valuation"
                 width="60%"
                 height="60%"
               />
@@ -395,8 +404,8 @@ const Solution2 = () => {
             <Tag>
               <img
                 loading="lazy"
-                src={Security}
-                alt="location"
+                src={Rating}
+                alt="Improved Customer Experience Rating"
                 width="60%"
                 height="60%"
               />
@@ -435,8 +444,8 @@ const Solution2 = () => {
             <Tag>
               <img
                 loading="lazy"
-                src={Security}
-                alt="location"
+                src={Behaviour}
+                alt=" Monitoring Customer Behavior"
                 width="60%"
                 height="60%"
               />
@@ -476,8 +485,8 @@ const Solution2 = () => {
             <Tag>
               <img
                 loading="lazy"
-                src={Security}
-                alt="location"
+                src={Sales}
+                alt="Increased Sales"
                 width="60%"
                 height="60%"
               />

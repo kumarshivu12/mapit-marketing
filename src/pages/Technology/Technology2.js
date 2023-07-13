@@ -3,11 +3,10 @@ import { Box, useMediaQuery, Grid, Typography, styled } from "@mui/material";
 import React from "react";
 //Components
 import banner from "../../assets/images/Solution1Banner.webp";
-import technology1 from "../../assets/images/Solution1(1).webp";
-import Location from "../../assets/images/Location.svg";
-import Productivity from "../../assets/images/Productivity.svg";
-import Customers from "../../assets/images/Customers.svg";
-import Security from "../../assets/images/Security.svg";
+import IMU from "../../assets/images/BLE.webp";
+import HighAccuracy from "../../assets/images/HighAccuracy.webp";
+import Hardware from "../../assets/images/HighAccuracy.webp";
+import Footer from "../../components/Footer/Footer";
 
 //Styles
 const Tag = styled(Box)`
@@ -36,28 +35,33 @@ const Technology2 = () => {
     <Box>
       <Box
         style={{
+          minHeight: isMobile ? "50vh" : "70vh",
+          maxWidth: "100vw",
           clipPath: isMobile
             ? "polygon(49.7% 100%, 100% 90%, 100% 0.3%, 0% 0%, 0% 90%)"
             : "polygon(49.7% 100%, 100% 80%, 100% 0.3%, 0% 0%, 0% 80%)",
-          // background: "rgba(15, 101, 121, 0.5)",
-          padding: isMobile ? "4vh 1vw" : "8vh 3vw",
           backgroundImage: `url(${banner})`,
           backgroundSize: "auto",
-          marginBottom: isMobile ? "4vh" : "8vh",
         }}
       >
         <Box
           style={{
-            padding: isMobile ? "10vh 0 " : "20vh 0 ",
-            marginBottom: isMobile ? "2vh" : "4vh",
+            background: "#e8e8e8ba",
+            minHeight: isMobile ? "50vh" : "70vh",
           }}
         >
-          <Typography variant="h3" fontWeight={500} gutterBottom>
-            Indoor Positioning Using
-          </Typography>
-          <Typography variant="h1" fontWeight={700} style={{ color: "#fff" }}>
-            Embedded IMU Sensors in Smartphone Devices
-          </Typography>
+          <Box
+            style={{
+              padding: isMobile ? "10vh 1vw " : "20vh 3vw ",
+            }}
+          >
+            <Typography variant="h3" fontWeight={500} gutterBottom>
+              Indoor Positioning Using
+            </Typography>
+            <Typography variant="h1" fontWeight={700} style={{ color: "#fff" }}>
+              Embedded IMU Sensors in Smartphone Devices
+            </Typography>
+          </Box>
         </Box>
       </Box>
       <Grid
@@ -105,8 +109,8 @@ const Technology2 = () => {
         >
           <img
             loading="lazy"
-            src={technology1}
-            alt="banner"
+            src={IMU}
+            alt="Inertial Measurement Units"
             style={{ width: "90%", height: "auto" }}
           />
         </Grid>
@@ -121,8 +125,8 @@ const Technology2 = () => {
       >
         <img
           loading="lazy"
-          src={banner}
-          alt="banner"
+          src={IMU}
+          alt="Inertial Measurement Units"
           style={{ width: "90%", height: "auto" }}
         />
       </Box>
@@ -168,8 +172,8 @@ const Technology2 = () => {
             <Tag>
               <img
                 loading="lazy"
-                src={Location}
-                alt="location"
+                src={HighAccuracy}
+                alt="high accuracy"
                 width="60%"
                 height="60%"
               />
@@ -206,8 +210,8 @@ const Technology2 = () => {
             <Tag>
               <img
                 loading="lazy"
-                src={Security}
-                alt="location"
+                src={Hardware}
+                alt="No specialized hardware"
                 width="60%"
                 height="60%"
               />
@@ -234,6 +238,9 @@ const Technology2 = () => {
           and prevalent, the adoption of IMU-based positioning is expected to
           increase in the future.
         </Typography>
+      </Box>
+      <Box style={{ marginTop: isMobile ? "4vh" : "8vh" }}>
+        <Footer />
       </Box>
     </Box>
   );
