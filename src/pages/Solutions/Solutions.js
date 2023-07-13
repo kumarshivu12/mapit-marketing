@@ -37,14 +37,12 @@ const Solutions = () => {
       id="solutions"
       style={{
         padding: isMobile ? "8vh 0" : "16vh 0 ",
-        border: "2px solid yellow",
       }}
     >
       <Box
         style={{
           marginBottom: isMobile ? "4vh" : "8vh",
           textAlign: "center",
-          border: "2px solid green",
         }}
       >
         <Typography variant="h1" fontWeight={600}>
@@ -62,7 +60,6 @@ const Solutions = () => {
       <Banner />
       <Box
         style={{
-          border: "2px solid red",
           marginTop: isMobile ? "4vh" : "8vh",
           padding: isMobile ? "4vh" : "8vh",
           background: "rgba(41, 173, 190, 0.20)",
@@ -72,7 +69,6 @@ const Solutions = () => {
           style={{
             marginBottom: isMobile ? "4vh" : "8vh ",
             textAlign: "center",
-            border: "2px solid pink",
           }}
         >
           <Typography variant="h3" fontWeight={600} gutterBottom>
@@ -92,7 +88,6 @@ const Solutions = () => {
           justifyContent="center"
           style={{
             padding: isMobile ? "0 3vw " : "0 5vw ",
-            border: "2px solid violet",
           }}
         >
           <Grid
@@ -118,7 +113,7 @@ const Solutions = () => {
                 <img
                   loading="lazy"
                   src={Location}
-                  alt="location"
+                  alt="real time asset tracking"
                   width="60%"
                   height="60%"
                 />
@@ -155,7 +150,7 @@ const Solutions = () => {
                 <img
                   loading="lazy"
                   src={Security}
-                  alt="location"
+                  alt="Enhanced Safety and Security"
                   width="60%"
                   height="60%"
                 />
@@ -194,7 +189,7 @@ const Solutions = () => {
                 <img
                   loading="lazy"
                   src={Productivity}
-                  alt="location"
+                  alt="Improved Efficiency and Productivity"
                   width="60%"
                   height="60%"
                 />
@@ -232,7 +227,7 @@ const Solutions = () => {
                 <img
                   loading="lazy"
                   src={Customers}
-                  alt="location"
+                  alt="Enhanced Customer Experience"
                   width="60%"
                   height="60%"
                 />

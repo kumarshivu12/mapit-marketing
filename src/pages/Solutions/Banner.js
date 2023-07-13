@@ -32,7 +32,7 @@ const ImageContainer = styled(Box)(({ theme }) => ({
     height: "500px", // Height for medium screens
   },
   [theme.breakpoints.down("md")]: {
-    height: "300px", // Height for small screens
+    height: "250px", // Height for small screens
   },
 }));
 
@@ -77,7 +77,7 @@ const Banner = () => {
       >
         {SolutionData.map((item) => (
           <ImageContainer key={item.id}>
-            <Image loading="lazy" src={item.image} alt="banner" />
+            <Image loading="lazy" src={item.image} alt={item.text} />
             <Overlay direction="column" spacing={4} justifyContent="center">
               <Box>
                 <Typography

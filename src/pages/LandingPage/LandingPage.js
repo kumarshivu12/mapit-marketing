@@ -41,7 +41,7 @@ const GridContainer = styled(Grid)`
     background-image: url(${landingBackground});
     background-size: cover;
     background-position: center;
-    opacity: 0.3; /* Adjust the opacity as per your preference */
+    opacity: 0.3;
     z-index: -1;
   }
 `;
@@ -163,18 +163,24 @@ const LandingPage = () => {
           <Grid item lg={5} md={12} sm={12} xs={12}></Grid>
         </GridContainer>
       </Box>
+
       {/* Hero Section */}
       <Hero />
+
       {/* Solution */}
       <Solutions />
+
       {/* Technology */}
       <Technology />
+
       {/* Blogs  */}
       {/* <Blogs /> */}
+
       {/* Contact */}
       <Box id="myBox" style={{ margin: isMobile ? "4vh 0" : "8vh 0" }}>
         <Contact />
       </Box>
+
       {/* Footer */}
       <Footer />
     </Box>

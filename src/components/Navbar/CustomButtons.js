@@ -60,6 +60,7 @@ const CustomButtons = ({ direction, onClose }) => {
   const handleLinkClick = () => {
     handleButtonClick();
     scrollToTop();
+    onClose();
   };
 
   return (
@@ -78,7 +79,7 @@ const CustomButtons = ({ direction, onClose }) => {
       <StyledLink
         to="/#technology"
         onClick={() => {
-          handleButtonClick();
+          handleLinkClick();
         }}
         smooth
         duration={300}
@@ -91,7 +92,7 @@ const CustomButtons = ({ direction, onClose }) => {
       <StyledLink
         to="/blogs"
         onClick={() => {
-          handleButtonClick();
+          handleLinkClick();
           scrollToTop();
         }}
         smooth
@@ -106,7 +107,7 @@ const CustomButtons = ({ direction, onClose }) => {
         to="/about"
         component={Link}
         onClick={() => {
-          handleButtonClick();
+          handleLinkClick();
           scrollToTop();
         }}
       >
@@ -136,7 +137,7 @@ const CustomButtons = ({ direction, onClose }) => {
         }}
         onClick={() => {
           navigate("/contact");
-          handleButtonClick();
+          handleLinkClick();
           scrollToTop();
         }}
       >

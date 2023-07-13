@@ -44,7 +44,6 @@ const CloseButton = styled(IconButton)`
 
 const Navbar = () => {
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down("md"));
-
   const [open, setOpen] = useState(false);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -82,7 +81,7 @@ const Navbar = () => {
                   height: isMobile ? "30px" : "50px",
                   width: "auto",
                 }}
-                onClick={handleLogoClick}
+                onClick={() => handleLogoClick}
               />
             </Component>
           </Box>
@@ -98,7 +97,7 @@ const Navbar = () => {
               <Menu />
             </IconButton>
           ) : (
-            <CustomButtons direction="row" />
+            <CustomButtons direction="row" onClose={handleClose} />
           )}
 
           <Drawer
@@ -134,7 +133,7 @@ const Navbar = () => {
                 <Close />
               </CloseButton>
             </Box>
-            <CustomButtons direction="column" />
+            <CustomButtons direction="column" onClose={handleClose} />
           </Drawer>
         </Toolbar>
       </NavbarContainer>
