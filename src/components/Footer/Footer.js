@@ -49,7 +49,7 @@ const Footer = () => {
             <Typography variant="body1" gutterBottom>
               Powai, Mumbai Maharashtra 400076
             </Typography>
-            <Typography variant="h6" fontWeight={500} color="primary" gutterTop>
+            <Typography variant="h6" fontWeight={500} color="primary">
               +91 XXX-XXX-XXXX
             </Typography>
           </Box>
@@ -189,7 +189,6 @@ const Footer = () => {
               }}
               component={NavLink}
               to="/contact"
-              activeClassName="active"
               onClick={() => {
                 scrollToTop();
               }}

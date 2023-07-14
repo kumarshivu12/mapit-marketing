@@ -1,8 +1,9 @@
 .pin {
   animation-name: pin;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out; 
+  animation-direction: alternate;
   width: 60px;
   height: 60px;
   border-radius: 50% 50% 50% 0;
@@ -63,7 +64,7 @@
   }
 }
 
-@keyframes bounce {
+/* @keyframes bounce {
   0% {
     transform: translateY(-2000px) rotate(-45deg);
   }
@@ -82,31 +83,27 @@
   100% {
     transform: translateY(0) rotate(-45deg);
   }
-}
+} */
 
 @keyframes pin {
   0% {
     top: 40%;
     bottom: 100px;
   }
-  20% {
+  25%{
+    top: 42.5%;
+    bottom: 90px;
+  }
+  50% {
     top: 45%;
     bottom: 80px;
   }
-  40% {
-    top: 50%;
-    bottom: 70px;
-  }
-  60% {
+  75% {
     top: 47.5%;
-    bottom: 65px;
-  }
-  80% {
-    top: 45%;
-    bottom: 62.5px;
+    bottom: 90px;
   }
   100% {
-    top: 45%;
-    bottom: 60px;
+    top: 50%;
+    bottom: 70px;
   }
 }
