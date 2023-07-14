@@ -164,7 +164,7 @@ const App = () => {
                   element={<Technology3 />}
                 />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/blogpage" element={<Blogpage />} />
+                <Route path="/blogpage/:id1" element={<Blogpage />} />
                 <Route path="/blogs" element={<Blogs />} />
                 <Route path="/career" element={<Career />} />
                 <Route path="/loader" element={<Loader />} />

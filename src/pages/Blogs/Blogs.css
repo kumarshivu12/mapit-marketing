@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
 .pictureBlogPost{
     height: 200px;
@@ -305,7 +306,8 @@ height: 3px;
 background: #49A9BE;
 }
 #second{
-  margin-top: 15% !important;
+  margin-top: 14.5% !important;
+  height: 3.5px !important;
 }
 .share{
   width: 50%;
@@ -328,4 +330,41 @@ font-size: 20px;
 font-style: normal;
 font-weight: 600;
 line-height: 135.687%; /* 40.706px */
+}
+
+.post-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.post-button-container::before {
+  transform: translateY(-50%);
+}
+
+.post-button-container::after {
+  transform: translateY(50%);
+}
+
+.post-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #00C4F0;
+  border-bottom: 2px solid #00C4F0;
+}
+
+.post-button-icon {
+  margin-right: 5px;
+}
+
+.footerBlogpage{
+  position: absolute;
+ margin-top:135% 
 }

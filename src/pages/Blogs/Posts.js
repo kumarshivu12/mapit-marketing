@@ -1,14 +1,16 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { PropTypes } from "prop-types";
+import "./Blogs.css";
+
+
+//Import the additional image for blogpost and then add it to the array below too after importing , keep in mind to update it with sequential  next id 
 import image1 from "../../assets/images/photo-blogs/1.png";
 import image2 from "../../assets/images/photo-blogs/2.png";
 import image3 from "../../assets/images/photo-blogs/3.png";
 import image4 from "../../assets/images/photo-blogs/4.png";
 import image5 from "../../assets/images/photo-blogs/5.png";
 import image6 from "../../assets/images/photo-blogs/6.png";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import "./Blogs.css";
-import { PropTypes } from "prop-types";
 const image = [
   image1,
   image2,
@@ -21,7 +23,7 @@ const image = [
 const Posts = (props) => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate(`/blogpage`, {
+    navigate(`/blogpage/${props.id}`, {
       replace: false,
       state: {
         category: props.category,

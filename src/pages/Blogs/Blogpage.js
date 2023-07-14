@@ -1,114 +1,147 @@
-import { useLocation } from 'react-router-dom';
 import whatsapp from "../../assets/images/photo-blogs/whatsapp.svg";
 import facebook from "../../assets/images/photo-blogs/facebook.svg";
 import instagram from "../../assets/images/photo-blogs/instagram.svg";
 import twitter from "../../assets/images/photo-blogs/twitter.svg";
 import linkedin from "../../assets/images/photo-blogs/linkedin.svg";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link , useNavigate, useParams, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { PropTypes } from "prop-types";
 import articlesData from "./blogsdata.json";
+import Footer from "../../components/Footer/Footer";
+import Posts from "./Posts";
 
-//Import the additional image for blogpost and then add it to the array below too after importing , keep in mind to update it with sequential  next id 
+//Import the additional image for blogpost and then add it to the array below too after importing , keep in mind to update it with sequential  next id
 import image1 from "../../assets/images/photo-blogs/1.png";
 import image2 from "../../assets/images/photo-blogs/2.png";
 import image3 from "../../assets/images/photo-blogs/3.png";
 import image4 from "../../assets/images/photo-blogs/4.png";
 import image5 from "../../assets/images/photo-blogs/5.png";
 import image6 from "../../assets/images/photo-blogs/6.png";
-const image = [
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-  image6,
-]
+const image = [image1, image2, image3, image4, image5, image6];
 
-import Posts from './Posts';
-import { LinkedIn } from '@mui/icons-material';
 const Blogpage = () => {
+  const { id1 } = useParams();
+  const id = id1 - 1;
+  const nextid = id + 2;
   const location = useLocation();
-    const { id, content, title , category, imageSRC, timestamp } = location.state;
-  const currentData=articlesData["articles"][id];
-  const prevData=articlesData["articles"][id-2];
-  const nextData=articlesData["articles"][id];
+  const {
+    content,
+    title,
+    category,
+    timestamp,
+  } = articlesData["articles"][id];
+  const imageSRC = image[id];
   const navigate = useNavigate();
+  const contentURL = `Hey there! I wanted to share this amazing blog post with you. It's titled ${title} and it's really insightful. You can check it out here:
+  ${window.location.href}
+I hope you find it interesting and valuable! Enjoy reading!`;
+
+  const whatsURL = `https://api.whatsapp.com/send?text=${encodeURIComponent(
+    contentURL
+  )}`;
+  const instaURL = `https://www.instagram.com/share?url=${encodeURIComponent(
+    window.location.href
+  )}&title=${encodeURIComponent(contentURL)}`;
+  const linkedinURL = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+    window.location.href
+  )}&title=${encodeURIComponent(contentURL)}`;
+  const twitURL = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+    contentURL
+  )}`;
+  const faceURL = `https://www.facebook.com/sharer.php?u=${encodeURIComponent(
+    window.location.href
+  )}&quote=${encodeURIComponent(contentURL)}`;
+
   const previousPostClick = () => {
-    navigate("/blogpage/", {
+    navigate(`/blogpage/${id}`, {
       replace: false,
-      state: {
-        category: prevData.category,
-        title: prevData.title,
-        content: prevData.content,
-        id: prevData.id,
-        imageSRC: image[prevData.id-1],
-        timestamp: prevData.timestamp,
-      }
-      ,
     });
   };
   const nextPostClick = () => {
-    navigate("/blogpage/", {
+    navigate(`/blogpage/${nextid}`, {
       replace: false,
-      state: {
-        category: nextData.category,
-        title: nextData.title,
-        content: nextData.content,
-        id: nextData.id,
-        imageSRC: image[nextData.id-1],
-        timestamp: nextData.timestamp,
-      },
     });
   };
-    
-    
+  
+
   return (
-      <>
-      <div className='containerBlogPage'>
-      <div className='topBlueBlock' style={{backgroundImage: `url(${imageSRC})`}}>
-      </div>
-      <div className='subheadingBlock'>
-        <div className='categoryBlock'>{category}</div>
-        <div className='timestampBlock'>{timestamp}</div>
+    <>
+    <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+      <div className="containerBlogPage">
+        <div
+          className="topBlueBlock"
+          style={{
+            backgroundImage: `url(${imageSRC})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        ></div>
+        <div className="subheadingBlock">
+          <div className="categoryBlock">{category}</div>
+          <div className="timestampBlock">{timestamp}</div>
         </div>
-        <div className='titleBlock'>{title}</div>
-        <div className='pageBlock'>
-         <div className='contentBlock'>{content}</div> 
-          <div className='footerLine'></div>
-          <div className='share'>
-            <div className='ShareIconsText'>Share</div>
-            <div className='ShareIcons' ><a href="whatsapp://send?text=http://www.example.com"><img src={whatsapp}></img></a></div>
-            <div className='ShareIcons' id="others"><a href="whatsapp://send?text=http://www.example.com"><img src={facebook}></img></a></div>
-            <div className='ShareIcons' id="others" ><a href="whatsapp://send?text=http://www.example.com"><img src={instagram}></img></a></div>
-            <div className='ShareIcons' id="others" ><a href="whatsapp://send?text=http://www.example.com"><img src={twitter}></img></a></div>
-            <div className='ShareIcons' id="others" ><a href="whatsapp://send?text=http://www.example.com"><img src={linkedin}></img></a></div>
+        <div className="titleBlock">{title}</div>
+        <div className="pageBlock">
+          <div className="contentBlock">{content}</div>
+          <div className="footerLine"></div>
+          <div className="share">
+            <div className="ShareIconsText">Share</div>
+            <div className="ShareIcons">
+              <a target="_blank" href={whatsURL}>
+                <img src={whatsapp}></img>
+              </a>
+            </div>
+            <div className="ShareIcons" id="others">
+              <a target="_blank" href={faceURL}>
+                <img src={facebook}></img>
+              </a>
+            </div>
+            <div className="ShareIcons" id="others">
+              <a target="_blank" href={instaURL}>
+                <img src={instagram}></img>
+              </a>
+            </div>
+            <div className="ShareIcons" id="others">
+              <a target="_blank" href={twitURL}>
+                <img src={twitter}></img>
+              </a>
+            </div>
+            <div className="ShareIcons" id="others">
+              <a target="_blank"  href={linkedinURL}>
+                <img src={linkedin}></img>
+              </a>
+            </div>
           </div>
-          <div className='postChanger'>
-            <div className='previousPost'><button onClick={previousPostClick}>prev</button></div>
-            <div className='nextPost'><button onClick={nextPostClick}>next</button></div>
+          <div className="footerLine" id="second"></div>
+          <div className="postChanger">
+            <div class="post-button-container">
+              <button
+                disabled={id1 == 1}
+                onClick={previousPostClick}
+                class="post-button"
+              >
+                <span class="post-button-icon">←</span>
+                Previous Post
+              </button>
+              <button
+                disabled={id1 == articlesData["articles"].length}
+                onClick={nextPostClick}
+                class="post-button"
+              >
+                Next Post
+                <span class="post-button-icon">→</span>
+              </button>
+            </div>
           </div>
-
-          <div className='footerLine' id="second"></div>
+        </div>
+        <div className="footerBlogpage">
+          <Footer />
         </div>
       </div>
-      </>
+    </>
 
-
-
-
-
-
-
-
-
-    // <div>
-    //     <div className='container'>
-    //   <div className='pageContent'>{content}</div>
-    //   <div className='pageContent'>{title}</div>
-    //   <div>{category}</div>
-    //     </div>
-    // </div>
+  
   );
 };
 
