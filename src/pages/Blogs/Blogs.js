@@ -47,6 +47,7 @@ function Carousel() {
           imageSRC={article.imageSRC}
           title={article.title}
           content={article.content}
+          timestamp={article.timestamp}
         />
       </div>
     ));

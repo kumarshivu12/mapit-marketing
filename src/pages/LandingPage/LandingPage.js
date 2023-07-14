@@ -170,7 +170,7 @@ const LandingPage = () => {
       <Technology />
 
       {/* Blogs  */}
-      {/* <Blogs /> */}
+      <Blogs />
 
       {/* Contact */}
       <Box id="myBox" style={{ margin: isMobile ? "4vh 0" : "8vh 0" }}>

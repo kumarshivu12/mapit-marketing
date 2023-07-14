@@ -20,6 +20,13 @@ position: relative;
     background-color: rgba(0, 0, 0, 0.45);
   }
 
+  .share{
+    display: flex;
+    flex-direction: row;
+    
+
+  }
+
 .dataHeader{
     display: flex;
     align-items: center;
