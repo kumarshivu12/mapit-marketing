@@ -90,6 +90,19 @@ const CustomButtons = ({ direction, onClose }) => {
       </StyledLink>
 
       <StyledLink
+        to="/career"
+        onClick={() => {
+          handleLinkClick();
+        }}
+        smooth
+        duration={300}
+      >
+        <Typography variant="h6" color="primary" fontWeight={600}>
+          Careers
+        </Typography>
+      </StyledLink>
+
+      <StyledLink
         to="/blogs"
         onClick={() => {
           handleLinkClick();

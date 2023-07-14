@@ -9,14 +9,30 @@ function Carousel() {
 
   const totalSlides = Math.ceil(articlesData.articles.length / slidesPerPage);
   const totalDots = Array.from(Array(totalSlides).keys());
-
+  // function updatePageNumber() {
+  //   const initialPageNumber = 5;
+  //   const pageWidth = window.innerWidth;
+  
+  //   let upgradedPageNumber;
+  
+  //   if (pageWidth < 768) {
+  //     upgradedPageNumber = initialPageNumber + 1;
+  //   } else if (pageWidth >= 768 && pageWidth < 1024) {
+  //     upgradedPageNumber = initialPageNumber + 2;
+  //   } else {
+  //     upgradedPageNumber = initialPageNumber + 3;
+  //   }
+  
+  //   console.log("Upgraded Page Number:", upgradedPageNumber);
+  // }
+  console.log(slidesPerPage)
   useEffect(() => {
     const handleResize = () => {
       const containerWidth = document.querySelector(
         ".carousel-container"
       ).offsetWidth;
       const slideWidth = document.querySelector(".carousel-slide").offsetWidth;
-      // setSlidesPerPage(Math.floor(containerWidth / slideWidth));
+      setSlidesPerPage(Math.floor(containerWidth / slideWidth));
     };
 
     handleResize();
