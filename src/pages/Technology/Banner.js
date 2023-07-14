@@ -86,7 +86,7 @@ const Banner = () => {
           />
           <img
             loading="lazy"
-            src={second}
+            src={forth}
             alt="image2"
             style={{
               position: "absolute",
@@ -97,7 +97,7 @@ const Banner = () => {
           />
           <img
             loading="lazy"
-            src={third}
+            src={seventh}
             style={{
               position: "absolute",
               zIndex: grid3Hovered ? 3 : 1,
@@ -136,7 +136,7 @@ const Banner = () => {
         >
           <img
             loading="lazy"
-            src={forth}
+            src={second}
             alt="image4"
             style={{
               position: "absolute",
@@ -157,7 +157,7 @@ const Banner = () => {
           />
           <img
             loading="lazy"
-            src={sixth}
+            src={eighth}
             style={{
               position: "absolute",
               zIndex: grid3Hovered ? 3 : 1,
@@ -196,7 +196,7 @@ const Banner = () => {
         >
           <img
             loading="lazy"
-            src={seventh}
+            src={third}
             style={{
               position: "absolute",
               zIndex: grid1Hovered ? 3 : 2,
@@ -206,7 +206,7 @@ const Banner = () => {
           />
           <img
             loading="lazy"
-            src={eighth}
+            src={sixth}
             style={{
               position: "absolute",
               zIndex: grid2Hovered ? 3 : 1,

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 
 //Components
 import Navbar from "../src/components/Navbar/Navbar";
@@ -125,14 +125,16 @@ const theme = createTheme({
 const App = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [loading, setLoading] = useState(true);
+  // const location = useLocation();
   useEffect(() => {
+    // setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 3000);
   }, []);
   const contentStyle = {
     opacity: loading ? 0 : 1,
-    transition: "opacity 0.5s ease-in-out", // Add the transition property
+    transition: "opacity 0.01s ease-in-out", // Add the transition property
   };
   return (
     <ThemeProvider theme={theme}>
@@ -164,7 +166,7 @@ const App = () => {
                   element={<Technology3 />}
                 />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/blogpage/:id1" element={<Blogpage />} />
+                <Route path="/blogpage" element={<Blogpage />} />
                 <Route path="/blogs" element={<Blogs />} />
                 <Route path="/career" element={<Career />} />
                 <Route path="/loader" element={<Loader />} />

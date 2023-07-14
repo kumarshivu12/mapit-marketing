@@ -138,11 +138,7 @@ const LandingPage = () => {
               </Typography>
               <Box component="span">
                 {isVisible && (
-                  <RandomWord
-                    component="span"
-                    currentIndex={currentWordIndex}
-                    currentWordIndex={currentWordIndex}
-                  >
+                  <RandomWord component="span" currentindex={currentWordIndex}>
                     <Typography
                       variant="h2"
                       color="primary"
