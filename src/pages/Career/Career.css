@@ -7,7 +7,7 @@ position: relative;
     position: relative;
     width: 100%;
     height: 400px;
-    background-image: url("../../assets/images/backgroundCareer.png");
+    background-image: url("../../assets/images/backgroundCareer.webp");
   }
   
   .picBlock::before {
@@ -85,7 +85,7 @@ position: relative;
   .imageCareer {
     width: 400px; /* Adjust the width as needed */
     height: 250px; /* Adjust the height as needed */
-    background-image: url("../../assets/images/backgroundCareer.png");
+    background-image: url("../../assets/images/backgroundCareer.webp");
   }
   
   .containerBlueCareer {
