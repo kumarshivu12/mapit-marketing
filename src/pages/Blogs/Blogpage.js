@@ -11,12 +11,12 @@ import Footer from "../../components/Footer/Footer";
 import Posts from "./Posts";
 
 //Import the additional image for blogpost and then add it to the array below too after importing , keep in mind to update it with sequential  next id
-import image1 from "../../assets/images/photo-blogs/1.png";
-import image2 from "../../assets/images/photo-blogs/2.png";
-import image3 from "../../assets/images/photo-blogs/3.png";
-import image4 from "../../assets/images/photo-blogs/4.png";
-import image5 from "../../assets/images/photo-blogs/5.png";
-import image6 from "../../assets/images/photo-blogs/6.png";
+import image1 from "../../assets/images/photo-blogs/1.svg";
+import image2 from "../../assets/images/photo-blogs/2.svg";
+import image3 from "../../assets/images/photo-blogs/3.webp";
+import image4 from "../../assets/images/photo-blogs/4.svg";
+import image5 from "../../assets/images/photo-blogs/5.webp";
+import image6 from "../../assets/images/photo-blogs/6.svg";
 const image = [image1, image2, image3, image4, image5, image6];
 
 const Blogpage = () => {

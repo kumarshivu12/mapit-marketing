@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
 .pictureBlogPost {
-  height: 200px;
   width: 300px;
 }
 .Header {
@@ -56,11 +55,10 @@
   cursor: pointer;
 }
 .blogPost {
-  height: 530px;
+  height: 470px;
   width: 300px;
   background-color: white;
   box-shadow: 2px 2px 10px grey;
-
   margin: 10px;
   position: relative;
 }
@@ -390,5 +388,5 @@
 
 .footerBlogpage {
   position: absolute;
-  margin-top: 135%;
+  margin-top: 155%;
 }

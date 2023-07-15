@@ -6,26 +6,8 @@ import Posts from "./Posts";
 function Carousel() {
   const [currentPage, setCurrentPage] = useState(0);
   const [slidesPerPage, setSlidesPerPage] = useState(3);
-
   const totalSlides = Math.ceil(articlesData.articles.length / slidesPerPage);
   const totalDots = Array.from(Array(totalSlides).keys());
-  // function updatePageNumber() {
-  //   const initialPageNumber = 5;
-  //   const pageWidth = window.innerWidth;
-  
-  //   let upgradedPageNumber;
-  
-  //   if (pageWidth < 768) {
-  //     upgradedPageNumber = initialPageNumber + 1;
-  //   } else if (pageWidth >= 768 && pageWidth < 1024) {
-  //     upgradedPageNumber = initialPageNumber + 2;
-  //   } else {
-  //     upgradedPageNumber = initialPageNumber + 3;
-  //   }
-  
-  //   console.log("Upgraded Page Number:", upgradedPageNumber);
-  // }
-  console.log(slidesPerPage)
   useEffect(() => {
     const handleResize = () => {
       const containerWidth = document.querySelector(
