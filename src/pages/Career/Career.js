@@ -1,10 +1,10 @@
 import React from "react";
 import "./Career.css";
 import image4 from "../../assets/images/Solution3.webp";
-import log1 from "../../assets/images/careerlog1.png";
-import log2 from "../../assets/images/careerlog2.png";
-import log3 from "../../assets/images/careerlog3.png";
-import log4 from "../../assets/images/careerlog4.png";
+import log1 from "../../assets/images/careerlog1.svg";
+import log2 from "../../assets/images/careerlog2.svg";
+import log3 from "../../assets/images/careerlog3.svg";
+import log4 from "../../assets/images/careerlog4.svg";
 
 const Career = () => {
   return (
