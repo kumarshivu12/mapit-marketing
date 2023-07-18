@@ -3,7 +3,7 @@ import facebook from "../../assets/images/photo-blogs/facebook.svg";
 import instagram from "../../assets/images/photo-blogs/instagram.svg";
 import twitter from "../../assets/images/photo-blogs/twitter.svg";
 import linkedin from "../../assets/images/photo-blogs/linkedin.svg";
-import { Link , useNavigate, useParams, useLocation } from "react-router-dom";
+import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { PropTypes } from "prop-types";
 import articlesData from "./blogsdata.json";
@@ -11,12 +11,12 @@ import Footer from "../../components/Footer/Footer";
 import Posts from "./Posts";
 
 //Import the additional image for blogpost and then add it to the array below too after importing , keep in mind to update it with sequential  next id
-import image1 from "../../assets/images/photo-blogs/1.svg";
-import image2 from "../../assets/images/photo-blogs/2.svg";
+import image1 from "../../assets/images/photo-blogs/1.webp";
+import image2 from "../../assets/images/photo-blogs/2.webp";
 import image3 from "../../assets/images/photo-blogs/3.webp";
-import image4 from "../../assets/images/photo-blogs/4.svg";
+import image4 from "../../assets/images/photo-blogs/4.webp";
 import image5 from "../../assets/images/photo-blogs/5.webp";
-import image6 from "../../assets/images/photo-blogs/6.svg";
+import image6 from "../../assets/images/photo-blogs/6.webp";
 const image = [image1, image2, image3, image4, image5, image6];
 
 const Blogpage = () => {
@@ -24,12 +24,7 @@ const Blogpage = () => {
   const id = id1 - 1;
   const nextid = id + 2;
   const location = useLocation();
-  const {
-    content,
-    title,
-    category,
-    timestamp,
-  } = articlesData["articles"][id];
+  const { content, title, category, timestamp } = articlesData["articles"][id];
   const imageSRC = image[id];
   const navigate = useNavigate();
   const contentURL = `Hey there! I wanted to share this amazing blog post with you. It's titled ${title} and it's really insightful. You can check it out here:
@@ -62,11 +57,12 @@ I hope you find it interesting and valuable! Enjoy reading!`;
       replace: false,
     });
   };
-  
 
   return (
     <>
-    <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+      <script src="https://platform.linkedin.com/in.js" type="text/javascript">
+        lang: en_US
+      </script>
       <div className="containerBlogPage">
         <div
           className="topBlueBlock"
@@ -108,7 +104,7 @@ I hope you find it interesting and valuable! Enjoy reading!`;
               </a>
             </div>
             <div className="ShareIcons" id="others">
-              <a target="_blank"  href={linkedinURL}>
+              <a target="_blank" href={linkedinURL}>
                 <img src={linkedin}></img>
               </a>
             </div>
@@ -140,8 +136,6 @@ I hope you find it interesting and valuable! Enjoy reading!`;
         </div>
       </div>
     </>
-
-  
   );
 };
 

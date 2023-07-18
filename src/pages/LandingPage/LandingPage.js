@@ -173,12 +173,9 @@ const LandingPage = () => {
       <Blogs />
 
       {/* Contact */}
-      <Box id="myBox" style={{ margin: isMobile ? "4vh 0" : "8vh 0" }}>
+      <Box id="myBox" style={{ marginTop: isMobile ? "4vh" : "8vh" }}>
         <Contact />
       </Box>
-
-      {/* Footer */}
-      <Footer />
     </Box>
   );
 };

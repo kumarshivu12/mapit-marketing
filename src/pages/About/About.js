@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import ProfileCard from "./ProfileCard";
-
+import Footer from "../../components/Footer/Footer";
 const About = () => {
   let cardCount = 10;
   const theme = useTheme();

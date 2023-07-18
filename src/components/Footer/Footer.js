@@ -6,11 +6,23 @@ import {
   Divider,
   Grid,
   Typography,
+  styled,
   useMediaQuery,
 } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+
+//Styles
+const StyledDiv = styled(Box)`
+  cursor: pointer;
+  text-decoration: none;
+  color: #444444;
+  transition: all 0.2s;
+  &:hover {
+    color: #00c4f0;
+  }
+`;
 
 const Footer = () => {
   const theme = useTheme();
@@ -21,7 +33,7 @@ const Footer = () => {
   return (
     <Box
       style={{
-        background: "#FFF",
+        background: "#E6E6E6",
         boxShadow:
           "0px -16.17043685913086px 32.34087371826172px 0px rgba(0, 0, 0, 0.15)",
       }}
@@ -59,15 +71,39 @@ const Footer = () => {
             Solutions
           </Typography>
           <Box style={{ padding: "20px 0" }}>
-            <Typography variant="body1" fontWeight={500}>
-              Hybrid Space
-            </Typography>
-            <Typography variant="body1" fontWeight={500}>
-              Retail Stores
-            </Typography>
-            <Typography variant="body1" fontWeight={500}>
-              Hospitals
-            </Typography>
+            <StyledDiv
+              component={Link}
+              to="/solutions/solution1"
+              onClick={() => {
+                scrollToTop();
+              }}
+            >
+              <Typography variant="body1" fontWeight={500}>
+                Hybrid Space
+              </Typography>
+            </StyledDiv>
+            <StyledDiv
+              component={Link}
+              to="/solutions/solution2"
+              onClick={() => {
+                scrollToTop();
+              }}
+            >
+              <Typography variant="body1" fontWeight={500}>
+                Retails Stores
+              </Typography>
+            </StyledDiv>
+            <StyledDiv
+              component={Link}
+              to="/solutions/solution3"
+              onClick={() => {
+                scrollToTop();
+              }}
+            >
+              <Typography variant="body1" fontWeight={500}>
+                Hospitals
+              </Typography>
+            </StyledDiv>
           </Box>
         </Grid>
         <Grid item lg={3} md={3} sm={6} xs={12} style={{ padding: "20px" }}>
@@ -75,82 +111,79 @@ const Footer = () => {
             Technology
           </Typography>
           <Box style={{ padding: "20px 0" }}>
-            <Typography variant="body1" fontWeight={500}>
-              Bluetooth Low Energy
-            </Typography>
-            <Typography variant="body1" fontWeight={500}>
-              Inertial Measurement Units (IMU)
-            </Typography>
-            <Typography variant="body1" fontWeight={500}>
-              Fusion
-            </Typography>
+            <StyledDiv
+              component={Link}
+              to="/technology/technology1"
+              onClick={() => {
+                scrollToTop();
+              }}
+            >
+              <Typography variant="body1" fontWeight={500}>
+                Bluetooth Low Energy (BLE)
+              </Typography>
+            </StyledDiv>
+            <StyledDiv
+              component={Link}
+              to="/technology/technology2"
+              onClick={() => {
+                scrollToTop();
+              }}
+            >
+              <Typography variant="body1" fontWeight={500}>
+                Inertial Measurement Units (IMU)
+              </Typography>
+            </StyledDiv>
+            <StyledDiv
+              component={Link}
+              to="/technology/technology3"
+              onClick={() => {
+                scrollToTop();
+              }}
+            >
+              <Typography variant="body1" fontWeight={500}>
+                Fusion
+              </Typography>
+            </StyledDiv>
           </Box>
         </Grid>
         <Grid item lg={3} md={3} sm={6} xs={12} style={{ padding: "20px" }}>
           <Typography variant="h5" fontWeight={600} style={{ color: "black" }}>
             Quick Links
           </Typography>
-          <Box style={{ padding: "20px 10px" }}>
-            <Box>
-              <Link
-                to="/about"
-                style={{
-                  textDecoration: "none",
-                  display: "inline-flex",
-                  alignItems: "center",
-                }}
-              >
-                <ArrowForward sx={{ color: "black", marginRight: "4px" }} />
-                <Typography variant="body1" sx={{ color: "black" }}>
-                  About Us
-                </Typography>
-              </Link>
-            </Box>
-            <Box>
-              <Link
-                to="/blogs"
-                style={{
-                  textDecoration: "none",
-                  display: "inline-flex",
-                  alignItems: "center",
-                }}
-              >
-                <ArrowForward sx={{ color: "black", marginRight: "4px" }} />
-                <Typography variant="body1" sx={{ color: "black" }}>
-                  Blog
-                </Typography>
-              </Link>
-            </Box>
-            <Box>
-              <Link
-                to="/contact"
-                style={{
-                  textDecoration: "none",
-                  display: "inline-flex",
-                  alignItems: "center",
-                }}
-              >
-                <ArrowForward sx={{ color: "black", marginRight: "4px" }} />
-                <Typography variant="body1" sx={{ color: "black" }}>
-                  Contact
-                </Typography>
-              </Link>
-            </Box>
-            <Box>
-              <Link
-                to="/solutions"
-                style={{
-                  textDecoration: "none",
-                  display: "inline-flex",
-                  alignItems: "center",
-                }}
-              >
-                <ArrowForward sx={{ color: "black", marginRight: "4px" }} />
-                <Typography variant="body1" sx={{ color: "black" }}>
-                  Career
-                </Typography>
-              </Link>
-            </Box>
+          <Box style={{ padding: "20px 0px" }}>
+            <StyledDiv
+              component={Link}
+              to="/about"
+              onClick={() => {
+                scrollToTop();
+              }}
+            >
+              <Typography variant="body1" fontWeight={500}>
+                About Us
+              </Typography>
+            </StyledDiv>
+            <StyledDiv
+              component={Link}
+              to="career"
+              onClick={() => {
+                scrollToTop();
+              }}
+            >
+              <Typography variant="body1" fontWeight={500}>
+                Careers
+              </Typography>
+            </StyledDiv>
+            <StyledDiv
+              component={Link}
+              to="/blogs"
+              onClick={() => {
+                scrollToTop();
+              }}
+            >
+              <Typography variant="body1" fontWeight={500}>
+                Blogs
+              </Typography>
+            </StyledDiv>
           </Box>
         </Grid>
         <Grid
@@ -160,7 +193,7 @@ const Footer = () => {
           sm={12}
           xs={12}
           style={{
-            background: "rgba(230, 230, 230, 1)",
+            background: "rgba(205, 205, 205, 1)",
             padding: "20px",
             display: "flex",
             justifyContent: "center",
@@ -205,13 +238,16 @@ const Footer = () => {
           md={12}
           sm={12}
           xs={12}
-          style={{ padding: "20px" }}
+          style={{ padding: "5px" }}
           textAlign="center"
+          alignSelf="center"
         >
-          <Typography variant="body1" style={{ color: "grey" }}>
-            2023 MapIT.ai. All Rights Reserved &nbsp;&nbsp; |
-            &nbsp;&nbsp;Privacy Policy &nbsp;&nbsp; |&nbsp;&nbsp; Cookies
-          </Typography>
+          <Box>
+            <Typography style={{ color: "grey", fontSize: "14px" }}>
+              2023 MapIT.ai All Rights Reserved &nbsp;&nbsp; |
+              &nbsp;&nbsp;Privacy Policy &nbsp;&nbsp; |&nbsp;&nbsp; Cookies
+            </Typography>
+          </Box>
         </Grid>
       </Grid>
     </Box>

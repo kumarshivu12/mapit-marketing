@@ -17,6 +17,7 @@ import Technology1 from "./pages/Technology/Technology1";
 import Technology2 from "./pages/Technology/Technology2";
 import Technology3 from "./pages/Technology/Technology3";
 import Loader from "./components/Loader/Loader";
+import Footer from "./components/Footer/Footer";
 
 //creating theme
 const theme = createTheme({

@@ -20,6 +20,7 @@ import banner from "../../assets/images/Solution1Banner.webp";
 import image2 from "../../assets/images/Solution1(1).webp";
 import { Button2 } from "../../components/Buttons/Buttons";
 import Contact from "../Contact/Contact";
+import Footer from "../../components/Footer/Footer";
 
 //Styles
 const Tag = styled(Box)`
@@ -55,6 +56,7 @@ const Solution1 = () => {
             : "polygon(49.7% 100%, 100% 80%, 100% 0.3%, 0% 0%, 0% 80%)",
           marginBottom: isMobile ? "4vh" : "8vh",
           backgroundImage: `url(${banner})`,
+          backgroundPosition: "center",
           backgroundSize: "cover",
         }}
       >
@@ -201,7 +203,8 @@ const Solution1 = () => {
           alt="banner"
           style={{
             position: "absolute",
-            width: "90%",
+            width: "auto",
+            maxWidth: "90%",
             height: "90%",
             zIndex: 2,
           }}
