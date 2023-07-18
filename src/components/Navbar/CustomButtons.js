@@ -6,14 +6,15 @@ import {
   Box,
   Stack,
   Link,
+  Menu,
+  MenuItem,
   useMediaQuery,
 } from "@mui/material";
 import { Phone } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import { NavLink } from "react-router-dom";
 import { useTheme } from "@emotion/react";
 
-const StyledLink = styled(HashLink)`
+const StyledLink = styled(NavLink)`
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -42,88 +43,130 @@ const StyledLink = styled(HashLink)`
     transition: transform 0.3s ease;
   }
 `;
+const StyledMenuItem = styled(MenuItem)`
+  width: inherit;
+  padding: 5px 20px;
+  transition: all 0.2s;
+  &:hover {
+    color: #00c4f0;
+    fontweight: 600;
+    transform: scale(1.05);
+  }
+`;
 
 const CustomButtons = ({ direction, onClose }) => {
-  const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [solutionAnchorEl, setSolutionAnchorEl] = useState(null);
+  const [technologyAnchorEl, setTechnologyAnchorEl] = useState(null);
 
-  const handleButtonClick = () => {
-    setDrawerOpen(false);
+  const handleSolutionClick = (event) => {
+    setSolutionAnchorEl(event.currentTarget);
+  };
+
+  const handleTechnologyClick = (event) => {
+    setTechnologyAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setSolutionAnchorEl(null);
+    setTechnologyAnchorEl(null);
+    scrollToTop();
   };
 
   const scrollToTop = () => {
-    const element = document.documentElement;
-    element.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
   const handleLinkClick = () => {
-    handleButtonClick();
+    handleClose();
     scrollToTop();
     onClose();
   };
 
   return (
     <Stack direction={direction} spacing={3} justifyContent="center">
-      <StyledLink
-        smooth
-        duration={300}
-        to="/#solutions"
-        onClick={() => handleLinkClick()}
-      >
+      <StyledLink aria-haspopup="true" onClick={handleSolutionClick}>
         <Typography variant="h6" color="primary" fontWeight={600}>
           Solutions
         </Typography>
       </StyledLink>
-
-      <StyledLink
-        to="/#technology"
-        onClick={() => {
-          handleLinkClick();
-        }}
-        smooth
-        duration={300}
+      <Menu
+        id="solutions-menu"
+        anchorEl={solutionAnchorEl}
+        open={Boolean(solutionAnchorEl)}
+        onClose={handleClose}
       >
+        <StyledMenuItem
+          component={NavLink}
+          to="/solutions/solution1"
+          onClick={handleClose}
+        >
+          Solution 1
+        </StyledMenuItem>
+        <StyledMenuItem
+          component={NavLink}
+          to="/solutions/solution2"
+          onClick={handleClose}
+        >
+          Solution 2
+        </StyledMenuItem>
+        <StyledMenuItem
+          component={NavLink}
+          to="/solutions/solution3"
+          onClick={handleClose}
+        >
+          Solution 3
+        </StyledMenuItem>
+      </Menu>
+
+      <StyledLink aria-haspopup="true" onClick={handleTechnologyClick}>
         <Typography variant="h6" color="primary" fontWeight={600}>
           Technology
         </Typography>
       </StyledLink>
-
-      <StyledLink
-        to="/career"
-        onClick={() => {
-          handleLinkClick();
-        }}
-        smooth
-        duration={300}
+      <Menu
+        id="technology-menu"
+        anchorEl={technologyAnchorEl}
+        open={Boolean(technologyAnchorEl)}
+        onClose={handleClose}
       >
+        <StyledMenuItem
+          component={NavLink}
+          to="/technology/technology1"
+          onClick={handleClose}
+        >
+          Technology 1
+        </StyledMenuItem>
+        <StyledMenuItem
+          component={NavLink}
+          to="/technology/technology2"
+          onClick={handleClose}
+        >
+          Technology 2
+        </StyledMenuItem>
+        <StyledMenuItem
+          component={NavLink}
+          to="/technology/technology3"
+          onClick={handleClose}
+        >
+          Technology 3
+        </StyledMenuItem>
+      </Menu>
+
+      <StyledLink to="/career" onClick={handleLinkClick}>
         <Typography variant="h6" color="primary" fontWeight={600}>
           Careers
         </Typography>
       </StyledLink>
 
-      <StyledLink
-        to="/blogs"
-        onClick={() => {
-          handleLinkClick();
-          scrollToTop();
-        }}
-        smooth
-        duration={500}
-      >
+      <StyledLink to="/blogs" onClick={handleLinkClick}>
         <Typography variant="h6" color="primary" fontWeight={600}>
           Blogs
         </Typography>
       </StyledLink>
 
-      <StyledLink
-        to="/about"
-        component={Link}
-        onClick={() => {
-          handleLinkClick();
-          scrollToTop();
-        }}
-      >
+      <StyledLink to="/about" onClick={handleLinkClick}>
         <Typography variant="h6" color="primary" fontWeight={600}>
           About Us
         </Typography>
@@ -148,11 +191,7 @@ const CustomButtons = ({ direction, onClose }) => {
           padding: "5px 20px",
           textTransform: "none",
         }}
-        onClick={() => {
-          navigate("/contact");
-          handleLinkClick();
-          scrollToTop();
-        }}
+        onClick={handleLinkClick}
       >
         <Typography variant="h6" color="white" fontWeight={600}>
           Contact Us

@@ -55,7 +55,7 @@ const Navbar = () => {
   const handleLogoClick = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "instant",
     });
   };
 
@@ -72,7 +72,7 @@ const Navbar = () => {
           }}
         >
           <Box>
-            <Component to="/">
+            <Component to="/" onClick={handleLogoClick}>
               <img
                 loading="lazy"
                 src={logo}
@@ -81,7 +81,6 @@ const Navbar = () => {
                   height: isMobile ? "30px" : "50px",
                   width: "auto",
                 }}
-                onClick={() => handleLogoClick}
               />
             </Component>
           </Box>
