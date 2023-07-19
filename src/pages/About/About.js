@@ -4,7 +4,7 @@ import { useTheme } from "@emotion/react";
 import ProfileCard from "./ProfileCard";
 import Footer from "../../components/Footer/Footer";
 import Contact from "../Contact/Contact";
-import Gallery from "./Gallery";
+// import Gallery from "./Gallery";
 const About = () => {
   let cardCount = 10;
   const theme = useTheme();

@@ -72,6 +72,7 @@ const CustomButtons = ({ direction, onClose }) => {
     setSolutionAnchorEl(null);
     setTechnologyAnchorEl(null);
     scrollToTop();
+    onClose();
   };
 
   const scrollToTop = () => {

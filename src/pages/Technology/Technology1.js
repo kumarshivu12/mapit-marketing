@@ -41,9 +41,10 @@ const Technology1 = () => {
           clipPath: isMobile
             ? "polygon(49.7% 100%, 100% 90%, 100% 0.3%, 0% 0%, 0% 90%)"
             : "polygon(49.7% 100%, 100% 80%, 100% 0.3%, 0% 0%, 0% 80%)",
-          backgroundImage: `url(${banner})`,
-          backgroundPosition: "center",
-          backgroundSize: "auto",
+          // backgroundImage: `url(${banner})`,
+          backgroundColor: "rgb(0, 137, 16",
+          // backgroundPosition: "center",
+          // backgroundSize: "auto",
         }}
       >
         <Box
