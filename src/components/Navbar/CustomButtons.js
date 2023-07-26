@@ -175,7 +175,8 @@ const CustomButtons = ({ direction, onClose }) => {
 
       <Button
         variant="contained"
-        component={Link}
+        component={NavLink}
+        to="/contact"
         startIcon={
           <Phone
             color="light"
